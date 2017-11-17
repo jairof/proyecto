@@ -1,0 +1,317 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">	
+			<h:form id="formDialog">
+				<p:messages id="msg" />
+				<p:growl id="men"/>
+					<p:panel id="panelTlp00002" header="Tlp00002">							
+						<h:panelGrid columns="2" id="panelGrid" >
+												 	<h:outputText id="msgNumPlanilla" value="NumPlanilla"/>
+						 	<p:inputText id="txtNumPlanilla" binding="#{tlp00002View.txtNumPlanilla}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCodiEps" value="CodiEps"/>
+						 	<p:inputText id="txtCodiEps" binding="#{tlp00002View.txtCodiEps}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCodiArp" value="CodiArp"/>
+						 	<p:inputText id="txtCodiArp" binding="#{tlp00002View.txtCodiArp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCodiAfp" value="CodiAfp"/>
+						 	<p:inputText id="txtCodiAfp" binding="#{tlp00002View.txtCodiAfp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCodiCaja" value="CodiCaja"/>
+						 	<p:inputText id="txtCodiCaja" binding="#{tlp00002View.txtCodiCaja}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCotizante" value="Cotizante"/>
+						 	<p:inputText id="txtCotizante" binding="#{tlp00002View.txtCotizante}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCodEmpresaEmp" value="CodEmpresaEmp"/>
+						 	<p:inputText id="txtCodEmpresaEmp" binding="#{tlp00002View.txtCodEmpresaEmp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCiuLaboralCotizante" value="CiuLaboralCotizante"/>
+						 	<p:inputText id="txtCiuLaboralCotizante" binding="#{tlp00002View.txtCiuLaboralCotizante}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgDepLaboralCotizante" value="DepLaboralCotizante"/>
+						 	<p:inputText id="txtDepLaboralCotizante" binding="#{tlp00002View.txtDepLaboralCotizante}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgTipocotizante" value="Tipocotizante"/>
+						 	<p:inputText id="txtTipocotizante" binding="#{tlp00002View.txtTipocotizante}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgSubTipocotizante" value="SubTipocotizante"/>
+						 	<p:inputText id="txtSubTipocotizante" binding="#{tlp00002View.txtSubTipocotizante}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgDiasCotizados" value="DiasCotizados"/>
+						 	<p:inputText id="txtDiasCotizados" binding="#{tlp00002View.txtDiasCotizados}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgDiasCotizadosArp" value="DiasCotizadosArp"/>
+						 	<p:inputText id="txtDiasCotizadosArp" binding="#{tlp00002View.txtDiasCotizadosArp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgDiasCotizadosAfp" value="DiasCotizadosAfp"/>
+						 	<p:inputText id="txtDiasCotizadosAfp" binding="#{tlp00002View.txtDiasCotizadosAfp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgDiasCotizadosCaja" value="DiasCotizadosCaja"/>
+						 	<p:inputText id="txtDiasCotizadosCaja" binding="#{tlp00002View.txtDiasCotizadosCaja}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgSalarioBasico" value="SalarioBasico"/>
+						 	<p:inputText id="txtSalarioBasico" binding="#{tlp00002View.txtSalarioBasico}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgSalarioCIntegral" value="SalarioCIntegral"/>
+						 	<p:inputText id="txtSalarioCIntegral" binding="#{tlp00002View.txtSalarioCIntegral}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgPlanillaEps" value="PlanillaEps"/>
+						 	<p:inputText id="txtPlanillaEps" binding="#{tlp00002View.txtPlanillaEps}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgPlanillaArp" value="PlanillaArp"/>
+						 	<p:inputText id="txtPlanillaArp" binding="#{tlp00002View.txtPlanillaArp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgPlanillaAfp" value="PlanillaAfp"/>
+						 	<p:inputText id="txtPlanillaAfp" binding="#{tlp00002View.txtPlanillaAfp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgPlanillaCaja" value="PlanillaCaja"/>
+						 	<p:inputText id="txtPlanillaCaja" binding="#{tlp00002View.txtPlanillaCaja}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgNumAuincapacidad" value="NumAuincapacidad"/>
+						 	<p:inputText id="txtNumAuincapacidad" binding="#{tlp00002View.txtNumAuincapacidad}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgValorIncapacidad" value="ValorIncapacidad"/>
+						 	<p:inputText id="txtValorIncapacidad" binding="#{tlp00002View.txtValorIncapacidad}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgNumAulicenciaM" value="NumAulicenciaM"/>
+						 	<p:inputText id="txtNumAulicenciaM" binding="#{tlp00002View.txtNumAulicenciaM}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgValorLicenciaM" value="ValorLicenciaM"/>
+						 	<p:inputText id="txtValorLicenciaM" binding="#{tlp00002View.txtValorLicenciaM}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgValorUpcAdicional" value="ValorUpcAdicional"/>
+						 	<p:inputText id="txtValorUpcAdicional" binding="#{tlp00002View.txtValorUpcAdicional}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgIngresoBaseCotizacion" value="IngresoBaseCotizacion"/>
+						 	<p:inputText id="txtIngresoBaseCotizacion" binding="#{tlp00002View.txtIngresoBaseCotizacion}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgIngresoBaseCotizacionArp" value="IngresoBaseCotizacionArp"/>
+						 	<p:inputText id="txtIngresoBaseCotizacionArp" binding="#{tlp00002View.txtIngresoBaseCotizacionArp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgIngresoBaseCotizacionAfp" value="IngresoBaseCotizacionAfp"/>
+						 	<p:inputText id="txtIngresoBaseCotizacionAfp" binding="#{tlp00002View.txtIngresoBaseCotizacionAfp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgIngresoBaseCotizacionCaja" value="IngresoBaseCotizacionCaja"/>
+						 	<p:inputText id="txtIngresoBaseCotizacionCaja" binding="#{tlp00002View.txtIngresoBaseCotizacionCaja}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgIngresoBaseCotizacionSenaIcbf" value="IngresoBaseCotizacionSenaIcbf"/>
+						 	<p:inputText id="txtIngresoBaseCotizacionSenaIcbf" binding="#{tlp00002View.txtIngresoBaseCotizacionSenaIcbf}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCotizaciónObligatoria" value="CotizaciónObligatoria"/>
+						 	<p:inputText id="txtCotizaciónObligatoria" binding="#{tlp00002View.txtCotizaciónObligatoria}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCotizaciónObligatoriaArp" value="CotizaciónObligatoriaArp"/>
+						 	<p:inputText id="txtCotizaciónObligatoriaArp" binding="#{tlp00002View.txtCotizaciónObligatoriaArp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCodigoCentroTrabajo" value="CodigoCentroTrabajo"/>
+						 	<p:inputText id="txtCodigoCentroTrabajo" binding="#{tlp00002View.txtCodigoCentroTrabajo}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCotizaciónObligatoriaAfp" value="CotizaciónObligatoriaAfp"/>
+						 	<p:inputText id="txtCotizaciónObligatoriaAfp" binding="#{tlp00002View.txtCotizaciónObligatoriaAfp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgValorFpsolidaridad" value="ValorFpsolidaridad"/>
+						 	<p:inputText id="txtValorFpsolidaridad" binding="#{tlp00002View.txtValorFpsolidaridad}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgValorFpsubsistencia" value="ValorFpsubsistencia"/>
+						 	<p:inputText id="txtValorFpsubsistencia" binding="#{tlp00002View.txtValorFpsubsistencia}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgRiesgos" value="Riesgos"/>
+						 	<p:inputText id="txtRiesgos" binding="#{tlp00002View.txtRiesgos}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgPorcEps" value="PorcEps"/>
+						 	<p:inputText id="txtPorcEps" binding="#{tlp00002View.txtPorcEps}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgPorcRiesgo" value="PorcRiesgo"/>
+						 	<p:inputText id="txtPorcRiesgo" binding="#{tlp00002View.txtPorcRiesgo}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgPorcAfp" value="PorcAfp"/>
+						 	<p:inputText id="txtPorcAfp" binding="#{tlp00002View.txtPorcAfp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgPorcCaja" value="PorcCaja"/>
+						 	<p:inputText id="txtPorcCaja" binding="#{tlp00002View.txtPorcCaja}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCotizaciónObligatoriaCaja" value="CotizaciónObligatoriaCaja"/>
+						 	<p:inputText id="txtCotizaciónObligatoriaCaja" binding="#{tlp00002View.txtCotizaciónObligatoriaCaja}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgPorcSena" value="PorcSena"/>
+						 	<p:inputText id="txtPorcSena" binding="#{tlp00002View.txtPorcSena}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCotizaciónObligatoriaSena" value="CotizaciónObligatoriaSena"/>
+						 	<p:inputText id="txtCotizaciónObligatoriaSena" binding="#{tlp00002View.txtCotizaciónObligatoriaSena}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgPorcIcbf" value="PorcIcbf"/>
+						 	<p:inputText id="txtPorcIcbf" binding="#{tlp00002View.txtPorcIcbf}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCotizaciónObligatoriaIcbf" value="CotizaciónObligatoriaIcbf"/>
+						 	<p:inputText id="txtCotizaciónObligatoriaIcbf" binding="#{tlp00002View.txtCotizaciónObligatoriaIcbf}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgDetaPlanPrimeraEps" value="DetaPlanPrimeraEps"/>
+						 	<p:inputText id="txtDetaPlanPrimeraEps" binding="#{tlp00002View.txtDetaPlanPrimeraEps}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgDetaPlanPrimeraArp" value="DetaPlanPrimeraArp"/>
+						 	<p:inputText id="txtDetaPlanPrimeraArp" binding="#{tlp00002View.txtDetaPlanPrimeraArp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgDetaPlanPrimeraAfp" value="DetaPlanPrimeraAfp"/>
+						 	<p:inputText id="txtDetaPlanPrimeraAfp" binding="#{tlp00002View.txtDetaPlanPrimeraAfp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgDetaPlanPrimeraCaja" value="DetaPlanPrimeraCaja"/>
+						 	<p:inputText id="txtDetaPlanPrimeraCaja" binding="#{tlp00002View.txtDetaPlanPrimeraCaja}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgIng" value="Ing"/>
+						 	<p:inputText id="txtIng" binding="#{tlp00002View.txtIng}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgRet" value="Ret"/>
+						 	<p:inputText id="txtRet" binding="#{tlp00002View.txtRet}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgTde" value="Tde"/>
+						 	<p:inputText id="txtTde" binding="#{tlp00002View.txtTde}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgTae" value="Tae"/>
+						 	<p:inputText id="txtTae" binding="#{tlp00002View.txtTae}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCodiEpsTraslado" value="CodiEpsTraslado"/>
+						 	<p:inputText id="txtCodiEpsTraslado" binding="#{tlp00002View.txtCodiEpsTraslado}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgTdp" value="Tdp"/>
+						 	<p:inputText id="txtTdp" binding="#{tlp00002View.txtTdp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgTap" value="Tap"/>
+						 	<p:inputText id="txtTap" binding="#{tlp00002View.txtTap}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCodiAfpTraslado" value="CodiAfpTraslado"/>
+						 	<p:inputText id="txtCodiAfpTraslado" binding="#{tlp00002View.txtCodiAfpTraslado}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgTda" value="Tda"/>
+						 	<p:inputText id="txtTda" binding="#{tlp00002View.txtTda}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgTaa" value="Taa"/>
+						 	<p:inputText id="txtTaa" binding="#{tlp00002View.txtTaa}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgVsp" value="Vsp"/>
+						 	<p:inputText id="txtVsp" binding="#{tlp00002View.txtVsp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgVte" value="Vte"/>
+						 	<p:inputText id="txtVte" binding="#{tlp00002View.txtVte}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgVst" value="Vst"/>
+						 	<p:inputText id="txtVst" binding="#{tlp00002View.txtVst}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgSln" value="Sln"/>
+						 	<p:inputText id="txtSln" binding="#{tlp00002View.txtSln}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgIge" value="Ige"/>
+						 	<p:inputText id="txtIge" binding="#{tlp00002View.txtIge}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgLma" value="Lma"/>
+						 	<p:inputText id="txtLma" binding="#{tlp00002View.txtLma}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgVac" value="Vac"/>
+						 	<p:inputText id="txtVac" binding="#{tlp00002View.txtVac}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgAvp" value="Avp"/>
+						 	<p:inputText id="txtAvp" binding="#{tlp00002View.txtAvp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgVct" value="Vct"/>
+						 	<p:inputText id="txtVct" binding="#{tlp00002View.txtVct}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgIrp" value="Irp"/>
+						 	<p:inputText id="txtIrp" binding="#{tlp00002View.txtIrp}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCodUsuario" value="CodUsuario"/>
+						 	<p:inputText id="txtCodUsuario" binding="#{tlp00002View.txtCodUsuario}">
+						 		<p:ajax update="panelTlp00002,msg,panelBotones" listener="#{tlp00002View.listener_txtId}"/>
+						 	</p:inputText>	
+																		
+													<h:outputText id="msgCodEps_Tp000003" value=" CodEps_Tp000003"/>
+							<p:inputText id="txtCodEps_Tp000003" disabled="true" binding="#{tlp00002View.txtCodEps_Tp000003}"/>
+												
+										   </h:panelGrid>
+				</p:panel>
+	   			<p:panel id="panelBotones">
+					<div align="center">					
+						<p:commandButton id="btnSave" binding="#{tlp00002View.btnSave}" disabled="true" value="Save" action="#{tlp00002View.action_save()}" update="panelTlp00002,msg,panelBotones" />
+						<p:commandButton id="btnDelete" binding="#{tlp00002View.btnDelete}" disabled="true" value="Delete" action="#{tlp00002View.action_delete_master()}" onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}" update="panelTlp00002,msg,panelBotones" />
+						<p:commandButton id="btnClear" value="Clear" action="#{tlp00002View.action_clear()}" update="panelTlp00002,msg,panelBotones" />
+					</div>
+				</p:panel>			
+			</h:form>
+  </ui:define>
+</ui:composition>

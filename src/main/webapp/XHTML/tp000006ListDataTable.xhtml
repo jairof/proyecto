@@ -1,0 +1,206 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">		
+
+		  			<h:form id="frm">								  		
+						
+						<p:panel id="panelDataTableTp000006" header="Tp000006Data">
+							<p:growl id="men"/>				
+							<p:dataTable value="#{tp000006View.data}" var="tp000006"
+								paginator="true" rows="5">
+																										<p:column filterBy="#{tp000006.codCaja}" sortBy="#{tp000006.codCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="codCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.codCaja}"/>
+										 </p:column>
+			                    																									
+										<p:column filterBy="#{tp000006.cajaPrincipal}" sortBy="#{tp000006.cajaPrincipal}" >
+										 <f:facet name="header">
+										<h:outputText value="CajaPrincipal"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.cajaPrincipal}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000006.codDepto}" sortBy="#{tp000006.codDepto}" >
+										 <f:facet name="header">
+										<h:outputText value="CodDepto"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.codDepto}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000006.codEmpresa}" sortBy="#{tp000006.codEmpresa}" >
+										 <f:facet name="header">
+										<h:outputText value="CodEmpresa"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.codEmpresa}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000006.codigoCaja}" sortBy="#{tp000006.codigoCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="CodigoCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.codigoCaja}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000006.direccionCaja}" sortBy="#{tp000006.direccionCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="DireccionCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.direccionCaja}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000006.dvcaja}" sortBy="#{tp000006.dvcaja}" >
+										 <f:facet name="header">
+										<h:outputText value="Dvcaja"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.dvcaja}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000006.emailCaja}" sortBy="#{tp000006.emailCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="EmailCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.emailCaja}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000006.faxCaja}" sortBy="#{tp000006.faxCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="FaxCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.faxCaja}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000006.nitCaja}" sortBy="#{tp000006.nitCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="NitCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.nitCaja}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000006.noPagoCaja}" sortBy="#{tp000006.noPagoCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="NoPagoCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.noPagoCaja}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000006.nomContactoCaja}" sortBy="#{tp000006.nomContactoCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="NomContactoCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.nomContactoCaja}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000006.nombreCaja}" sortBy="#{tp000006.nombreCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="NombreCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.nombreCaja}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000006.numPerPlaniCaja}" sortBy="#{tp000006.numPerPlaniCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="NumPerPlaniCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.numPerPlaniCaja}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000006.telefonoCaja}" sortBy="#{tp000006.telefonoCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="TelefonoCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.telefonoCaja}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000006.tipoDocumentoCaja}" sortBy="#{tp000006.tipoDocumentoCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="TipoDocumentoCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tp000006.tipoDocumentoCaja}"/>
+										</p:column>   
+			                    			                    
+								<p:column headerText="Options">
+									<p:commandButton id="btnEdit" icon="ui-icon-pencil"
+										update=":dialogTp000006"
+										actionListener="#{tp000006View.action_edit}">
+										<f:attribute name="selectedTp000006" value="#{tp000006}" />
+									</p:commandButton>
+									<p:commandButton id="btnDelete"									
+										title="Delete" actionListener="#{tp000006View.action_delete_datatable}"
+										onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}"
+										icon="ui-icon-trash" update="@form">
+										<f:attribute name="selectedTp000006" value="#{tp000006}" />
+									</p:commandButton>
+								</p:column>									                    
+							</p:dataTable>	
+						</p:panel>
+						<p:panel id="panelBoton">
+							<div align="center">
+								<p:commandButton id="btnNew" value="New"
+									action="#{tp000006View.action_new()}" update=":dialogTp000006" />
+							</div>
+						</p:panel>						
+		   			</h:form>
+					<p:dialog id="dialogTp000006" appendTo="@(body)" draggable="true"
+						closable="false" visible="#{tp000006View.showDialog}" resizable="false"
+						modal="true" width="500">
+						<h:form id="formDialog">
+							<p:messages id="msg" />
+							<p:panel id="panelTp000006" header="Tp000006">							
+							    <h:panelGrid columns="2" id="panelGrid" >
+																		 <h:outputText id="msgCodCaja" value="CodCaja"/>
+									 <p:inputText id="txtCodCaja" binding="#{tp000006View.txtCodCaja}">
+									 <p:ajax update=":dialogTp000006" listener="#{tp000006View.listener_txtId}"/>
+									 </p:inputText>	
+																											
+																		<h:outputText id="msgCajaPrincipal" value=" CajaPrincipal"/>
+									<p:inputText id="txtCajaPrincipal" disabled="true" binding="#{tp000006View.txtCajaPrincipal}"/>
+																		<h:outputText id="msgCodDepto" value=" CodDepto"/>
+									<p:inputText id="txtCodDepto" disabled="true" binding="#{tp000006View.txtCodDepto}"/>
+																		<h:outputText id="msgCodEmpresa" value=" CodEmpresa"/>
+									<p:inputText id="txtCodEmpresa" disabled="true" binding="#{tp000006View.txtCodEmpresa}"/>
+																		<h:outputText id="msgCodigoCaja" value=" CodigoCaja"/>
+									<p:inputText id="txtCodigoCaja" disabled="true" binding="#{tp000006View.txtCodigoCaja}"/>
+																		<h:outputText id="msgDireccionCaja" value=" DireccionCaja"/>
+									<p:inputText id="txtDireccionCaja" disabled="true" binding="#{tp000006View.txtDireccionCaja}"/>
+																		<h:outputText id="msgDvcaja" value=" Dvcaja"/>
+									<p:inputText id="txtDvcaja" disabled="true" binding="#{tp000006View.txtDvcaja}"/>
+																		<h:outputText id="msgEmailCaja" value=" EmailCaja"/>
+									<p:inputText id="txtEmailCaja" disabled="true" binding="#{tp000006View.txtEmailCaja}"/>
+																		<h:outputText id="msgFaxCaja" value=" FaxCaja"/>
+									<p:inputText id="txtFaxCaja" disabled="true" binding="#{tp000006View.txtFaxCaja}"/>
+																		<h:outputText id="msgNitCaja" value=" NitCaja"/>
+									<p:inputText id="txtNitCaja" disabled="true" binding="#{tp000006View.txtNitCaja}"/>
+																		<h:outputText id="msgNoPagoCaja" value=" NoPagoCaja"/>
+									<p:inputText id="txtNoPagoCaja" disabled="true" binding="#{tp000006View.txtNoPagoCaja}"/>
+																		<h:outputText id="msgNomContactoCaja" value=" NomContactoCaja"/>
+									<p:inputText id="txtNomContactoCaja" disabled="true" binding="#{tp000006View.txtNomContactoCaja}"/>
+																		<h:outputText id="msgNombreCaja" value=" NombreCaja"/>
+									<p:inputText id="txtNombreCaja" disabled="true" binding="#{tp000006View.txtNombreCaja}"/>
+																		<h:outputText id="msgNumPerPlaniCaja" value=" NumPerPlaniCaja"/>
+									<p:inputText id="txtNumPerPlaniCaja" disabled="true" binding="#{tp000006View.txtNumPerPlaniCaja}"/>
+																		<h:outputText id="msgTelefonoCaja" value=" TelefonoCaja"/>
+									<p:inputText id="txtTelefonoCaja" disabled="true" binding="#{tp000006View.txtTelefonoCaja}"/>
+																		<h:outputText id="msgTipoDocumentoCaja" value=" TipoDocumentoCaja"/>
+									<p:inputText id="txtTipoDocumentoCaja" disabled="true" binding="#{tp000006View.txtTipoDocumentoCaja}"/>
+																		
+																    </h:panelGrid>
+							</p:panel>						   
+							<p:panel id="panelBotones">
+								<div align="center">					
+									<p:commandButton id="btnSave" binding="#{tp000006View.btnSave}" value="Save" action="#{tp000006View.action_save()}" update=":dialogTp000006 :frm:panelDataTableTp000006" />
+									<p:commandButton id="btnClear" value="Clear" action="#{tp000006View.action_clear()}" update=":dialogTp000006" />
+									<p:commandButton id="btnExit" value="Exit" action="#{tp000006View.action_closeDialog()}" update=":dialogTp000006" />
+								</div>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+	</ui:define>
+</ui:composition>
+

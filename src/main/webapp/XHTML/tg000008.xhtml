@@ -1,0 +1,53 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">	
+			<h:form id="formDialog">
+				<p:messages id="msg" />
+				<p:growl id="men"/>
+					<p:panel id="panelTg000008" header="Tg000008">							
+						<h:panelGrid columns="2" id="panelGrid" >
+												 	<h:outputText id="msgCodCuenta" value="CodCuenta"/>
+						 	<p:inputText id="txtCodCuenta" binding="#{tg000008View.txtCodCuenta}">
+						 		<p:ajax update="panelTg000008,msg,panelBotones" listener="#{tg000008View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCodEmpresa" value="CodEmpresa"/>
+						 	<p:inputText id="txtCodEmpresa" binding="#{tg000008View.txtCodEmpresa}">
+						 		<p:ajax update="panelTg000008,msg,panelBotones" listener="#{tg000008View.listener_txtId}"/>
+						 	</p:inputText>	
+																		
+													<h:outputText id="msgChequeActivo" value=" ChequeActivo"/>
+							<p:inputText id="txtChequeActivo" disabled="true" binding="#{tg000008View.txtChequeActivo}"/>
+													<h:outputText id="msgChequeUltimo" value=" ChequeUltimo"/>
+							<p:inputText id="txtChequeUltimo" disabled="true" binding="#{tg000008View.txtChequeUltimo}"/>
+													<h:outputText id="msgChequeprimer" value=" Chequeprimer"/>
+							<p:inputText id="txtChequeprimer" disabled="true" binding="#{tg000008View.txtChequeprimer}"/>
+													<h:outputText id="msgConsignacionClientes" value=" ConsignacionClientes"/>
+							<p:inputText id="txtConsignacionClientes" disabled="true" binding="#{tg000008View.txtConsignacionClientes}"/>
+													<h:outputText id="msgNcheques" value=" Ncheques"/>
+							<p:inputText id="txtNcheques" disabled="true" binding="#{tg000008View.txtNcheques}"/>
+													<h:outputText id="msgNumcuenta" value=" Numcuenta"/>
+							<p:inputText id="txtNumcuenta" disabled="true" binding="#{tg000008View.txtNumcuenta}"/>
+													<h:outputText id="msgTipoCuenta" value=" TipoCuenta"/>
+							<p:inputText id="txtTipoCuenta" disabled="true" binding="#{tg000008View.txtTipoCuenta}"/>
+													<h:outputText id="msgCodBanco_Tg000001" value=" CodBanco_Tg000001"/>
+							<p:inputText id="txtCodBanco_Tg000001" disabled="true" binding="#{tg000008View.txtCodBanco_Tg000001}"/>
+													<h:outputText id="msgCodEmpresa_Tg000003" value=" CodEmpresa_Tg000003"/>
+							<p:inputText id="txtCodEmpresa_Tg000003" disabled="true" binding="#{tg000008View.txtCodEmpresa_Tg000003}"/>
+												
+										   </h:panelGrid>
+				</p:panel>
+	   			<p:panel id="panelBotones">
+					<div align="center">					
+						<p:commandButton id="btnSave" binding="#{tg000008View.btnSave}" disabled="true" value="Save" action="#{tg000008View.action_save()}" update="panelTg000008,msg,panelBotones" />
+						<p:commandButton id="btnDelete" binding="#{tg000008View.btnDelete}" disabled="true" value="Delete" action="#{tg000008View.action_delete_master()}" onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}" update="panelTg000008,msg,panelBotones" />
+						<p:commandButton id="btnClear" value="Clear" action="#{tg000008View.action_clear()}" update="panelTg000008,msg,panelBotones" />
+					</div>
+				</p:panel>			
+			</h:form>
+  </ui:define>
+</ui:composition>

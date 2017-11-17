@@ -1,0 +1,162 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">		
+
+		  			<h:form id="frm">								  		
+						
+						<p:panel id="panelDataTableTg000008" header="Tg000008Data">
+							<p:growl id="men"/>				
+							<p:dataTable value="#{tg000008View.data}" var="tg000008"
+								paginator="true" rows="5">
+																										<p:column filterBy="#{tg000008.codCuenta}" sortBy="#{tg000008.codCuenta}" >
+										 <f:facet name="header">
+										<h:outputText value="codCuenta"/>
+										</f:facet>
+										 <h:outputText value="#{tg000008.codCuenta}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tg000008.codEmpresa}" sortBy="#{tg000008.codEmpresa}" >
+										 <f:facet name="header">
+										<h:outputText value="codEmpresa"/>
+										</f:facet>
+										 <h:outputText value="#{tg000008.codEmpresa}"/>
+										 </p:column>
+			                    																									
+										<p:column filterBy="#{tg000008.chequeActivo}" sortBy="#{tg000008.chequeActivo}" >
+										 <f:facet name="header">
+										<h:outputText value="ChequeActivo"/>
+										</f:facet>
+										 <h:outputText value="#{tg000008.chequeActivo}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000008.chequeUltimo}" sortBy="#{tg000008.chequeUltimo}" >
+										 <f:facet name="header">
+										<h:outputText value="ChequeUltimo"/>
+										</f:facet>
+										 <h:outputText value="#{tg000008.chequeUltimo}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000008.chequeprimer}" sortBy="#{tg000008.chequeprimer}" >
+										 <f:facet name="header">
+										<h:outputText value="Chequeprimer"/>
+										</f:facet>
+										 <h:outputText value="#{tg000008.chequeprimer}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000008.consignacionClientes}" sortBy="#{tg000008.consignacionClientes}" >
+										 <f:facet name="header">
+										<h:outputText value="ConsignacionClientes"/>
+										</f:facet>
+										 <h:outputText value="#{tg000008.consignacionClientes}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000008.ncheques}" sortBy="#{tg000008.ncheques}" >
+										 <f:facet name="header">
+										<h:outputText value="Ncheques"/>
+										</f:facet>
+										 <h:outputText value="#{tg000008.ncheques}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000008.numcuenta}" sortBy="#{tg000008.numcuenta}" >
+										 <f:facet name="header">
+										<h:outputText value="Numcuenta"/>
+										</f:facet>
+										 <h:outputText value="#{tg000008.numcuenta}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000008.tipoCuenta}" sortBy="#{tg000008.tipoCuenta}" >
+										 <f:facet name="header">
+										<h:outputText value="TipoCuenta"/>
+										</f:facet>
+										 <h:outputText value="#{tg000008.tipoCuenta}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000008.codBanco_Tg000001}" sortBy="#{tg000008.codBanco_Tg000001}" >
+										 <f:facet name="header">
+										<h:outputText value="CodBanco_Tg000001"/>
+										</f:facet>
+										 <h:outputText value="#{tg000008.codBanco_Tg000001}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000008.codEmpresa_Tg000003}" sortBy="#{tg000008.codEmpresa_Tg000003}" >
+										 <f:facet name="header">
+										<h:outputText value="CodEmpresa_Tg000003"/>
+										</f:facet>
+										 <h:outputText value="#{tg000008.codEmpresa_Tg000003}"/>
+										</p:column>   
+			                    			                    
+								<p:column headerText="Options">
+									<p:commandButton id="btnEdit" icon="ui-icon-pencil"
+										update=":dialogTg000008"
+										actionListener="#{tg000008View.action_edit}">
+										<f:attribute name="selectedTg000008" value="#{tg000008}" />
+									</p:commandButton>
+									<p:commandButton id="btnDelete"									
+										title="Delete" actionListener="#{tg000008View.action_delete_datatable}"
+										onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}"
+										icon="ui-icon-trash" update="@form">
+										<f:attribute name="selectedTg000008" value="#{tg000008}" />
+									</p:commandButton>
+								</p:column>									                    
+							</p:dataTable>	
+						</p:panel>
+						<p:panel id="panelBoton">
+							<div align="center">
+								<p:commandButton id="btnNew" value="New"
+									action="#{tg000008View.action_new()}" update=":dialogTg000008" />
+							</div>
+						</p:panel>						
+		   			</h:form>
+					<p:dialog id="dialogTg000008" appendTo="@(body)" draggable="true"
+						closable="false" visible="#{tg000008View.showDialog}" resizable="false"
+						modal="true" width="500">
+						<h:form id="formDialog">
+							<p:messages id="msg" />
+							<p:panel id="panelTg000008" header="Tg000008">							
+							    <h:panelGrid columns="2" id="panelGrid" >
+																		 <h:outputText id="msgCodCuenta" value="CodCuenta"/>
+									 <p:inputText id="txtCodCuenta" binding="#{tg000008View.txtCodCuenta}">
+									 <p:ajax update=":dialogTg000008" listener="#{tg000008View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCodEmpresa" value="CodEmpresa"/>
+									 <p:inputText id="txtCodEmpresa" binding="#{tg000008View.txtCodEmpresa}">
+									 <p:ajax update=":dialogTg000008" listener="#{tg000008View.listener_txtId}"/>
+									 </p:inputText>	
+																											
+																		<h:outputText id="msgChequeActivo" value=" ChequeActivo"/>
+									<p:inputText id="txtChequeActivo" disabled="true" binding="#{tg000008View.txtChequeActivo}"/>
+																		<h:outputText id="msgChequeUltimo" value=" ChequeUltimo"/>
+									<p:inputText id="txtChequeUltimo" disabled="true" binding="#{tg000008View.txtChequeUltimo}"/>
+																		<h:outputText id="msgChequeprimer" value=" Chequeprimer"/>
+									<p:inputText id="txtChequeprimer" disabled="true" binding="#{tg000008View.txtChequeprimer}"/>
+																		<h:outputText id="msgConsignacionClientes" value=" ConsignacionClientes"/>
+									<p:inputText id="txtConsignacionClientes" disabled="true" binding="#{tg000008View.txtConsignacionClientes}"/>
+																		<h:outputText id="msgNcheques" value=" Ncheques"/>
+									<p:inputText id="txtNcheques" disabled="true" binding="#{tg000008View.txtNcheques}"/>
+																		<h:outputText id="msgNumcuenta" value=" Numcuenta"/>
+									<p:inputText id="txtNumcuenta" disabled="true" binding="#{tg000008View.txtNumcuenta}"/>
+																		<h:outputText id="msgTipoCuenta" value=" TipoCuenta"/>
+									<p:inputText id="txtTipoCuenta" disabled="true" binding="#{tg000008View.txtTipoCuenta}"/>
+																		<h:outputText id="msgCodBanco_Tg000001" value=" CodBanco_Tg000001"/>
+									<p:inputText id="txtCodBanco_Tg000001" disabled="true" binding="#{tg000008View.txtCodBanco_Tg000001}"/>
+																		<h:outputText id="msgCodEmpresa_Tg000003" value=" CodEmpresa_Tg000003"/>
+									<p:inputText id="txtCodEmpresa_Tg000003" disabled="true" binding="#{tg000008View.txtCodEmpresa_Tg000003}"/>
+																		
+																    </h:panelGrid>
+							</p:panel>						   
+							<p:panel id="panelBotones">
+								<div align="center">					
+									<p:commandButton id="btnSave" binding="#{tg000008View.btnSave}" value="Save" action="#{tg000008View.action_save()}" update=":dialogTg000008 :frm:panelDataTableTg000008" />
+									<p:commandButton id="btnClear" value="Clear" action="#{tg000008View.action_clear()}" update=":dialogTg000008" />
+									<p:commandButton id="btnExit" value="Exit" action="#{tg000008View.action_closeDialog()}" update=":dialogTg000008" />
+								</div>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+	</ui:define>
+</ui:composition>
+

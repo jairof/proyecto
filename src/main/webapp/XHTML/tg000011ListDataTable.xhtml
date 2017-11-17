@@ -1,0 +1,198 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">		
+
+		  			<h:form id="frm">								  		
+						
+						<p:panel id="panelDataTableTg000011" header="Tg000011Data">
+							<p:growl id="men"/>				
+							<p:dataTable value="#{tg000011View.data}" var="tg000011"
+								paginator="true" rows="5">
+																										<p:column filterBy="#{tg000011.codEmpresaEmp}" sortBy="#{tg000011.codEmpresaEmp}" >
+										 <f:facet name="header">
+										<h:outputText value="codEmpresaEmp"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.codEmpresaEmp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tg000011.codEmpresa}" sortBy="#{tg000011.codEmpresa}" >
+										 <f:facet name="header">
+										<h:outputText value="codEmpresa"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.codEmpresa}"/>
+										 </p:column>
+			                    																									
+										<p:column filterBy="#{tg000011.ativa}" sortBy="#{tg000011.ativa}" >
+										 <f:facet name="header">
+										<h:outputText value="Ativa"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.ativa}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000011.ciudad}" sortBy="#{tg000011.ciudad}" >
+										 <f:facet name="header">
+										<h:outputText value="Ciudad"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.ciudad}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000011.depto}" sortBy="#{tg000011.depto}" >
+										 <f:facet name="header">
+										<h:outputText value="Depto"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.depto}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000011.dirEmpresa}" sortBy="#{tg000011.dirEmpresa}" >
+										 <f:facet name="header">
+										<h:outputText value="DirEmpresa"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.dirEmpresa}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000011.dvempaf}" sortBy="#{tg000011.dvempaf}" >
+										 <f:facet name="header">
+										<h:outputText value="Dvempaf"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.dvempaf}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000011.emailEmpresa}" sortBy="#{tg000011.emailEmpresa}" >
+										 <f:facet name="header">
+										<h:outputText value="EmailEmpresa"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.emailEmpresa}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000011.faxEmpresa}" sortBy="#{tg000011.faxEmpresa}" >
+										 <f:facet name="header">
+										<h:outputText value="FaxEmpresa"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.faxEmpresa}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000011.nitEmpresa}" sortBy="#{tg000011.nitEmpresa}" >
+										 <f:facet name="header">
+										<h:outputText value="NitEmpresa"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.nitEmpresa}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000011.nomContacto}" sortBy="#{tg000011.nomContacto}" >
+										 <f:facet name="header">
+										<h:outputText value="NomContacto"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.nomContacto}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000011.nomEmpresa}" sortBy="#{tg000011.nomEmpresa}" >
+										 <f:facet name="header">
+										<h:outputText value="NomEmpresa"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.nomEmpresa}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000011.telEmpresa}" sortBy="#{tg000011.telEmpresa}" >
+										 <f:facet name="header">
+										<h:outputText value="TelEmpresa"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.telEmpresa}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000011.tipoDocumentoEmpaf}" sortBy="#{tg000011.tipoDocumentoEmpaf}" >
+										 <f:facet name="header">
+										<h:outputText value="TipoDocumentoEmpaf"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.tipoDocumentoEmpaf}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000011.codEmpresa_Tg000003}" sortBy="#{tg000011.codEmpresa_Tg000003}" >
+										 <f:facet name="header">
+										<h:outputText value="CodEmpresa_Tg000003"/>
+										</f:facet>
+										 <h:outputText value="#{tg000011.codEmpresa_Tg000003}"/>
+										</p:column>   
+			                    			                    
+								<p:column headerText="Options">
+									<p:commandButton id="btnEdit" icon="ui-icon-pencil"
+										update=":dialogTg000011"
+										actionListener="#{tg000011View.action_edit}">
+										<f:attribute name="selectedTg000011" value="#{tg000011}" />
+									</p:commandButton>
+									<p:commandButton id="btnDelete"									
+										title="Delete" actionListener="#{tg000011View.action_delete_datatable}"
+										onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}"
+										icon="ui-icon-trash" update="@form">
+										<f:attribute name="selectedTg000011" value="#{tg000011}" />
+									</p:commandButton>
+								</p:column>									                    
+							</p:dataTable>	
+						</p:panel>
+						<p:panel id="panelBoton">
+							<div align="center">
+								<p:commandButton id="btnNew" value="New"
+									action="#{tg000011View.action_new()}" update=":dialogTg000011" />
+							</div>
+						</p:panel>						
+		   			</h:form>
+					<p:dialog id="dialogTg000011" appendTo="@(body)" draggable="true"
+						closable="false" visible="#{tg000011View.showDialog}" resizable="false"
+						modal="true" width="500">
+						<h:form id="formDialog">
+							<p:messages id="msg" />
+							<p:panel id="panelTg000011" header="Tg000011">							
+							    <h:panelGrid columns="2" id="panelGrid" >
+																		 <h:outputText id="msgCodEmpresaEmp" value="CodEmpresaEmp"/>
+									 <p:inputText id="txtCodEmpresaEmp" binding="#{tg000011View.txtCodEmpresaEmp}">
+									 <p:ajax update=":dialogTg000011" listener="#{tg000011View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCodEmpresa" value="CodEmpresa"/>
+									 <p:inputText id="txtCodEmpresa" binding="#{tg000011View.txtCodEmpresa}">
+									 <p:ajax update=":dialogTg000011" listener="#{tg000011View.listener_txtId}"/>
+									 </p:inputText>	
+																											
+																		<h:outputText id="msgAtiva" value=" Ativa"/>
+									<p:inputText id="txtAtiva" disabled="true" binding="#{tg000011View.txtAtiva}"/>
+																		<h:outputText id="msgCiudad" value=" Ciudad"/>
+									<p:inputText id="txtCiudad" disabled="true" binding="#{tg000011View.txtCiudad}"/>
+																		<h:outputText id="msgDepto" value=" Depto"/>
+									<p:inputText id="txtDepto" disabled="true" binding="#{tg000011View.txtDepto}"/>
+																		<h:outputText id="msgDirEmpresa" value=" DirEmpresa"/>
+									<p:inputText id="txtDirEmpresa" disabled="true" binding="#{tg000011View.txtDirEmpresa}"/>
+																		<h:outputText id="msgDvempaf" value=" Dvempaf"/>
+									<p:inputText id="txtDvempaf" disabled="true" binding="#{tg000011View.txtDvempaf}"/>
+																		<h:outputText id="msgEmailEmpresa" value=" EmailEmpresa"/>
+									<p:inputText id="txtEmailEmpresa" disabled="true" binding="#{tg000011View.txtEmailEmpresa}"/>
+																		<h:outputText id="msgFaxEmpresa" value=" FaxEmpresa"/>
+									<p:inputText id="txtFaxEmpresa" disabled="true" binding="#{tg000011View.txtFaxEmpresa}"/>
+																		<h:outputText id="msgNitEmpresa" value=" NitEmpresa"/>
+									<p:inputText id="txtNitEmpresa" disabled="true" binding="#{tg000011View.txtNitEmpresa}"/>
+																		<h:outputText id="msgNomContacto" value=" NomContacto"/>
+									<p:inputText id="txtNomContacto" disabled="true" binding="#{tg000011View.txtNomContacto}"/>
+																		<h:outputText id="msgNomEmpresa" value=" NomEmpresa"/>
+									<p:inputText id="txtNomEmpresa" disabled="true" binding="#{tg000011View.txtNomEmpresa}"/>
+																		<h:outputText id="msgTelEmpresa" value=" TelEmpresa"/>
+									<p:inputText id="txtTelEmpresa" disabled="true" binding="#{tg000011View.txtTelEmpresa}"/>
+																		<h:outputText id="msgTipoDocumentoEmpaf" value=" TipoDocumentoEmpaf"/>
+									<p:inputText id="txtTipoDocumentoEmpaf" disabled="true" binding="#{tg000011View.txtTipoDocumentoEmpaf}"/>
+																		<h:outputText id="msgCodEmpresa_Tg000003" value=" CodEmpresa_Tg000003"/>
+									<p:inputText id="txtCodEmpresa_Tg000003" disabled="true" binding="#{tg000011View.txtCodEmpresa_Tg000003}"/>
+																		
+																    </h:panelGrid>
+							</p:panel>						   
+							<p:panel id="panelBotones">
+								<div align="center">					
+									<p:commandButton id="btnSave" binding="#{tg000011View.btnSave}" value="Save" action="#{tg000011View.action_save()}" update=":dialogTg000011 :frm:panelDataTableTg000011" />
+									<p:commandButton id="btnClear" value="Clear" action="#{tg000011View.action_clear()}" update=":dialogTg000011" />
+									<p:commandButton id="btnExit" value="Exit" action="#{tg000011View.action_closeDialog()}" update=":dialogTg000011" />
+								</div>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+	</ui:define>
+</ui:composition>
+

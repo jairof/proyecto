@@ -1,0 +1,33 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">	
+			<h:form id="formDialog">
+				<p:messages id="msg" />
+				<p:growl id="men"/>
+					<p:panel id="panelTg000028" header="Tg000028">							
+						<h:panelGrid columns="2" id="panelGrid" >
+												 	<h:outputText id="msgCodTipoCotizante" value="CodTipoCotizante"/>
+						 	<p:inputText id="txtCodTipoCotizante" binding="#{tg000028View.txtCodTipoCotizante}">
+						 		<p:ajax update="panelTg000028,msg,panelBotones" listener="#{tg000028View.listener_txtId}"/>
+						 	</p:inputText>	
+																		
+													<h:outputText id="msgNombTipoCotizante" value=" NombTipoCotizante"/>
+							<p:inputText id="txtNombTipoCotizante" disabled="true" binding="#{tg000028View.txtNombTipoCotizante}"/>
+												
+										   </h:panelGrid>
+				</p:panel>
+	   			<p:panel id="panelBotones">
+					<div align="center">					
+						<p:commandButton id="btnSave" binding="#{tg000028View.btnSave}" disabled="true" value="Save" action="#{tg000028View.action_save()}" update="panelTg000028,msg,panelBotones" />
+						<p:commandButton id="btnDelete" binding="#{tg000028View.btnDelete}" disabled="true" value="Delete" action="#{tg000028View.action_delete_master()}" onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}" update="panelTg000028,msg,panelBotones" />
+						<p:commandButton id="btnClear" value="Clear" action="#{tg000028View.action_clear()}" update="panelTg000028,msg,panelBotones" />
+					</div>
+				</p:panel>			
+			</h:form>
+  </ui:define>
+</ui:composition>

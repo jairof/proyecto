@@ -1,0 +1,617 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">		
+
+		  			<h:form id="frm">								  		
+						
+						<p:panel id="panelDataTableTg000003" header="Tg000003Data">
+							<p:growl id="men"/>				
+							<p:dataTable value="#{tg000003View.data}" var="tg000003"
+								paginator="true" rows="5">
+																										<p:column filterBy="#{tg000003.codEmpresa}" sortBy="#{tg000003.codEmpresa}" >
+										 <f:facet name="header">
+										<h:outputText value="codEmpresa"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.codEmpresa}"/>
+										 </p:column>
+			                    																									
+										<p:column filterBy="#{tg000003.apartado}" sortBy="#{tg000003.apartado}" >
+										 <f:facet name="header">
+										<h:outputText value="Apartado"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.apartado}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.apeContacto}" sortBy="#{tg000003.apeContacto}" >
+										 <f:facet name="header">
+										<h:outputText value="ApeContacto"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.apeContacto}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.cotizacionnoCaja}" sortBy="#{tg000003.cotizacionnoCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="CotizacionnoCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.cotizacionnoCaja}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.cotizacionredondeada}" sortBy="#{tg000003.cotizacionredondeada}" >
+										 <f:facet name="header">
+										<h:outputText value="Cotizacionredondeada"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.cotizacionredondeada}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.cotizacionresiduoMayor}" sortBy="#{tg000003.cotizacionresiduoMayor}" >
+										 <f:facet name="header">
+										<h:outputText value="CotizacionresiduoMayor"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.cotizacionresiduoMayor}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.de16hasta17}" sortBy="#{tg000003.de16hasta17}" >
+										 <f:facet name="header">
+										<h:outputText value="De16hasta17"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.de16hasta17}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.de4amenosde16}" sortBy="#{tg000003.de4amenosde16}" >
+										 <f:facet name="header">
+										<h:outputText value="De4amenosde16"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.de4amenosde16}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.departamentoCargo}" sortBy="#{tg000003.departamentoCargo}" >
+										 <f:facet name="header">
+										<h:outputText value="DepartamentoCargo"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.departamentoCargo}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.depto}" sortBy="#{tg000003.depto}" >
+										 <f:facet name="header">
+										<h:outputText value="Depto"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.depto}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.despedida}" sortBy="#{tg000003.despedida}" >
+										 <f:facet name="header">
+										<h:outputText value="Despedida"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.despedida}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.direccion}" sortBy="#{tg000003.direccion}" >
+										 <f:facet name="header">
+										<h:outputText value="Direccion"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.direccion}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.dvemp}" sortBy="#{tg000003.dvemp}" >
+										 <f:facet name="header">
+										<h:outputText value="Dvemp"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.dvemp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.email}" sortBy="#{tg000003.email}" >
+										 <f:facet name="header">
+										<h:outputText value="Email"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.email}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.fax}" sortBy="#{tg000003.fax}" >
+										 <f:facet name="header">
+										<h:outputText value="Fax"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.fax}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.fechaPrimerPago}" sortBy="#{tg000003.fechaPrimerPago}" >
+										 <f:facet name="header">
+										<h:outputText value="FechaPrimerPago"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.fechaPrimerPago}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.fechaSegundoPago}" sortBy="#{tg000003.fechaSegundoPago}" >
+										 <f:facet name="header">
+										<h:outputText value="FechaSegundoPago"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.fechaSegundoPago}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.firmadaPor}" sortBy="#{tg000003.firmadaPor}" >
+										 <f:facet name="header">
+										<h:outputText value="FirmadaPor"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.firmadaPor}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.fondoArp}" sortBy="#{tg000003.fondoArp}" >
+										 <f:facet name="header">
+										<h:outputText value="FondoArp"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.fondoArp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.ibcnoCaja}" sortBy="#{tg000003.ibcnoCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="IbcnoCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.ibcnoCaja}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.ibcredondeado}" sortBy="#{tg000003.ibcredondeado}" >
+										 <f:facet name="header">
+										<h:outputText value="Ibcredondeado"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.ibcredondeado}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.ibcresiduoMayor}" sortBy="#{tg000003.ibcresiduoMayor}" >
+										 <f:facet name="header">
+										<h:outputText value="IbcresiduoMayor"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.ibcresiduoMayor}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.masde17hasta18}" sortBy="#{tg000003.masde17hasta18}" >
+										 <f:facet name="header">
+										<h:outputText value="Masde17hasta18"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.masde17hasta18}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.masde18hasta19}" sortBy="#{tg000003.masde18hasta19}" >
+										 <f:facet name="header">
+										<h:outputText value="Masde18hasta19"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.masde18hasta19}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.masde19hasta20}" sortBy="#{tg000003.masde19hasta20}" >
+										 <f:facet name="header">
+										<h:outputText value="Masde19hasta20"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.masde19hasta20}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.mayora20}" sortBy="#{tg000003.mayora20}" >
+										 <f:facet name="header">
+										<h:outputText value="Mayora20"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.mayora20}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.nit}" sortBy="#{tg000003.nit}" >
+										 <f:facet name="header">
+										<h:outputText value="Nit"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.nit}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.nomContacto}" sortBy="#{tg000003.nomContacto}" >
+										 <f:facet name="header">
+										<h:outputText value="NomContacto"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.nomContacto}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.nomRegistroPila}" sortBy="#{tg000003.nomRegistroPila}" >
+										 <f:facet name="header">
+										<h:outputText value="NomRegistroPila"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.nomRegistroPila}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.notaAlpieRecibo}" sortBy="#{tg000003.notaAlpieRecibo}" >
+										 <f:facet name="header">
+										<h:outputText value="NotaAlpieRecibo"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.notaAlpieRecibo}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.numeroEmpresas}" sortBy="#{tg000003.numeroEmpresas}" >
+										 <f:facet name="header">
+										<h:outputText value="NumeroEmpresas"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.numeroEmpresas}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.observacion}" sortBy="#{tg000003.observacion}" >
+										 <f:facet name="header">
+										<h:outputText value="Observacion"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.observacion}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.pagaMesActual}" sortBy="#{tg000003.pagaMesActual}" >
+										 <f:facet name="header">
+										<h:outputText value="PagaMesActual"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.pagaMesActual}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.porAfp}" sortBy="#{tg000003.porAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="PorAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.porAfp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.porMoraPlanilla}" sortBy="#{tg000003.porMoraPlanilla}" >
+										 <f:facet name="header">
+										<h:outputText value="PorMoraPlanilla"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.porMoraPlanilla}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.porMoraRecibo}" sortBy="#{tg000003.porMoraRecibo}" >
+										 <f:facet name="header">
+										<h:outputText value="PorMoraRecibo"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.porMoraRecibo}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.porcAporteSocial}" sortBy="#{tg000003.porcAporteSocial}" >
+										 <f:facet name="header">
+										<h:outputText value="PorcAporteSocial"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.porcAporteSocial}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.porcCaja}" sortBy="#{tg000003.porcCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="PorcCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.porcCaja}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.porcEps}" sortBy="#{tg000003.porcEps}" >
+										 <f:facet name="header">
+										<h:outputText value="PorcEps"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.porcEps}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.porcIcbf}" sortBy="#{tg000003.porcIcbf}" >
+										 <f:facet name="header">
+										<h:outputText value="PorcIcbf"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.porcIcbf}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.porcIva}" sortBy="#{tg000003.porcIva}" >
+										 <f:facet name="header">
+										<h:outputText value="PorcIva"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.porcIva}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.porcSena}" sortBy="#{tg000003.porcSena}" >
+										 <f:facet name="header">
+										<h:outputText value="PorcSena"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.porcSena}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.profesion}" sortBy="#{tg000003.profesion}" >
+										 <f:facet name="header">
+										<h:outputText value="Profesion"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.profesion}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.razonSocial}" sortBy="#{tg000003.razonSocial}" >
+										 <f:facet name="header">
+										<h:outputText value="RazonSocial"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.razonSocial}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.riesgo1}" sortBy="#{tg000003.riesgo1}" >
+										 <f:facet name="header">
+										<h:outputText value="Riesgo1"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.riesgo1}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.riesgo2}" sortBy="#{tg000003.riesgo2}" >
+										 <f:facet name="header">
+										<h:outputText value="Riesgo2"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.riesgo2}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.riesgo3}" sortBy="#{tg000003.riesgo3}" >
+										 <f:facet name="header">
+										<h:outputText value="Riesgo3"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.riesgo3}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.riesgo4}" sortBy="#{tg000003.riesgo4}" >
+										 <f:facet name="header">
+										<h:outputText value="Riesgo4"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.riesgo4}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.riesgo5}" sortBy="#{tg000003.riesgo5}" >
+										 <f:facet name="header">
+										<h:outputText value="Riesgo5"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.riesgo5}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.salarioBasico}" sortBy="#{tg000003.salarioBasico}" >
+										 <f:facet name="header">
+										<h:outputText value="SalarioBasico"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.salarioBasico}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.sigla}" sortBy="#{tg000003.sigla}" >
+										 <f:facet name="header">
+										<h:outputText value="Sigla"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.sigla}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.telefono}" sortBy="#{tg000003.telefono}" >
+										 <f:facet name="header">
+										<h:outputText value="Telefono"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.telefono}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.tipoAportante}" sortBy="#{tg000003.tipoAportante}" >
+										 <f:facet name="header">
+										<h:outputText value="TipoAportante"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.tipoAportante}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.tipoDocumentoC}" sortBy="#{tg000003.tipoDocumentoC}" >
+										 <f:facet name="header">
+										<h:outputText value="TipoDocumentoC"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.tipoDocumentoC}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.valAdmon}" sortBy="#{tg000003.valAdmon}" >
+										 <f:facet name="header">
+										<h:outputText value="ValAdmon"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.valAdmon}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.valAdmonAfp}" sortBy="#{tg000003.valAdmonAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="ValAdmonAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.valAdmonAfp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.valorMensajeriaRecibo}" sortBy="#{tg000003.valorMensajeriaRecibo}" >
+										 <f:facet name="header">
+										<h:outputText value="ValorMensajeriaRecibo"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.valorMensajeriaRecibo}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.valorReactivacion}" sortBy="#{tg000003.valorReactivacion}" >
+										 <f:facet name="header">
+										<h:outputText value="ValorReactivacion"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.valorReactivacion}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.valorRetiro}" sortBy="#{tg000003.valorRetiro}" >
+										 <f:facet name="header">
+										<h:outputText value="ValorRetiro"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.valorRetiro}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.codCiudad_Tg000002}" sortBy="#{tg000003.codCiudad_Tg000002}" >
+										 <f:facet name="header">
+										<h:outputText value="CodCiudad_Tg000002"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.codCiudad_Tg000002}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000003.codCargo_Tg000006}" sortBy="#{tg000003.codCargo_Tg000006}" >
+										 <f:facet name="header">
+										<h:outputText value="CodCargo_Tg000006"/>
+										</f:facet>
+										 <h:outputText value="#{tg000003.codCargo_Tg000006}"/>
+										</p:column>   
+			                    			                    
+								<p:column headerText="Options">
+									<p:commandButton id="btnEdit" icon="ui-icon-pencil"
+										update=":dialogTg000003"
+										actionListener="#{tg000003View.action_edit}">
+										<f:attribute name="selectedTg000003" value="#{tg000003}" />
+									</p:commandButton>
+									<p:commandButton id="btnDelete"									
+										title="Delete" actionListener="#{tg000003View.action_delete_datatable}"
+										onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}"
+										icon="ui-icon-trash" update="@form">
+										<f:attribute name="selectedTg000003" value="#{tg000003}" />
+									</p:commandButton>
+								</p:column>									                    
+							</p:dataTable>	
+						</p:panel>
+						<p:panel id="panelBoton">
+							<div align="center">
+								<p:commandButton id="btnNew" value="New"
+									action="#{tg000003View.action_new()}" update=":dialogTg000003" />
+							</div>
+						</p:panel>						
+		   			</h:form>
+					<p:dialog id="dialogTg000003" appendTo="@(body)" draggable="true"
+						closable="false" visible="#{tg000003View.showDialog}" resizable="false"
+						modal="true" width="500">
+						<h:form id="formDialog">
+							<p:messages id="msg" />
+							<p:panel id="panelTg000003" header="Tg000003">							
+							    <h:panelGrid columns="2" id="panelGrid" >
+																		 <h:outputText id="msgCodEmpresa" value="CodEmpresa"/>
+									 <p:inputText id="txtCodEmpresa" binding="#{tg000003View.txtCodEmpresa}">
+									 <p:ajax update=":dialogTg000003" listener="#{tg000003View.listener_txtId}"/>
+									 </p:inputText>	
+																											
+																		<h:outputText id="msgApartado" value=" Apartado"/>
+									<p:inputText id="txtApartado" disabled="true" binding="#{tg000003View.txtApartado}"/>
+																		<h:outputText id="msgApeContacto" value=" ApeContacto"/>
+									<p:inputText id="txtApeContacto" disabled="true" binding="#{tg000003View.txtApeContacto}"/>
+																		<h:outputText id="msgCotizacionnoCaja" value=" CotizacionnoCaja"/>
+									<p:inputText id="txtCotizacionnoCaja" disabled="true" binding="#{tg000003View.txtCotizacionnoCaja}"/>
+																		<h:outputText id="msgCotizacionredondeada" value=" Cotizacionredondeada"/>
+									<p:inputText id="txtCotizacionredondeada" disabled="true" binding="#{tg000003View.txtCotizacionredondeada}"/>
+																		<h:outputText id="msgCotizacionresiduoMayor" value=" CotizacionresiduoMayor"/>
+									<p:inputText id="txtCotizacionresiduoMayor" disabled="true" binding="#{tg000003View.txtCotizacionresiduoMayor}"/>
+																		<h:outputText id="msgDe16hasta17" value=" De16hasta17"/>
+									<p:inputText id="txtDe16hasta17" disabled="true" binding="#{tg000003View.txtDe16hasta17}"/>
+																		<h:outputText id="msgDe4amenosde16" value=" De4amenosde16"/>
+									<p:inputText id="txtDe4amenosde16" disabled="true" binding="#{tg000003View.txtDe4amenosde16}"/>
+																		<h:outputText id="msgDepartamentoCargo" value=" DepartamentoCargo"/>
+									<p:inputText id="txtDepartamentoCargo" disabled="true" binding="#{tg000003View.txtDepartamentoCargo}"/>
+																		<h:outputText id="msgDepto" value=" Depto"/>
+									<p:inputText id="txtDepto" disabled="true" binding="#{tg000003View.txtDepto}"/>
+																		<h:outputText id="msgDespedida" value=" Despedida"/>
+									<p:inputText id="txtDespedida" disabled="true" binding="#{tg000003View.txtDespedida}"/>
+																		<h:outputText id="msgDireccion" value=" Direccion"/>
+									<p:inputText id="txtDireccion" disabled="true" binding="#{tg000003View.txtDireccion}"/>
+																		<h:outputText id="msgDvemp" value=" Dvemp"/>
+									<p:inputText id="txtDvemp" disabled="true" binding="#{tg000003View.txtDvemp}"/>
+																		<h:outputText id="msgEmail" value=" Email"/>
+									<p:inputText id="txtEmail" disabled="true" binding="#{tg000003View.txtEmail}"/>
+																		<h:outputText id="msgFax" value=" Fax"/>
+									<p:inputText id="txtFax" disabled="true" binding="#{tg000003View.txtFax}"/>
+																		<h:outputText id="msgFirmadaPor" value=" FirmadaPor"/>
+									<p:inputText id="txtFirmadaPor" disabled="true" binding="#{tg000003View.txtFirmadaPor}"/>
+																		<h:outputText id="msgFondoArp" value=" FondoArp"/>
+									<p:inputText id="txtFondoArp" disabled="true" binding="#{tg000003View.txtFondoArp}"/>
+																		<h:outputText id="msgIbcnoCaja" value=" IbcnoCaja"/>
+									<p:inputText id="txtIbcnoCaja" disabled="true" binding="#{tg000003View.txtIbcnoCaja}"/>
+																		<h:outputText id="msgIbcredondeado" value=" Ibcredondeado"/>
+									<p:inputText id="txtIbcredondeado" disabled="true" binding="#{tg000003View.txtIbcredondeado}"/>
+																		<h:outputText id="msgIbcresiduoMayor" value=" IbcresiduoMayor"/>
+									<p:inputText id="txtIbcresiduoMayor" disabled="true" binding="#{tg000003View.txtIbcresiduoMayor}"/>
+																		<h:outputText id="msgMasde17hasta18" value=" Masde17hasta18"/>
+									<p:inputText id="txtMasde17hasta18" disabled="true" binding="#{tg000003View.txtMasde17hasta18}"/>
+																		<h:outputText id="msgMasde18hasta19" value=" Masde18hasta19"/>
+									<p:inputText id="txtMasde18hasta19" disabled="true" binding="#{tg000003View.txtMasde18hasta19}"/>
+																		<h:outputText id="msgMasde19hasta20" value=" Masde19hasta20"/>
+									<p:inputText id="txtMasde19hasta20" disabled="true" binding="#{tg000003View.txtMasde19hasta20}"/>
+																		<h:outputText id="msgMayora20" value=" Mayora20"/>
+									<p:inputText id="txtMayora20" disabled="true" binding="#{tg000003View.txtMayora20}"/>
+																		<h:outputText id="msgNit" value=" Nit"/>
+									<p:inputText id="txtNit" disabled="true" binding="#{tg000003View.txtNit}"/>
+																		<h:outputText id="msgNomContacto" value=" NomContacto"/>
+									<p:inputText id="txtNomContacto" disabled="true" binding="#{tg000003View.txtNomContacto}"/>
+																		<h:outputText id="msgNomRegistroPila" value=" NomRegistroPila"/>
+									<p:inputText id="txtNomRegistroPila" disabled="true" binding="#{tg000003View.txtNomRegistroPila}"/>
+																		<h:outputText id="msgNotaAlpieRecibo" value=" NotaAlpieRecibo"/>
+									<p:inputText id="txtNotaAlpieRecibo" disabled="true" binding="#{tg000003View.txtNotaAlpieRecibo}"/>
+																		<h:outputText id="msgNumeroEmpresas" value=" NumeroEmpresas"/>
+									<p:inputText id="txtNumeroEmpresas" disabled="true" binding="#{tg000003View.txtNumeroEmpresas}"/>
+																		<h:outputText id="msgObservacion" value=" Observacion"/>
+									<p:inputText id="txtObservacion" disabled="true" binding="#{tg000003View.txtObservacion}"/>
+																		<h:outputText id="msgPagaMesActual" value=" PagaMesActual"/>
+									<p:inputText id="txtPagaMesActual" disabled="true" binding="#{tg000003View.txtPagaMesActual}"/>
+																		<h:outputText id="msgPorAfp" value=" PorAfp"/>
+									<p:inputText id="txtPorAfp" disabled="true" binding="#{tg000003View.txtPorAfp}"/>
+																		<h:outputText id="msgPorMoraPlanilla" value=" PorMoraPlanilla"/>
+									<p:inputText id="txtPorMoraPlanilla" disabled="true" binding="#{tg000003View.txtPorMoraPlanilla}"/>
+																		<h:outputText id="msgPorMoraRecibo" value=" PorMoraRecibo"/>
+									<p:inputText id="txtPorMoraRecibo" disabled="true" binding="#{tg000003View.txtPorMoraRecibo}"/>
+																		<h:outputText id="msgPorcAporteSocial" value=" PorcAporteSocial"/>
+									<p:inputText id="txtPorcAporteSocial" disabled="true" binding="#{tg000003View.txtPorcAporteSocial}"/>
+																		<h:outputText id="msgPorcCaja" value=" PorcCaja"/>
+									<p:inputText id="txtPorcCaja" disabled="true" binding="#{tg000003View.txtPorcCaja}"/>
+																		<h:outputText id="msgPorcEps" value=" PorcEps"/>
+									<p:inputText id="txtPorcEps" disabled="true" binding="#{tg000003View.txtPorcEps}"/>
+																		<h:outputText id="msgPorcIcbf" value=" PorcIcbf"/>
+									<p:inputText id="txtPorcIcbf" disabled="true" binding="#{tg000003View.txtPorcIcbf}"/>
+																		<h:outputText id="msgPorcIva" value=" PorcIva"/>
+									<p:inputText id="txtPorcIva" disabled="true" binding="#{tg000003View.txtPorcIva}"/>
+																		<h:outputText id="msgPorcSena" value=" PorcSena"/>
+									<p:inputText id="txtPorcSena" disabled="true" binding="#{tg000003View.txtPorcSena}"/>
+																		<h:outputText id="msgProfesion" value=" Profesion"/>
+									<p:inputText id="txtProfesion" disabled="true" binding="#{tg000003View.txtProfesion}"/>
+																		<h:outputText id="msgRazonSocial" value=" RazonSocial"/>
+									<p:inputText id="txtRazonSocial" disabled="true" binding="#{tg000003View.txtRazonSocial}"/>
+																		<h:outputText id="msgRiesgo1" value=" Riesgo1"/>
+									<p:inputText id="txtRiesgo1" disabled="true" binding="#{tg000003View.txtRiesgo1}"/>
+																		<h:outputText id="msgRiesgo2" value=" Riesgo2"/>
+									<p:inputText id="txtRiesgo2" disabled="true" binding="#{tg000003View.txtRiesgo2}"/>
+																		<h:outputText id="msgRiesgo3" value=" Riesgo3"/>
+									<p:inputText id="txtRiesgo3" disabled="true" binding="#{tg000003View.txtRiesgo3}"/>
+																		<h:outputText id="msgRiesgo4" value=" Riesgo4"/>
+									<p:inputText id="txtRiesgo4" disabled="true" binding="#{tg000003View.txtRiesgo4}"/>
+																		<h:outputText id="msgRiesgo5" value=" Riesgo5"/>
+									<p:inputText id="txtRiesgo5" disabled="true" binding="#{tg000003View.txtRiesgo5}"/>
+																		<h:outputText id="msgSalarioBasico" value=" SalarioBasico"/>
+									<p:inputText id="txtSalarioBasico" disabled="true" binding="#{tg000003View.txtSalarioBasico}"/>
+																		<h:outputText id="msgSigla" value=" Sigla"/>
+									<p:inputText id="txtSigla" disabled="true" binding="#{tg000003View.txtSigla}"/>
+																		<h:outputText id="msgTelefono" value=" Telefono"/>
+									<p:inputText id="txtTelefono" disabled="true" binding="#{tg000003View.txtTelefono}"/>
+																		<h:outputText id="msgTipoAportante" value=" TipoAportante"/>
+									<p:inputText id="txtTipoAportante" disabled="true" binding="#{tg000003View.txtTipoAportante}"/>
+																		<h:outputText id="msgTipoDocumentoC" value=" TipoDocumentoC"/>
+									<p:inputText id="txtTipoDocumentoC" disabled="true" binding="#{tg000003View.txtTipoDocumentoC}"/>
+																		<h:outputText id="msgValAdmon" value=" ValAdmon"/>
+									<p:inputText id="txtValAdmon" disabled="true" binding="#{tg000003View.txtValAdmon}"/>
+																		<h:outputText id="msgValAdmonAfp" value=" ValAdmonAfp"/>
+									<p:inputText id="txtValAdmonAfp" disabled="true" binding="#{tg000003View.txtValAdmonAfp}"/>
+																		<h:outputText id="msgValorMensajeriaRecibo" value=" ValorMensajeriaRecibo"/>
+									<p:inputText id="txtValorMensajeriaRecibo" disabled="true" binding="#{tg000003View.txtValorMensajeriaRecibo}"/>
+																		<h:outputText id="msgValorReactivacion" value=" ValorReactivacion"/>
+									<p:inputText id="txtValorReactivacion" disabled="true" binding="#{tg000003View.txtValorReactivacion}"/>
+																		<h:outputText id="msgValorRetiro" value=" ValorRetiro"/>
+									<p:inputText id="txtValorRetiro" disabled="true" binding="#{tg000003View.txtValorRetiro}"/>
+																		<h:outputText id="msgCodCiudad_Tg000002" value=" CodCiudad_Tg000002"/>
+									<p:inputText id="txtCodCiudad_Tg000002" disabled="true" binding="#{tg000003View.txtCodCiudad_Tg000002}"/>
+																		<h:outputText id="msgCodCargo_Tg000006" value=" CodCargo_Tg000006"/>
+									<p:inputText id="txtCodCargo_Tg000006" disabled="true" binding="#{tg000003View.txtCodCargo_Tg000006}"/>
+																		
+																													<h:outputText id="msgFechaPrimerPago" value=" FechaPrimerPago"/>
+																				<p:calendar showOn="button" navigator="true" locale="en" 
+										binding="#{tg000003View.txtFechaPrimerPago}" >
+										<p:ajax event="dateSelect" listener="#{tg000003View.listener_txtFechaPrimerPago}"  />
+										</p:calendar>
+																				<h:outputText id="msgFechaSegundoPago" value=" FechaSegundoPago"/>
+																				<p:calendar showOn="button" navigator="true" locale="en" 
+										binding="#{tg000003View.txtFechaSegundoPago}" >
+										<p:ajax event="dateSelect" listener="#{tg000003View.listener_txtFechaSegundoPago}"  />
+										</p:calendar>
+																										    </h:panelGrid>
+							</p:panel>						   
+							<p:panel id="panelBotones">
+								<div align="center">					
+									<p:commandButton id="btnSave" binding="#{tg000003View.btnSave}" value="Save" action="#{tg000003View.action_save()}" update=":dialogTg000003 :frm:panelDataTableTg000003" />
+									<p:commandButton id="btnClear" value="Clear" action="#{tg000003View.action_clear()}" update=":dialogTg000003" />
+									<p:commandButton id="btnExit" value="Exit" action="#{tg000003View.action_closeDialog()}" update=":dialogTg000003" />
+								</div>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+	</ui:define>
+</ui:composition>
+

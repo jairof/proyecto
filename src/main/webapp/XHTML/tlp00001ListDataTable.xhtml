@@ -1,0 +1,408 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">		
+
+		  			<h:form id="frm">								  		
+						
+						<p:panel id="panelDataTableTlp00001" header="Tlp00001Data">
+							<p:growl id="men"/>				
+							<p:dataTable value="#{tlp00001View.data}" var="tlp00001"
+								paginator="true" rows="5">
+																										<p:column filterBy="#{tlp00001.numPlanilla}" sortBy="#{tlp00001.numPlanilla}" >
+										 <f:facet name="header">
+										<h:outputText value="numPlanilla"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.numPlanilla}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00001.codEmpresa}" sortBy="#{tlp00001.codEmpresa}" >
+										 <f:facet name="header">
+										<h:outputText value="codEmpresa"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.codEmpresa}"/>
+										 </p:column>
+			                    																									
+										<p:column filterBy="#{tlp00001.afp}" sortBy="#{tlp00001.afp}" >
+										 <f:facet name="header">
+										<h:outputText value="Afp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.afp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.arp}" sortBy="#{tlp00001.arp}" >
+										 <f:facet name="header">
+										<h:outputText value="Arp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.arp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.codBanco}" sortBy="#{tlp00001.codBanco}" >
+										 <f:facet name="header">
+										<h:outputText value="CodBanco"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.codBanco}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.codPeriodo}" sortBy="#{tlp00001.codPeriodo}" >
+										 <f:facet name="header">
+										<h:outputText value="CodPeriodo"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.codPeriodo}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.codPeriodoPeRiSc}" sortBy="#{tlp00001.codPeriodoPeRiSc}" >
+										 <f:facet name="header">
+										<h:outputText value="CodPeriodoPeRiSc"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.codPeriodoPeRiSc}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.codigoArp}" sortBy="#{tlp00001.codigoArp}" >
+										 <f:facet name="header">
+										<h:outputText value="CodigoArp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.codigoArp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.codigoSucursal}" sortBy="#{tlp00001.codigoSucursal}" >
+										 <f:facet name="header">
+										<h:outputText value="CodigoSucursal"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.codigoSucursal}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.consecutivoPlani}" sortBy="#{tlp00001.consecutivoPlani}" >
+										 <f:facet name="header">
+										<h:outputText value="ConsecutivoPlani"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.consecutivoPlani}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.correccionPlanilla}" sortBy="#{tlp00001.correccionPlanilla}" >
+										 <f:facet name="header">
+										<h:outputText value="CorreccionPlanilla"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.correccionPlanilla}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.eps}" sortBy="#{tlp00001.eps}" >
+										 <f:facet name="header">
+										<h:outputText value="Eps"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.eps}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.fechaCorteRetiro}" sortBy="#{tlp00001.fechaCorteRetiro}" >
+										 <f:facet name="header">
+										<h:outputText value="FechaCorteRetiro"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.fechaCorteRetiro}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.fechaGenera}" sortBy="#{tlp00001.fechaGenera}" >
+										 <f:facet name="header">
+										<h:outputText value="FechaGenera"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.fechaGenera}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.fechaIngPagoSistema}" sortBy="#{tlp00001.fechaIngPagoSistema}" >
+										 <f:facet name="header">
+										<h:outputText value="FechaIngPagoSistema"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.fechaIngPagoSistema}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.fechaPago}" sortBy="#{tlp00001.fechaPago}" >
+										 <f:facet name="header">
+										<h:outputText value="FechaPago"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.fechaPago}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.fechaPagoPlanillaCorrecion}" sortBy="#{tlp00001.fechaPagoPlanillaCorrecion}" >
+										 <f:facet name="header">
+										<h:outputText value="FechaPagoPlanillaCorrecion"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.fechaPagoPlanillaCorrecion}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.formaPresentacion}" sortBy="#{tlp00001.formaPresentacion}" >
+										 <f:facet name="header">
+										<h:outputText value="FormaPresentacion"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.formaPresentacion}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.horaGenera}" sortBy="#{tlp00001.horaGenera}" >
+										 <f:facet name="header">
+										<h:outputText value="HoraGenera"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.horaGenera}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.horaIngPagoSistema}" sortBy="#{tlp00001.horaIngPagoSistema}" >
+										 <f:facet name="header">
+										<h:outputText value="HoraIngPagoSistema"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.horaIngPagoSistema}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.ingUsuariosPagos}" sortBy="#{tlp00001.ingUsuariosPagos}" >
+										 <f:facet name="header">
+										<h:outputText value="IngUsuariosPagos"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.ingUsuariosPagos}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.masIntdemora}" sortBy="#{tlp00001.masIntdemora}" >
+										 <f:facet name="header">
+										<h:outputText value="MasIntdemora"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.masIntdemora}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.numCheque}" sortBy="#{tlp00001.numCheque}" >
+										 <f:facet name="header">
+										<h:outputText value="NumCheque"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.numCheque}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.numCuentadelCheque}" sortBy="#{tlp00001.numCuentadelCheque}" >
+										 <f:facet name="header">
+										<h:outputText value="NumCuentadelCheque"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.numCuentadelCheque}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.numPlanillaCorrecion}" sortBy="#{tlp00001.numPlanillaCorrecion}" >
+										 <f:facet name="header">
+										<h:outputText value="NumPlanillaCorrecion"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.numPlanillaCorrecion}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.numeroMeses}" sortBy="#{tlp00001.numeroMeses}" >
+										 <f:facet name="header">
+										<h:outputText value="NumeroMeses"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.numeroMeses}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.numerodeCotizantes}" sortBy="#{tlp00001.numerodeCotizantes}" >
+										 <f:facet name="header">
+										<h:outputText value="NumerodeCotizantes"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.numerodeCotizantes}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.parafiscales}" sortBy="#{tlp00001.parafiscales}" >
+										 <f:facet name="header">
+										<h:outputText value="Parafiscales"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.parafiscales}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.retUsuariosNoPagos}" sortBy="#{tlp00001.retUsuariosNoPagos}" >
+										 <f:facet name="header">
+										<h:outputText value="RetUsuariosNoPagos"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.retUsuariosNoPagos}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.tipoAportante}" sortBy="#{tlp00001.tipoAportante}" >
+										 <f:facet name="header">
+										<h:outputText value="TipoAportante"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.tipoAportante}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.valorCheque}" sortBy="#{tlp00001.valorCheque}" >
+										 <f:facet name="header">
+										<h:outputText value="ValorCheque"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.valorCheque}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.valorEfectivo}" sortBy="#{tlp00001.valorEfectivo}" >
+										 <f:facet name="header">
+										<h:outputText value="ValorEfectivo"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.valorEfectivo}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.valorNomina}" sortBy="#{tlp00001.valorNomina}" >
+										 <f:facet name="header">
+										<h:outputText value="ValorNomina"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.valorNomina}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.codBanco_Tg000001}" sortBy="#{tlp00001.codBanco_Tg000001}" >
+										 <f:facet name="header">
+										<h:outputText value="CodBanco_Tg000001"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.codBanco_Tg000001}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.codEmpresa_Tg000003}" sortBy="#{tlp00001.codEmpresa_Tg000003}" >
+										 <f:facet name="header">
+										<h:outputText value="CodEmpresa_Tg000003"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.codEmpresa_Tg000003}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00001.codTipodePlanillas_Tg000026}" sortBy="#{tlp00001.codTipodePlanillas_Tg000026}" >
+										 <f:facet name="header">
+										<h:outputText value="CodTipodePlanillas_Tg000026"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00001.codTipodePlanillas_Tg000026}"/>
+										</p:column>   
+			                    			                    
+								<p:column headerText="Options">
+									<p:commandButton id="btnEdit" icon="ui-icon-pencil"
+										update=":dialogTlp00001"
+										actionListener="#{tlp00001View.action_edit}">
+										<f:attribute name="selectedTlp00001" value="#{tlp00001}" />
+									</p:commandButton>
+									<p:commandButton id="btnDelete"									
+										title="Delete" actionListener="#{tlp00001View.action_delete_datatable}"
+										onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}"
+										icon="ui-icon-trash" update="@form">
+										<f:attribute name="selectedTlp00001" value="#{tlp00001}" />
+									</p:commandButton>
+								</p:column>									                    
+							</p:dataTable>	
+						</p:panel>
+						<p:panel id="panelBoton">
+							<div align="center">
+								<p:commandButton id="btnNew" value="New"
+									action="#{tlp00001View.action_new()}" update=":dialogTlp00001" />
+							</div>
+						</p:panel>						
+		   			</h:form>
+					<p:dialog id="dialogTlp00001" appendTo="@(body)" draggable="true"
+						closable="false" visible="#{tlp00001View.showDialog}" resizable="false"
+						modal="true" width="500">
+						<h:form id="formDialog">
+							<p:messages id="msg" />
+							<p:panel id="panelTlp00001" header="Tlp00001">							
+							    <h:panelGrid columns="2" id="panelGrid" >
+																		 <h:outputText id="msgNumPlanilla" value="NumPlanilla"/>
+									 <p:inputText id="txtNumPlanilla" binding="#{tlp00001View.txtNumPlanilla}">
+									 <p:ajax update=":dialogTlp00001" listener="#{tlp00001View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCodEmpresa" value="CodEmpresa"/>
+									 <p:inputText id="txtCodEmpresa" binding="#{tlp00001View.txtCodEmpresa}">
+									 <p:ajax update=":dialogTlp00001" listener="#{tlp00001View.listener_txtId}"/>
+									 </p:inputText>	
+																											
+																		<h:outputText id="msgAfp" value=" Afp"/>
+									<p:inputText id="txtAfp" disabled="true" binding="#{tlp00001View.txtAfp}"/>
+																		<h:outputText id="msgArp" value=" Arp"/>
+									<p:inputText id="txtArp" disabled="true" binding="#{tlp00001View.txtArp}"/>
+																		<h:outputText id="msgCodBanco" value=" CodBanco"/>
+									<p:inputText id="txtCodBanco" disabled="true" binding="#{tlp00001View.txtCodBanco}"/>
+																		<h:outputText id="msgCodPeriodo" value=" CodPeriodo"/>
+									<p:inputText id="txtCodPeriodo" disabled="true" binding="#{tlp00001View.txtCodPeriodo}"/>
+																		<h:outputText id="msgCodPeriodoPeRiSc" value=" CodPeriodoPeRiSc"/>
+									<p:inputText id="txtCodPeriodoPeRiSc" disabled="true" binding="#{tlp00001View.txtCodPeriodoPeRiSc}"/>
+																		<h:outputText id="msgCodigoArp" value=" CodigoArp"/>
+									<p:inputText id="txtCodigoArp" disabled="true" binding="#{tlp00001View.txtCodigoArp}"/>
+																		<h:outputText id="msgCodigoSucursal" value=" CodigoSucursal"/>
+									<p:inputText id="txtCodigoSucursal" disabled="true" binding="#{tlp00001View.txtCodigoSucursal}"/>
+																		<h:outputText id="msgConsecutivoPlani" value=" ConsecutivoPlani"/>
+									<p:inputText id="txtConsecutivoPlani" disabled="true" binding="#{tlp00001View.txtConsecutivoPlani}"/>
+																		<h:outputText id="msgCorreccionPlanilla" value=" CorreccionPlanilla"/>
+									<p:inputText id="txtCorreccionPlanilla" disabled="true" binding="#{tlp00001View.txtCorreccionPlanilla}"/>
+																		<h:outputText id="msgEps" value=" Eps"/>
+									<p:inputText id="txtEps" disabled="true" binding="#{tlp00001View.txtEps}"/>
+																		<h:outputText id="msgFormaPresentacion" value=" FormaPresentacion"/>
+									<p:inputText id="txtFormaPresentacion" disabled="true" binding="#{tlp00001View.txtFormaPresentacion}"/>
+																		<h:outputText id="msgIngUsuariosPagos" value=" IngUsuariosPagos"/>
+									<p:inputText id="txtIngUsuariosPagos" disabled="true" binding="#{tlp00001View.txtIngUsuariosPagos}"/>
+																		<h:outputText id="msgMasIntdemora" value=" MasIntdemora"/>
+									<p:inputText id="txtMasIntdemora" disabled="true" binding="#{tlp00001View.txtMasIntdemora}"/>
+																		<h:outputText id="msgNumCheque" value=" NumCheque"/>
+									<p:inputText id="txtNumCheque" disabled="true" binding="#{tlp00001View.txtNumCheque}"/>
+																		<h:outputText id="msgNumCuentadelCheque" value=" NumCuentadelCheque"/>
+									<p:inputText id="txtNumCuentadelCheque" disabled="true" binding="#{tlp00001View.txtNumCuentadelCheque}"/>
+																		<h:outputText id="msgNumPlanillaCorrecion" value=" NumPlanillaCorrecion"/>
+									<p:inputText id="txtNumPlanillaCorrecion" disabled="true" binding="#{tlp00001View.txtNumPlanillaCorrecion}"/>
+																		<h:outputText id="msgNumeroMeses" value=" NumeroMeses"/>
+									<p:inputText id="txtNumeroMeses" disabled="true" binding="#{tlp00001View.txtNumeroMeses}"/>
+																		<h:outputText id="msgNumerodeCotizantes" value=" NumerodeCotizantes"/>
+									<p:inputText id="txtNumerodeCotizantes" disabled="true" binding="#{tlp00001View.txtNumerodeCotizantes}"/>
+																		<h:outputText id="msgParafiscales" value=" Parafiscales"/>
+									<p:inputText id="txtParafiscales" disabled="true" binding="#{tlp00001View.txtParafiscales}"/>
+																		<h:outputText id="msgRetUsuariosNoPagos" value=" RetUsuariosNoPagos"/>
+									<p:inputText id="txtRetUsuariosNoPagos" disabled="true" binding="#{tlp00001View.txtRetUsuariosNoPagos}"/>
+																		<h:outputText id="msgTipoAportante" value=" TipoAportante"/>
+									<p:inputText id="txtTipoAportante" disabled="true" binding="#{tlp00001View.txtTipoAportante}"/>
+																		<h:outputText id="msgValorCheque" value=" ValorCheque"/>
+									<p:inputText id="txtValorCheque" disabled="true" binding="#{tlp00001View.txtValorCheque}"/>
+																		<h:outputText id="msgValorEfectivo" value=" ValorEfectivo"/>
+									<p:inputText id="txtValorEfectivo" disabled="true" binding="#{tlp00001View.txtValorEfectivo}"/>
+																		<h:outputText id="msgValorNomina" value=" ValorNomina"/>
+									<p:inputText id="txtValorNomina" disabled="true" binding="#{tlp00001View.txtValorNomina}"/>
+																		<h:outputText id="msgCodBanco_Tg000001" value=" CodBanco_Tg000001"/>
+									<p:inputText id="txtCodBanco_Tg000001" disabled="true" binding="#{tlp00001View.txtCodBanco_Tg000001}"/>
+																		<h:outputText id="msgCodEmpresa_Tg000003" value=" CodEmpresa_Tg000003"/>
+									<p:inputText id="txtCodEmpresa_Tg000003" disabled="true" binding="#{tlp00001View.txtCodEmpresa_Tg000003}"/>
+																		<h:outputText id="msgCodTipodePlanillas_Tg000026" value=" CodTipodePlanillas_Tg000026"/>
+									<p:inputText id="txtCodTipodePlanillas_Tg000026" disabled="true" binding="#{tlp00001View.txtCodTipodePlanillas_Tg000026}"/>
+																		
+																													<h:outputText id="msgFechaCorteRetiro" value=" FechaCorteRetiro"/>
+																				<p:calendar showOn="button" navigator="true" locale="en" 
+										binding="#{tlp00001View.txtFechaCorteRetiro}" >
+										<p:ajax event="dateSelect" listener="#{tlp00001View.listener_txtFechaCorteRetiro}"  />
+										</p:calendar>
+																				<h:outputText id="msgFechaGenera" value=" FechaGenera"/>
+																				<p:calendar showOn="button" navigator="true" locale="en" 
+										binding="#{tlp00001View.txtFechaGenera}" >
+										<p:ajax event="dateSelect" listener="#{tlp00001View.listener_txtFechaGenera}"  />
+										</p:calendar>
+																				<h:outputText id="msgFechaIngPagoSistema" value=" FechaIngPagoSistema"/>
+																				<p:calendar showOn="button" navigator="true" locale="en" 
+										binding="#{tlp00001View.txtFechaIngPagoSistema}" >
+										<p:ajax event="dateSelect" listener="#{tlp00001View.listener_txtFechaIngPagoSistema}"  />
+										</p:calendar>
+																				<h:outputText id="msgFechaPago" value=" FechaPago"/>
+																				<p:calendar showOn="button" navigator="true" locale="en" 
+										binding="#{tlp00001View.txtFechaPago}" >
+										<p:ajax event="dateSelect" listener="#{tlp00001View.listener_txtFechaPago}"  />
+										</p:calendar>
+																				<h:outputText id="msgFechaPagoPlanillaCorrecion" value=" FechaPagoPlanillaCorrecion"/>
+																				<p:calendar showOn="button" navigator="true" locale="en" 
+										binding="#{tlp00001View.txtFechaPagoPlanillaCorrecion}" >
+										<p:ajax event="dateSelect" listener="#{tlp00001View.listener_txtFechaPagoPlanillaCorrecion}"  />
+										</p:calendar>
+																				<h:outputText id="msgHoraGenera" value=" HoraGenera"/>
+																				<p:calendar showOn="button" navigator="true" locale="en" 
+										binding="#{tlp00001View.txtHoraGenera}" >
+										<p:ajax event="dateSelect" listener="#{tlp00001View.listener_txtHoraGenera}"  />
+										</p:calendar>
+																				<h:outputText id="msgHoraIngPagoSistema" value=" HoraIngPagoSistema"/>
+																				<p:calendar showOn="button" navigator="true" locale="en" 
+										binding="#{tlp00001View.txtHoraIngPagoSistema}" >
+										<p:ajax event="dateSelect" listener="#{tlp00001View.listener_txtHoraIngPagoSistema}"  />
+										</p:calendar>
+																										    </h:panelGrid>
+							</p:panel>						   
+							<p:panel id="panelBotones">
+								<div align="center">					
+									<p:commandButton id="btnSave" binding="#{tlp00001View.btnSave}" value="Save" action="#{tlp00001View.action_save()}" update=":dialogTlp00001 :frm:panelDataTableTlp00001" />
+									<p:commandButton id="btnClear" value="Clear" action="#{tlp00001View.action_clear()}" update=":dialogTlp00001" />
+									<p:commandButton id="btnExit" value="Exit" action="#{tlp00001View.action_closeDialog()}" update=":dialogTlp00001" />
+								</div>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+	</ui:define>
+</ui:composition>
+

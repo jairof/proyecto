@@ -1,0 +1,35 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">	
+			<h:form id="formDialog">
+				<p:messages id="msg" />
+				<p:growl id="men"/>
+					<p:panel id="panelTg000013" header="Tg000013">							
+						<h:panelGrid columns="2" id="panelGrid" >
+												 	<h:outputText id="msgCodActividad" value="CodActividad"/>
+						 	<p:inputText id="txtCodActividad" binding="#{tg000013View.txtCodActividad}">
+						 		<p:ajax update="panelTg000013,msg,panelBotones" listener="#{tg000013View.listener_txtId}"/>
+						 	</p:inputText>	
+																		
+													<h:outputText id="msgDesActividad" value=" DesActividad"/>
+							<p:inputText id="txtDesActividad" disabled="true" binding="#{tg000013View.txtDesActividad}"/>
+													<h:outputText id="msgNivelRiesgo" value=" NivelRiesgo"/>
+							<p:inputText id="txtNivelRiesgo" disabled="true" binding="#{tg000013View.txtNivelRiesgo}"/>
+												
+										   </h:panelGrid>
+				</p:panel>
+	   			<p:panel id="panelBotones">
+					<div align="center">					
+						<p:commandButton id="btnSave" binding="#{tg000013View.btnSave}" disabled="true" value="Save" action="#{tg000013View.action_save()}" update="panelTg000013,msg,panelBotones" />
+						<p:commandButton id="btnDelete" binding="#{tg000013View.btnDelete}" disabled="true" value="Delete" action="#{tg000013View.action_delete_master()}" onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}" update="panelTg000013,msg,panelBotones" />
+						<p:commandButton id="btnClear" value="Clear" action="#{tg000013View.action_clear()}" update="panelTg000013,msg,panelBotones" />
+					</div>
+				</p:panel>			
+			</h:form>
+  </ui:define>
+</ui:composition>

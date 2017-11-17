@@ -1,0 +1,53 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">	
+			<h:form id="formDialog">
+				<p:messages id="msg" />
+				<p:growl id="men"/>
+					<p:panel id="panelTp000005" header="Tp000005">							
+						<h:panelGrid columns="2" id="panelGrid" >
+												 	<h:outputText id="msgCodAfp" value="CodAfp"/>
+						 	<p:inputText id="txtCodAfp" binding="#{tp000005View.txtCodAfp}">
+						 		<p:ajax update="panelTp000005,msg,panelBotones" listener="#{tp000005View.listener_txtId}"/>
+						 	</p:inputText>	
+																		
+													<h:outputText id="msgCodigoAfp" value=" CodigoAfp"/>
+							<p:inputText id="txtCodigoAfp" disabled="true" binding="#{tp000005View.txtCodigoAfp}"/>
+													<h:outputText id="msgDireccionAfp" value=" DireccionAfp"/>
+							<p:inputText id="txtDireccionAfp" disabled="true" binding="#{tp000005View.txtDireccionAfp}"/>
+													<h:outputText id="msgDvafp" value=" Dvafp"/>
+							<p:inputText id="txtDvafp" disabled="true" binding="#{tp000005View.txtDvafp}"/>
+													<h:outputText id="msgEmailAfp" value=" EmailAfp"/>
+							<p:inputText id="txtEmailAfp" disabled="true" binding="#{tp000005View.txtEmailAfp}"/>
+													<h:outputText id="msgFaxAfp" value=" FaxAfp"/>
+							<p:inputText id="txtFaxAfp" disabled="true" binding="#{tp000005View.txtFaxAfp}"/>
+													<h:outputText id="msgNitAfp" value=" NitAfp"/>
+							<p:inputText id="txtNitAfp" disabled="true" binding="#{tp000005View.txtNitAfp}"/>
+													<h:outputText id="msgNomContactoAfp" value=" NomContactoAfp"/>
+							<p:inputText id="txtNomContactoAfp" disabled="true" binding="#{tp000005View.txtNomContactoAfp}"/>
+													<h:outputText id="msgNombreAfp" value=" NombreAfp"/>
+							<p:inputText id="txtNombreAfp" disabled="true" binding="#{tp000005View.txtNombreAfp}"/>
+													<h:outputText id="msgNumPerPlaniAfp" value=" NumPerPlaniAfp"/>
+							<p:inputText id="txtNumPerPlaniAfp" disabled="true" binding="#{tp000005View.txtNumPerPlaniAfp}"/>
+													<h:outputText id="msgTelefonoAfp" value=" TelefonoAfp"/>
+							<p:inputText id="txtTelefonoAfp" disabled="true" binding="#{tp000005View.txtTelefonoAfp}"/>
+													<h:outputText id="msgTipoDocumentoAfp" value=" TipoDocumentoAfp"/>
+							<p:inputText id="txtTipoDocumentoAfp" disabled="true" binding="#{tp000005View.txtTipoDocumentoAfp}"/>
+												
+										   </h:panelGrid>
+				</p:panel>
+	   			<p:panel id="panelBotones">
+					<div align="center">					
+						<p:commandButton id="btnSave" binding="#{tp000005View.btnSave}" disabled="true" value="Save" action="#{tp000005View.action_save()}" update="panelTp000005,msg,panelBotones" />
+						<p:commandButton id="btnDelete" binding="#{tp000005View.btnDelete}" disabled="true" value="Delete" action="#{tp000005View.action_delete_master()}" onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}" update="panelTp000005,msg,panelBotones" />
+						<p:commandButton id="btnClear" value="Clear" action="#{tp000005View.action_clear()}" update="panelTp000005,msg,panelBotones" />
+					</div>
+				</p:panel>			
+			</h:form>
+  </ui:define>
+</ui:composition>

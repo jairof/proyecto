@@ -1,0 +1,35 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">	
+			<h:form id="formDialog">
+				<p:messages id="msg" />
+				<p:growl id="men"/>
+					<p:panel id="panelTg000002" header="Tg000002">							
+						<h:panelGrid columns="2" id="panelGrid" >
+												 	<h:outputText id="msgCodCiudad" value="CodCiudad"/>
+						 	<p:inputText id="txtCodCiudad" binding="#{tg000002View.txtCodCiudad}">
+						 		<p:ajax update="panelTg000002,msg,panelBotones" listener="#{tg000002View.listener_txtId}"/>
+						 	</p:inputText>	
+																		
+													<h:outputText id="msgDesCiudad" value=" DesCiudad"/>
+							<p:inputText id="txtDesCiudad" disabled="true" binding="#{tg000002View.txtDesCiudad}"/>
+													<h:outputText id="msgCodDepto_Tg000004" value=" CodDepto_Tg000004"/>
+							<p:inputText id="txtCodDepto_Tg000004" disabled="true" binding="#{tg000002View.txtCodDepto_Tg000004}"/>
+												
+										   </h:panelGrid>
+				</p:panel>
+	   			<p:panel id="panelBotones">
+					<div align="center">					
+						<p:commandButton id="btnSave" binding="#{tg000002View.btnSave}" disabled="true" value="Save" action="#{tg000002View.action_save()}" update="panelTg000002,msg,panelBotones" />
+						<p:commandButton id="btnDelete" binding="#{tg000002View.btnDelete}" disabled="true" value="Delete" action="#{tg000002View.action_delete_master()}" onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}" update="panelTg000002,msg,panelBotones" />
+						<p:commandButton id="btnClear" value="Clear" action="#{tg000002View.action_clear()}" update="panelTg000002,msg,panelBotones" />
+					</div>
+				</p:panel>			
+			</h:form>
+  </ui:define>
+</ui:composition>

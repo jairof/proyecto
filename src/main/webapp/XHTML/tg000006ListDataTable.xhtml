@@ -1,0 +1,80 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">		
+
+		  			<h:form id="frm">								  		
+						
+						<p:panel id="panelDataTableTg000006" header="Tg000006Data">
+							<p:growl id="men"/>				
+							<p:dataTable value="#{tg000006View.data}" var="tg000006"
+								paginator="true" rows="5">
+																										<p:column filterBy="#{tg000006.codCargo}" sortBy="#{tg000006.codCargo}" >
+										 <f:facet name="header">
+										<h:outputText value="codCargo"/>
+										</f:facet>
+										 <h:outputText value="#{tg000006.codCargo}"/>
+										 </p:column>
+			                    																									
+										<p:column filterBy="#{tg000006.desCargo}" sortBy="#{tg000006.desCargo}" >
+										 <f:facet name="header">
+										<h:outputText value="DesCargo"/>
+										</f:facet>
+										 <h:outputText value="#{tg000006.desCargo}"/>
+										</p:column>   
+			                    			                    
+								<p:column headerText="Options">
+									<p:commandButton id="btnEdit" icon="ui-icon-pencil"
+										update=":dialogTg000006"
+										actionListener="#{tg000006View.action_edit}">
+										<f:attribute name="selectedTg000006" value="#{tg000006}" />
+									</p:commandButton>
+									<p:commandButton id="btnDelete"									
+										title="Delete" actionListener="#{tg000006View.action_delete_datatable}"
+										onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}"
+										icon="ui-icon-trash" update="@form">
+										<f:attribute name="selectedTg000006" value="#{tg000006}" />
+									</p:commandButton>
+								</p:column>									                    
+							</p:dataTable>	
+						</p:panel>
+						<p:panel id="panelBoton">
+							<div align="center">
+								<p:commandButton id="btnNew" value="New"
+									action="#{tg000006View.action_new()}" update=":dialogTg000006" />
+							</div>
+						</p:panel>						
+		   			</h:form>
+					<p:dialog id="dialogTg000006" appendTo="@(body)" draggable="true"
+						closable="false" visible="#{tg000006View.showDialog}" resizable="false"
+						modal="true" width="500">
+						<h:form id="formDialog">
+							<p:messages id="msg" />
+							<p:panel id="panelTg000006" header="Tg000006">							
+							    <h:panelGrid columns="2" id="panelGrid" >
+																		 <h:outputText id="msgCodCargo" value="CodCargo"/>
+									 <p:inputText id="txtCodCargo" binding="#{tg000006View.txtCodCargo}">
+									 <p:ajax update=":dialogTg000006" listener="#{tg000006View.listener_txtId}"/>
+									 </p:inputText>	
+																											
+																		<h:outputText id="msgDesCargo" value=" DesCargo"/>
+									<p:inputText id="txtDesCargo" disabled="true" binding="#{tg000006View.txtDesCargo}"/>
+																		
+																    </h:panelGrid>
+							</p:panel>						   
+							<p:panel id="panelBotones">
+								<div align="center">					
+									<p:commandButton id="btnSave" binding="#{tg000006View.btnSave}" value="Save" action="#{tg000006View.action_save()}" update=":dialogTg000006 :frm:panelDataTableTg000006" />
+									<p:commandButton id="btnClear" value="Clear" action="#{tg000006View.action_clear()}" update=":dialogTg000006" />
+									<p:commandButton id="btnExit" value="Exit" action="#{tg000006View.action_closeDialog()}" update=":dialogTg000006" />
+								</div>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+	</ui:define>
+</ui:composition>
+

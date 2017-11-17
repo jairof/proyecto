@@ -1,0 +1,170 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">		
+
+		  			<h:form id="frm">								  		
+						
+						<p:panel id="panelDataTableTp000005" header="Tp000005Data">
+							<p:growl id="men"/>				
+							<p:dataTable value="#{tp000005View.data}" var="tp000005"
+								paginator="true" rows="5">
+																										<p:column filterBy="#{tp000005.codAfp}" sortBy="#{tp000005.codAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="codAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000005.codAfp}"/>
+										 </p:column>
+			                    																									
+										<p:column filterBy="#{tp000005.codigoAfp}" sortBy="#{tp000005.codigoAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="CodigoAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000005.codigoAfp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000005.direccionAfp}" sortBy="#{tp000005.direccionAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="DireccionAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000005.direccionAfp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000005.dvafp}" sortBy="#{tp000005.dvafp}" >
+										 <f:facet name="header">
+										<h:outputText value="Dvafp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000005.dvafp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000005.emailAfp}" sortBy="#{tp000005.emailAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="EmailAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000005.emailAfp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000005.faxAfp}" sortBy="#{tp000005.faxAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="FaxAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000005.faxAfp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000005.nitAfp}" sortBy="#{tp000005.nitAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="NitAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000005.nitAfp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000005.nomContactoAfp}" sortBy="#{tp000005.nomContactoAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="NomContactoAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000005.nomContactoAfp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000005.nombreAfp}" sortBy="#{tp000005.nombreAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="NombreAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000005.nombreAfp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000005.numPerPlaniAfp}" sortBy="#{tp000005.numPerPlaniAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="NumPerPlaniAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000005.numPerPlaniAfp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000005.telefonoAfp}" sortBy="#{tp000005.telefonoAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="TelefonoAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000005.telefonoAfp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000005.tipoDocumentoAfp}" sortBy="#{tp000005.tipoDocumentoAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="TipoDocumentoAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000005.tipoDocumentoAfp}"/>
+										</p:column>   
+			                    			                    
+								<p:column headerText="Options">
+									<p:commandButton id="btnEdit" icon="ui-icon-pencil"
+										update=":dialogTp000005"
+										actionListener="#{tp000005View.action_edit}">
+										<f:attribute name="selectedTp000005" value="#{tp000005}" />
+									</p:commandButton>
+									<p:commandButton id="btnDelete"									
+										title="Delete" actionListener="#{tp000005View.action_delete_datatable}"
+										onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}"
+										icon="ui-icon-trash" update="@form">
+										<f:attribute name="selectedTp000005" value="#{tp000005}" />
+									</p:commandButton>
+								</p:column>									                    
+							</p:dataTable>	
+						</p:panel>
+						<p:panel id="panelBoton">
+							<div align="center">
+								<p:commandButton id="btnNew" value="New"
+									action="#{tp000005View.action_new()}" update=":dialogTp000005" />
+							</div>
+						</p:panel>						
+		   			</h:form>
+					<p:dialog id="dialogTp000005" appendTo="@(body)" draggable="true"
+						closable="false" visible="#{tp000005View.showDialog}" resizable="false"
+						modal="true" width="500">
+						<h:form id="formDialog">
+							<p:messages id="msg" />
+							<p:panel id="panelTp000005" header="Tp000005">							
+							    <h:panelGrid columns="2" id="panelGrid" >
+																		 <h:outputText id="msgCodAfp" value="CodAfp"/>
+									 <p:inputText id="txtCodAfp" binding="#{tp000005View.txtCodAfp}">
+									 <p:ajax update=":dialogTp000005" listener="#{tp000005View.listener_txtId}"/>
+									 </p:inputText>	
+																											
+																		<h:outputText id="msgCodigoAfp" value=" CodigoAfp"/>
+									<p:inputText id="txtCodigoAfp" disabled="true" binding="#{tp000005View.txtCodigoAfp}"/>
+																		<h:outputText id="msgDireccionAfp" value=" DireccionAfp"/>
+									<p:inputText id="txtDireccionAfp" disabled="true" binding="#{tp000005View.txtDireccionAfp}"/>
+																		<h:outputText id="msgDvafp" value=" Dvafp"/>
+									<p:inputText id="txtDvafp" disabled="true" binding="#{tp000005View.txtDvafp}"/>
+																		<h:outputText id="msgEmailAfp" value=" EmailAfp"/>
+									<p:inputText id="txtEmailAfp" disabled="true" binding="#{tp000005View.txtEmailAfp}"/>
+																		<h:outputText id="msgFaxAfp" value=" FaxAfp"/>
+									<p:inputText id="txtFaxAfp" disabled="true" binding="#{tp000005View.txtFaxAfp}"/>
+																		<h:outputText id="msgNitAfp" value=" NitAfp"/>
+									<p:inputText id="txtNitAfp" disabled="true" binding="#{tp000005View.txtNitAfp}"/>
+																		<h:outputText id="msgNomContactoAfp" value=" NomContactoAfp"/>
+									<p:inputText id="txtNomContactoAfp" disabled="true" binding="#{tp000005View.txtNomContactoAfp}"/>
+																		<h:outputText id="msgNombreAfp" value=" NombreAfp"/>
+									<p:inputText id="txtNombreAfp" disabled="true" binding="#{tp000005View.txtNombreAfp}"/>
+																		<h:outputText id="msgNumPerPlaniAfp" value=" NumPerPlaniAfp"/>
+									<p:inputText id="txtNumPerPlaniAfp" disabled="true" binding="#{tp000005View.txtNumPerPlaniAfp}"/>
+																		<h:outputText id="msgTelefonoAfp" value=" TelefonoAfp"/>
+									<p:inputText id="txtTelefonoAfp" disabled="true" binding="#{tp000005View.txtTelefonoAfp}"/>
+																		<h:outputText id="msgTipoDocumentoAfp" value=" TipoDocumentoAfp"/>
+									<p:inputText id="txtTipoDocumentoAfp" disabled="true" binding="#{tp000005View.txtTipoDocumentoAfp}"/>
+																		
+																    </h:panelGrid>
+							</p:panel>						   
+							<p:panel id="panelBotones">
+								<div align="center">					
+									<p:commandButton id="btnSave" binding="#{tp000005View.btnSave}" value="Save" action="#{tp000005View.action_save()}" update=":dialogTp000005 :frm:panelDataTableTp000005" />
+									<p:commandButton id="btnClear" value="Clear" action="#{tp000005View.action_clear()}" update=":dialogTp000005" />
+									<p:commandButton id="btnExit" value="Exit" action="#{tp000005View.action_closeDialog()}" update=":dialogTp000005" />
+								</div>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+	</ui:define>
+</ui:composition>
+

@@ -1,0 +1,57 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">	
+			<h:form id="formDialog">
+				<p:messages id="msg" />
+				<p:growl id="men"/>
+					<p:panel id="panelTp000004" header="Tp000004">							
+						<h:panelGrid columns="2" id="panelGrid" >
+												 	<h:outputText id="msgCodArp" value="CodArp"/>
+						 	<p:inputText id="txtCodArp" binding="#{tp000004View.txtCodArp}">
+						 		<p:ajax update="panelTp000004,msg,panelBotones" listener="#{tp000004View.listener_txtId}"/>
+						 	</p:inputText>	
+																		
+													<h:outputText id="msgArpactiva" value=" Arpactiva"/>
+							<p:inputText id="txtArpactiva" disabled="true" binding="#{tp000004View.txtArpactiva}"/>
+													<h:outputText id="msgCodigoArp" value=" CodigoArp"/>
+							<p:inputText id="txtCodigoArp" disabled="true" binding="#{tp000004View.txtCodigoArp}"/>
+													<h:outputText id="msgDireccionArp" value=" DireccionArp"/>
+							<p:inputText id="txtDireccionArp" disabled="true" binding="#{tp000004View.txtDireccionArp}"/>
+													<h:outputText id="msgDvarp" value=" Dvarp"/>
+							<p:inputText id="txtDvarp" disabled="true" binding="#{tp000004View.txtDvarp}"/>
+													<h:outputText id="msgEmailArp" value=" EmailArp"/>
+							<p:inputText id="txtEmailArp" disabled="true" binding="#{tp000004View.txtEmailArp}"/>
+													<h:outputText id="msgFaxArp" value=" FaxArp"/>
+							<p:inputText id="txtFaxArp" disabled="true" binding="#{tp000004View.txtFaxArp}"/>
+													<h:outputText id="msgNitArp" value=" NitArp"/>
+							<p:inputText id="txtNitArp" disabled="true" binding="#{tp000004View.txtNitArp}"/>
+													<h:outputText id="msgNomContactoArp" value=" NomContactoArp"/>
+							<p:inputText id="txtNomContactoArp" disabled="true" binding="#{tp000004View.txtNomContactoArp}"/>
+													<h:outputText id="msgNombreArp" value=" NombreArp"/>
+							<p:inputText id="txtNombreArp" disabled="true" binding="#{tp000004View.txtNombreArp}"/>
+													<h:outputText id="msgNumPerPlaniArp" value=" NumPerPlaniArp"/>
+							<p:inputText id="txtNumPerPlaniArp" disabled="true" binding="#{tp000004View.txtNumPerPlaniArp}"/>
+													<h:outputText id="msgTelefonoArp" value=" TelefonoArp"/>
+							<p:inputText id="txtTelefonoArp" disabled="true" binding="#{tp000004View.txtTelefonoArp}"/>
+													<h:outputText id="msgTipoDocumentoArp" value=" TipoDocumentoArp"/>
+							<p:inputText id="txtTipoDocumentoArp" disabled="true" binding="#{tp000004View.txtTipoDocumentoArp}"/>
+													<h:outputText id="msgCodEmpresa_Tg000003" value=" CodEmpresa_Tg000003"/>
+							<p:inputText id="txtCodEmpresa_Tg000003" disabled="true" binding="#{tp000004View.txtCodEmpresa_Tg000003}"/>
+												
+										   </h:panelGrid>
+				</p:panel>
+	   			<p:panel id="panelBotones">
+					<div align="center">					
+						<p:commandButton id="btnSave" binding="#{tp000004View.btnSave}" disabled="true" value="Save" action="#{tp000004View.action_save()}" update="panelTp000004,msg,panelBotones" />
+						<p:commandButton id="btnDelete" binding="#{tp000004View.btnDelete}" disabled="true" value="Delete" action="#{tp000004View.action_delete_master()}" onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}" update="panelTp000004,msg,panelBotones" />
+						<p:commandButton id="btnClear" value="Clear" action="#{tp000004View.action_clear()}" update="panelTp000004,msg,panelBotones" />
+					</div>
+				</p:panel>			
+			</h:form>
+  </ui:define>
+</ui:composition>

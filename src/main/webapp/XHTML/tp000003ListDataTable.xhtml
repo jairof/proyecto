@@ -1,0 +1,170 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">		
+
+		  			<h:form id="frm">								  		
+						
+						<p:panel id="panelDataTableTp000003" header="Tp000003Data">
+							<p:growl id="men"/>				
+							<p:dataTable value="#{tp000003View.data}" var="tp000003"
+								paginator="true" rows="5">
+																										<p:column filterBy="#{tp000003.codEps}" sortBy="#{tp000003.codEps}" >
+										 <f:facet name="header">
+										<h:outputText value="codEps"/>
+										</f:facet>
+										 <h:outputText value="#{tp000003.codEps}"/>
+										 </p:column>
+			                    																									
+										<p:column filterBy="#{tp000003.codigoEps}" sortBy="#{tp000003.codigoEps}" >
+										 <f:facet name="header">
+										<h:outputText value="CodigoEps"/>
+										</f:facet>
+										 <h:outputText value="#{tp000003.codigoEps}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000003.direccionEps}" sortBy="#{tp000003.direccionEps}" >
+										 <f:facet name="header">
+										<h:outputText value="DireccionEps"/>
+										</f:facet>
+										 <h:outputText value="#{tp000003.direccionEps}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000003.dveps}" sortBy="#{tp000003.dveps}" >
+										 <f:facet name="header">
+										<h:outputText value="Dveps"/>
+										</f:facet>
+										 <h:outputText value="#{tp000003.dveps}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000003.emailEps}" sortBy="#{tp000003.emailEps}" >
+										 <f:facet name="header">
+										<h:outputText value="EmailEps"/>
+										</f:facet>
+										 <h:outputText value="#{tp000003.emailEps}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000003.faxEps}" sortBy="#{tp000003.faxEps}" >
+										 <f:facet name="header">
+										<h:outputText value="FaxEps"/>
+										</f:facet>
+										 <h:outputText value="#{tp000003.faxEps}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000003.nitEps}" sortBy="#{tp000003.nitEps}" >
+										 <f:facet name="header">
+										<h:outputText value="NitEps"/>
+										</f:facet>
+										 <h:outputText value="#{tp000003.nitEps}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000003.nomContactoEps}" sortBy="#{tp000003.nomContactoEps}" >
+										 <f:facet name="header">
+										<h:outputText value="NomContactoEps"/>
+										</f:facet>
+										 <h:outputText value="#{tp000003.nomContactoEps}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000003.nombreEps}" sortBy="#{tp000003.nombreEps}" >
+										 <f:facet name="header">
+										<h:outputText value="NombreEps"/>
+										</f:facet>
+										 <h:outputText value="#{tp000003.nombreEps}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000003.numPerPlaniEps}" sortBy="#{tp000003.numPerPlaniEps}" >
+										 <f:facet name="header">
+										<h:outputText value="NumPerPlaniEps"/>
+										</f:facet>
+										 <h:outputText value="#{tp000003.numPerPlaniEps}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000003.telefonoEps}" sortBy="#{tp000003.telefonoEps}" >
+										 <f:facet name="header">
+										<h:outputText value="TelefonoEps"/>
+										</f:facet>
+										 <h:outputText value="#{tp000003.telefonoEps}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000003.tipoDocumentoEps}" sortBy="#{tp000003.tipoDocumentoEps}" >
+										 <f:facet name="header">
+										<h:outputText value="TipoDocumentoEps"/>
+										</f:facet>
+										 <h:outputText value="#{tp000003.tipoDocumentoEps}"/>
+										</p:column>   
+			                    			                    
+								<p:column headerText="Options">
+									<p:commandButton id="btnEdit" icon="ui-icon-pencil"
+										update=":dialogTp000003"
+										actionListener="#{tp000003View.action_edit}">
+										<f:attribute name="selectedTp000003" value="#{tp000003}" />
+									</p:commandButton>
+									<p:commandButton id="btnDelete"									
+										title="Delete" actionListener="#{tp000003View.action_delete_datatable}"
+										onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}"
+										icon="ui-icon-trash" update="@form">
+										<f:attribute name="selectedTp000003" value="#{tp000003}" />
+									</p:commandButton>
+								</p:column>									                    
+							</p:dataTable>	
+						</p:panel>
+						<p:panel id="panelBoton">
+							<div align="center">
+								<p:commandButton id="btnNew" value="New"
+									action="#{tp000003View.action_new()}" update=":dialogTp000003" />
+							</div>
+						</p:panel>						
+		   			</h:form>
+					<p:dialog id="dialogTp000003" appendTo="@(body)" draggable="true"
+						closable="false" visible="#{tp000003View.showDialog}" resizable="false"
+						modal="true" width="500">
+						<h:form id="formDialog">
+							<p:messages id="msg" />
+							<p:panel id="panelTp000003" header="Tp000003">							
+							    <h:panelGrid columns="2" id="panelGrid" >
+																		 <h:outputText id="msgCodEps" value="CodEps"/>
+									 <p:inputText id="txtCodEps" binding="#{tp000003View.txtCodEps}">
+									 <p:ajax update=":dialogTp000003" listener="#{tp000003View.listener_txtId}"/>
+									 </p:inputText>	
+																											
+																		<h:outputText id="msgCodigoEps" value=" CodigoEps"/>
+									<p:inputText id="txtCodigoEps" disabled="true" binding="#{tp000003View.txtCodigoEps}"/>
+																		<h:outputText id="msgDireccionEps" value=" DireccionEps"/>
+									<p:inputText id="txtDireccionEps" disabled="true" binding="#{tp000003View.txtDireccionEps}"/>
+																		<h:outputText id="msgDveps" value=" Dveps"/>
+									<p:inputText id="txtDveps" disabled="true" binding="#{tp000003View.txtDveps}"/>
+																		<h:outputText id="msgEmailEps" value=" EmailEps"/>
+									<p:inputText id="txtEmailEps" disabled="true" binding="#{tp000003View.txtEmailEps}"/>
+																		<h:outputText id="msgFaxEps" value=" FaxEps"/>
+									<p:inputText id="txtFaxEps" disabled="true" binding="#{tp000003View.txtFaxEps}"/>
+																		<h:outputText id="msgNitEps" value=" NitEps"/>
+									<p:inputText id="txtNitEps" disabled="true" binding="#{tp000003View.txtNitEps}"/>
+																		<h:outputText id="msgNomContactoEps" value=" NomContactoEps"/>
+									<p:inputText id="txtNomContactoEps" disabled="true" binding="#{tp000003View.txtNomContactoEps}"/>
+																		<h:outputText id="msgNombreEps" value=" NombreEps"/>
+									<p:inputText id="txtNombreEps" disabled="true" binding="#{tp000003View.txtNombreEps}"/>
+																		<h:outputText id="msgNumPerPlaniEps" value=" NumPerPlaniEps"/>
+									<p:inputText id="txtNumPerPlaniEps" disabled="true" binding="#{tp000003View.txtNumPerPlaniEps}"/>
+																		<h:outputText id="msgTelefonoEps" value=" TelefonoEps"/>
+									<p:inputText id="txtTelefonoEps" disabled="true" binding="#{tp000003View.txtTelefonoEps}"/>
+																		<h:outputText id="msgTipoDocumentoEps" value=" TipoDocumentoEps"/>
+									<p:inputText id="txtTipoDocumentoEps" disabled="true" binding="#{tp000003View.txtTipoDocumentoEps}"/>
+																		
+																    </h:panelGrid>
+							</p:panel>						   
+							<p:panel id="panelBotones">
+								<div align="center">					
+									<p:commandButton id="btnSave" binding="#{tp000003View.btnSave}" value="Save" action="#{tp000003View.action_save()}" update=":dialogTp000003 :frm:panelDataTableTp000003" />
+									<p:commandButton id="btnClear" value="Clear" action="#{tp000003View.action_clear()}" update=":dialogTp000003" />
+									<p:commandButton id="btnExit" value="Exit" action="#{tp000003View.action_closeDialog()}" update=":dialogTp000003" />
+								</div>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+	</ui:define>
+</ui:composition>
+

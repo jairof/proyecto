@@ -1,0 +1,80 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">		
+
+		  			<h:form id="frm">								  		
+						
+						<p:panel id="panelDataTableTg000029" header="Tg000029Data">
+							<p:growl id="men"/>				
+							<p:dataTable value="#{tg000029View.data}" var="tg000029"
+								paginator="true" rows="5">
+																										<p:column filterBy="#{tg000029.codSubTipoCotizante}" sortBy="#{tg000029.codSubTipoCotizante}" >
+										 <f:facet name="header">
+										<h:outputText value="codSubTipoCotizante"/>
+										</f:facet>
+										 <h:outputText value="#{tg000029.codSubTipoCotizante}"/>
+										 </p:column>
+			                    																									
+										<p:column filterBy="#{tg000029.nombSubTipoCotizante}" sortBy="#{tg000029.nombSubTipoCotizante}" >
+										 <f:facet name="header">
+										<h:outputText value="NombSubTipoCotizante"/>
+										</f:facet>
+										 <h:outputText value="#{tg000029.nombSubTipoCotizante}"/>
+										</p:column>   
+			                    			                    
+								<p:column headerText="Options">
+									<p:commandButton id="btnEdit" icon="ui-icon-pencil"
+										update=":dialogTg000029"
+										actionListener="#{tg000029View.action_edit}">
+										<f:attribute name="selectedTg000029" value="#{tg000029}" />
+									</p:commandButton>
+									<p:commandButton id="btnDelete"									
+										title="Delete" actionListener="#{tg000029View.action_delete_datatable}"
+										onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}"
+										icon="ui-icon-trash" update="@form">
+										<f:attribute name="selectedTg000029" value="#{tg000029}" />
+									</p:commandButton>
+								</p:column>									                    
+							</p:dataTable>	
+						</p:panel>
+						<p:panel id="panelBoton">
+							<div align="center">
+								<p:commandButton id="btnNew" value="New"
+									action="#{tg000029View.action_new()}" update=":dialogTg000029" />
+							</div>
+						</p:panel>						
+		   			</h:form>
+					<p:dialog id="dialogTg000029" appendTo="@(body)" draggable="true"
+						closable="false" visible="#{tg000029View.showDialog}" resizable="false"
+						modal="true" width="500">
+						<h:form id="formDialog">
+							<p:messages id="msg" />
+							<p:panel id="panelTg000029" header="Tg000029">							
+							    <h:panelGrid columns="2" id="panelGrid" >
+																		 <h:outputText id="msgCodSubTipoCotizante" value="CodSubTipoCotizante"/>
+									 <p:inputText id="txtCodSubTipoCotizante" binding="#{tg000029View.txtCodSubTipoCotizante}">
+									 <p:ajax update=":dialogTg000029" listener="#{tg000029View.listener_txtId}"/>
+									 </p:inputText>	
+																											
+																		<h:outputText id="msgNombSubTipoCotizante" value=" NombSubTipoCotizante"/>
+									<p:inputText id="txtNombSubTipoCotizante" disabled="true" binding="#{tg000029View.txtNombSubTipoCotizante}"/>
+																		
+																    </h:panelGrid>
+							</p:panel>						   
+							<p:panel id="panelBotones">
+								<div align="center">					
+									<p:commandButton id="btnSave" binding="#{tg000029View.btnSave}" value="Save" action="#{tg000029View.action_save()}" update=":dialogTg000029 :frm:panelDataTableTg000029" />
+									<p:commandButton id="btnClear" value="Clear" action="#{tg000029View.action_clear()}" update=":dialogTg000029" />
+									<p:commandButton id="btnExit" value="Exit" action="#{tg000029View.action_closeDialog()}" update=":dialogTg000029" />
+								</div>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+	</ui:define>
+</ui:composition>
+

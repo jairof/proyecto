@@ -1,0 +1,124 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">	
+			<h:form id="formDialog">
+				<p:messages id="msg" />
+				<p:growl id="men"/>
+					<p:panel id="panelTlp00001" header="Tlp00001">							
+						<h:panelGrid columns="2" id="panelGrid" >
+												 	<h:outputText id="msgNumPlanilla" value="NumPlanilla"/>
+						 	<p:inputText id="txtNumPlanilla" binding="#{tlp00001View.txtNumPlanilla}">
+						 		<p:ajax update="panelTlp00001,msg,panelBotones" listener="#{tlp00001View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCodEmpresa" value="CodEmpresa"/>
+						 	<p:inputText id="txtCodEmpresa" binding="#{tlp00001View.txtCodEmpresa}">
+						 		<p:ajax update="panelTlp00001,msg,panelBotones" listener="#{tlp00001View.listener_txtId}"/>
+						 	</p:inputText>	
+																		
+													<h:outputText id="msgAfp" value=" Afp"/>
+							<p:inputText id="txtAfp" disabled="true" binding="#{tlp00001View.txtAfp}"/>
+													<h:outputText id="msgArp" value=" Arp"/>
+							<p:inputText id="txtArp" disabled="true" binding="#{tlp00001View.txtArp}"/>
+													<h:outputText id="msgCodBanco" value=" CodBanco"/>
+							<p:inputText id="txtCodBanco" disabled="true" binding="#{tlp00001View.txtCodBanco}"/>
+													<h:outputText id="msgCodPeriodo" value=" CodPeriodo"/>
+							<p:inputText id="txtCodPeriodo" disabled="true" binding="#{tlp00001View.txtCodPeriodo}"/>
+													<h:outputText id="msgCodPeriodoPeRiSc" value=" CodPeriodoPeRiSc"/>
+							<p:inputText id="txtCodPeriodoPeRiSc" disabled="true" binding="#{tlp00001View.txtCodPeriodoPeRiSc}"/>
+													<h:outputText id="msgCodigoArp" value=" CodigoArp"/>
+							<p:inputText id="txtCodigoArp" disabled="true" binding="#{tlp00001View.txtCodigoArp}"/>
+													<h:outputText id="msgCodigoSucursal" value=" CodigoSucursal"/>
+							<p:inputText id="txtCodigoSucursal" disabled="true" binding="#{tlp00001View.txtCodigoSucursal}"/>
+													<h:outputText id="msgConsecutivoPlani" value=" ConsecutivoPlani"/>
+							<p:inputText id="txtConsecutivoPlani" disabled="true" binding="#{tlp00001View.txtConsecutivoPlani}"/>
+													<h:outputText id="msgCorreccionPlanilla" value=" CorreccionPlanilla"/>
+							<p:inputText id="txtCorreccionPlanilla" disabled="true" binding="#{tlp00001View.txtCorreccionPlanilla}"/>
+													<h:outputText id="msgEps" value=" Eps"/>
+							<p:inputText id="txtEps" disabled="true" binding="#{tlp00001View.txtEps}"/>
+													<h:outputText id="msgFormaPresentacion" value=" FormaPresentacion"/>
+							<p:inputText id="txtFormaPresentacion" disabled="true" binding="#{tlp00001View.txtFormaPresentacion}"/>
+													<h:outputText id="msgIngUsuariosPagos" value=" IngUsuariosPagos"/>
+							<p:inputText id="txtIngUsuariosPagos" disabled="true" binding="#{tlp00001View.txtIngUsuariosPagos}"/>
+													<h:outputText id="msgMasIntdemora" value=" MasIntdemora"/>
+							<p:inputText id="txtMasIntdemora" disabled="true" binding="#{tlp00001View.txtMasIntdemora}"/>
+													<h:outputText id="msgNumCheque" value=" NumCheque"/>
+							<p:inputText id="txtNumCheque" disabled="true" binding="#{tlp00001View.txtNumCheque}"/>
+													<h:outputText id="msgNumCuentadelCheque" value=" NumCuentadelCheque"/>
+							<p:inputText id="txtNumCuentadelCheque" disabled="true" binding="#{tlp00001View.txtNumCuentadelCheque}"/>
+													<h:outputText id="msgNumPlanillaCorrecion" value=" NumPlanillaCorrecion"/>
+							<p:inputText id="txtNumPlanillaCorrecion" disabled="true" binding="#{tlp00001View.txtNumPlanillaCorrecion}"/>
+													<h:outputText id="msgNumeroMeses" value=" NumeroMeses"/>
+							<p:inputText id="txtNumeroMeses" disabled="true" binding="#{tlp00001View.txtNumeroMeses}"/>
+													<h:outputText id="msgNumerodeCotizantes" value=" NumerodeCotizantes"/>
+							<p:inputText id="txtNumerodeCotizantes" disabled="true" binding="#{tlp00001View.txtNumerodeCotizantes}"/>
+													<h:outputText id="msgParafiscales" value=" Parafiscales"/>
+							<p:inputText id="txtParafiscales" disabled="true" binding="#{tlp00001View.txtParafiscales}"/>
+													<h:outputText id="msgRetUsuariosNoPagos" value=" RetUsuariosNoPagos"/>
+							<p:inputText id="txtRetUsuariosNoPagos" disabled="true" binding="#{tlp00001View.txtRetUsuariosNoPagos}"/>
+													<h:outputText id="msgTipoAportante" value=" TipoAportante"/>
+							<p:inputText id="txtTipoAportante" disabled="true" binding="#{tlp00001View.txtTipoAportante}"/>
+													<h:outputText id="msgValorCheque" value=" ValorCheque"/>
+							<p:inputText id="txtValorCheque" disabled="true" binding="#{tlp00001View.txtValorCheque}"/>
+													<h:outputText id="msgValorEfectivo" value=" ValorEfectivo"/>
+							<p:inputText id="txtValorEfectivo" disabled="true" binding="#{tlp00001View.txtValorEfectivo}"/>
+													<h:outputText id="msgValorNomina" value=" ValorNomina"/>
+							<p:inputText id="txtValorNomina" disabled="true" binding="#{tlp00001View.txtValorNomina}"/>
+													<h:outputText id="msgCodBanco_Tg000001" value=" CodBanco_Tg000001"/>
+							<p:inputText id="txtCodBanco_Tg000001" disabled="true" binding="#{tlp00001View.txtCodBanco_Tg000001}"/>
+													<h:outputText id="msgCodEmpresa_Tg000003" value=" CodEmpresa_Tg000003"/>
+							<p:inputText id="txtCodEmpresa_Tg000003" disabled="true" binding="#{tlp00001View.txtCodEmpresa_Tg000003}"/>
+													<h:outputText id="msgCodTipodePlanillas_Tg000026" value=" CodTipodePlanillas_Tg000026"/>
+							<p:inputText id="txtCodTipodePlanillas_Tg000026" disabled="true" binding="#{tlp00001View.txtCodTipodePlanillas_Tg000026}"/>
+												
+																				<h:outputText id="msgFechaCorteRetiro" value=" FechaCorteRetiro"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tlp00001View.txtFechaCorteRetiro}" >
+								<p:ajax event="dateSelect" listener="#{tlp00001View.listener_txtFechaCorteRetiro}" />
+							</p:calendar>
+														<h:outputText id="msgFechaGenera" value=" FechaGenera"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tlp00001View.txtFechaGenera}" >
+								<p:ajax event="dateSelect" listener="#{tlp00001View.listener_txtFechaGenera}" />
+							</p:calendar>
+														<h:outputText id="msgFechaIngPagoSistema" value=" FechaIngPagoSistema"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tlp00001View.txtFechaIngPagoSistema}" >
+								<p:ajax event="dateSelect" listener="#{tlp00001View.listener_txtFechaIngPagoSistema}" />
+							</p:calendar>
+														<h:outputText id="msgFechaPago" value=" FechaPago"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tlp00001View.txtFechaPago}" >
+								<p:ajax event="dateSelect" listener="#{tlp00001View.listener_txtFechaPago}" />
+							</p:calendar>
+														<h:outputText id="msgFechaPagoPlanillaCorrecion" value=" FechaPagoPlanillaCorrecion"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tlp00001View.txtFechaPagoPlanillaCorrecion}" >
+								<p:ajax event="dateSelect" listener="#{tlp00001View.listener_txtFechaPagoPlanillaCorrecion}" />
+							</p:calendar>
+														<h:outputText id="msgHoraGenera" value=" HoraGenera"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tlp00001View.txtHoraGenera}" >
+								<p:ajax event="dateSelect" listener="#{tlp00001View.listener_txtHoraGenera}" />
+							</p:calendar>
+														<h:outputText id="msgHoraIngPagoSistema" value=" HoraIngPagoSistema"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tlp00001View.txtHoraIngPagoSistema}" >
+								<p:ajax event="dateSelect" listener="#{tlp00001View.listener_txtHoraIngPagoSistema}" />
+							</p:calendar>
+																	   </h:panelGrid>
+				</p:panel>
+	   			<p:panel id="panelBotones">
+					<div align="center">					
+						<p:commandButton id="btnSave" binding="#{tlp00001View.btnSave}" disabled="true" value="Save" action="#{tlp00001View.action_save()}" update="panelTlp00001,msg,panelBotones" />
+						<p:commandButton id="btnDelete" binding="#{tlp00001View.btnDelete}" disabled="true" value="Delete" action="#{tlp00001View.action_delete_master()}" onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}" update="panelTlp00001,msg,panelBotones" />
+						<p:commandButton id="btnClear" value="Clear" action="#{tlp00001View.action_clear()}" update="panelTlp00001,msg,panelBotones" />
+					</div>
+				</p:panel>			
+			</h:form>
+  </ui:define>
+</ui:composition>

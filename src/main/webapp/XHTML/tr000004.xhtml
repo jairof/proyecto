@@ -1,0 +1,207 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">	
+			<h:form id="formDialog">
+				<p:messages id="msg" />
+				<p:growl id="men"/>
+					<p:panel id="panelTr000004" header="Tr000004">							
+						<h:panelGrid columns="2" id="panelGrid" >
+												 	<h:outputText id="msgConsecutivo" value="Consecutivo"/>
+						 	<p:inputText id="txtConsecutivo" binding="#{tr000004View.txtConsecutivo}">
+						 		<p:ajax update="panelTr000004,msg,panelBotones" listener="#{tr000004View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCodEmpresa" value="CodEmpresa"/>
+						 	<p:inputText id="txtCodEmpresa" binding="#{tr000004View.txtCodEmpresa}">
+						 		<p:ajax update="panelTr000004,msg,panelBotones" listener="#{tr000004View.listener_txtId}"/>
+						 	</p:inputText>	
+																		
+													<h:outputText id="msgAfiliacion" value=" Afiliacion"/>
+							<p:inputText id="txtAfiliacion" disabled="true" binding="#{tr000004View.txtAfiliacion}"/>
+													<h:outputText id="msgAfiliacionporcobrar" value=" Afiliacionporcobrar"/>
+							<p:inputText id="txtAfiliacionporcobrar" disabled="true" binding="#{tr000004View.txtAfiliacionporcobrar}"/>
+													<h:outputText id="msgAfp" value=" Afp"/>
+							<p:inputText id="txtAfp" disabled="true" binding="#{tr000004View.txtAfp}"/>
+													<h:outputText id="msgAnulado" value=" Anulado"/>
+							<p:inputText id="txtAnulado" disabled="true" binding="#{tr000004View.txtAnulado}"/>
+													<h:outputText id="msgArp" value=" Arp"/>
+							<p:inputText id="txtArp" disabled="true" binding="#{tr000004View.txtArp}"/>
+													<h:outputText id="msgCaja" value=" Caja"/>
+							<p:inputText id="txtCaja" disabled="true" binding="#{tr000004View.txtCaja}"/>
+													<h:outputText id="msgCodBancoCheque" value=" CodBancoCheque"/>
+							<p:inputText id="txtCodBancoCheque" disabled="true" binding="#{tr000004View.txtCodBancoCheque}"/>
+													<h:outputText id="msgCodBancoConsignacion" value=" CodBancoConsignacion"/>
+							<p:inputText id="txtCodBancoConsignacion" disabled="true" binding="#{tr000004View.txtCodBancoConsignacion}"/>
+													<h:outputText id="msgCodUsuario" value=" CodUsuario"/>
+							<p:inputText id="txtCodUsuario" disabled="true" binding="#{tr000004View.txtCodUsuario}"/>
+													<h:outputText id="msgCodigoPagoMes" value=" CodigoPagoMes"/>
+							<p:inputText id="txtCodigoPagoMes" disabled="true" binding="#{tr000004View.txtCodigoPagoMes}"/>
+													<h:outputText id="msgComisionAsesor" value=" ComisionAsesor"/>
+							<p:inputText id="txtComisionAsesor" disabled="true" binding="#{tr000004View.txtComisionAsesor}"/>
+													<h:outputText id="msgCuota" value=" Cuota"/>
+							<p:inputText id="txtCuota" disabled="true" binding="#{tr000004View.txtCuota}"/>
+													<h:outputText id="msgCuotaporcobrar" value=" Cuotaporcobrar"/>
+							<p:inputText id="txtCuotaporcobrar" disabled="true" binding="#{tr000004View.txtCuotaporcobrar}"/>
+													<h:outputText id="msgDiasCotizadosAfp" value=" DiasCotizadosAfp"/>
+							<p:inputText id="txtDiasCotizadosAfp" disabled="true" binding="#{tr000004View.txtDiasCotizadosAfp}"/>
+													<h:outputText id="msgDiasCotizadosArp" value=" DiasCotizadosArp"/>
+							<p:inputText id="txtDiasCotizadosArp" disabled="true" binding="#{tr000004View.txtDiasCotizadosArp}"/>
+													<h:outputText id="msgDiasCotizadosCaja" value=" DiasCotizadosCaja"/>
+							<p:inputText id="txtDiasCotizadosCaja" disabled="true" binding="#{tr000004View.txtDiasCotizadosCaja}"/>
+													<h:outputText id="msgDiasCotizadosEps" value=" DiasCotizadosEps"/>
+							<p:inputText id="txtDiasCotizadosEps" disabled="true" binding="#{tr000004View.txtDiasCotizadosEps}"/>
+													<h:outputText id="msgEps" value=" Eps"/>
+							<p:inputText id="txtEps" disabled="true" binding="#{tr000004View.txtEps}"/>
+													<h:outputText id="msgFacturado" value=" Facturado"/>
+							<p:inputText id="txtFacturado" disabled="true" binding="#{tr000004View.txtFacturado}"/>
+													<h:outputText id="msgFaltanteConsignacion" value=" FaltanteConsignacion"/>
+							<p:inputText id="txtFaltanteConsignacion" disabled="true" binding="#{tr000004View.txtFaltanteConsignacion}"/>
+													<h:outputText id="msgIbc" value=" Ibc"/>
+							<p:inputText id="txtIbc" disabled="true" binding="#{tr000004View.txtIbc}"/>
+													<h:outputText id="msgIdenEmpresa" value=" IdenEmpresa"/>
+							<p:inputText id="txtIdenEmpresa" disabled="true" binding="#{tr000004View.txtIdenEmpresa}"/>
+													<h:outputText id="msgIdentificacion" value=" Identificacion"/>
+							<p:inputText id="txtIdentificacion" disabled="true" binding="#{tr000004View.txtIdentificacion}"/>
+													<h:outputText id="msgNumCheque" value=" NumCheque"/>
+							<p:inputText id="txtNumCheque" disabled="true" binding="#{tr000004View.txtNumCheque}"/>
+													<h:outputText id="msgNumConsignacion" value=" NumConsignacion"/>
+							<p:inputText id="txtNumConsignacion" disabled="true" binding="#{tr000004View.txtNumConsignacion}"/>
+													<h:outputText id="msgNumCuentaCobro" value=" NumCuentaCobro"/>
+							<p:inputText id="txtNumCuentaCobro" disabled="true" binding="#{tr000004View.txtNumCuentaCobro}"/>
+													<h:outputText id="msgNumPersonas" value=" NumPersonas"/>
+							<p:inputText id="txtNumPersonas" disabled="true" binding="#{tr000004View.txtNumPersonas}"/>
+													<h:outputText id="msgOtros" value=" Otros"/>
+							<p:inputText id="txtOtros" disabled="true" binding="#{tr000004View.txtOtros}"/>
+													<h:outputText id="msgPagoCheque" value=" PagoCheque"/>
+							<p:inputText id="txtPagoCheque" disabled="true" binding="#{tr000004View.txtPagoCheque}"/>
+													<h:outputText id="msgPagoConsignacion" value=" PagoConsignacion"/>
+							<p:inputText id="txtPagoConsignacion" disabled="true" binding="#{tr000004View.txtPagoConsignacion}"/>
+													<h:outputText id="msgPagoEfectivo" value=" PagoEfectivo"/>
+							<p:inputText id="txtPagoEfectivo" disabled="true" binding="#{tr000004View.txtPagoEfectivo}"/>
+													<h:outputText id="msgPagoRetiro" value=" PagoRetiro"/>
+							<p:inputText id="txtPagoRetiro" disabled="true" binding="#{tr000004View.txtPagoRetiro}"/>
+													<h:outputText id="msgPagoRetiroporcobrar" value=" PagoRetiroporcobrar"/>
+							<p:inputText id="txtPagoRetiroporcobrar" disabled="true" binding="#{tr000004View.txtPagoRetiroporcobrar}"/>
+													<h:outputText id="msgPeriodo" value=" Periodo"/>
+							<p:inputText id="txtPeriodo" disabled="true" binding="#{tr000004View.txtPeriodo}"/>
+													<h:outputText id="msgPeriodoRp" value=" PeriodoRp"/>
+							<p:inputText id="txtPeriodoRp" disabled="true" binding="#{tr000004View.txtPeriodoRp}"/>
+													<h:outputText id="msgPlanilladoAfp" value=" PlanilladoAfp"/>
+							<p:inputText id="txtPlanilladoAfp" disabled="true" binding="#{tr000004View.txtPlanilladoAfp}"/>
+													<h:outputText id="msgPlanilladoArp" value=" PlanilladoArp"/>
+							<p:inputText id="txtPlanilladoArp" disabled="true" binding="#{tr000004View.txtPlanilladoArp}"/>
+													<h:outputText id="msgPlanilladoCaja" value=" PlanilladoCaja"/>
+							<p:inputText id="txtPlanilladoCaja" disabled="true" binding="#{tr000004View.txtPlanilladoCaja}"/>
+													<h:outputText id="msgPlanilladoEps" value=" PlanilladoEps"/>
+							<p:inputText id="txtPlanilladoEps" disabled="true" binding="#{tr000004View.txtPlanilladoEps}"/>
+													<h:outputText id="msgPorcRiesgo" value=" PorcRiesgo"/>
+							<p:inputText id="txtPorcRiesgo" disabled="true" binding="#{tr000004View.txtPorcRiesgo}"/>
+													<h:outputText id="msgReactivacion" value=" Reactivacion"/>
+							<p:inputText id="txtReactivacion" disabled="true" binding="#{tr000004View.txtReactivacion}"/>
+													<h:outputText id="msgReactivacionporcobrar" value=" Reactivacionporcobrar"/>
+							<p:inputText id="txtReactivacionporcobrar" disabled="true" binding="#{tr000004View.txtReactivacionporcobrar}"/>
+													<h:outputText id="msgRecibPrimeraAfp" value=" RecibPrimeraAfp"/>
+							<p:inputText id="txtRecibPrimeraAfp" disabled="true" binding="#{tr000004View.txtRecibPrimeraAfp}"/>
+													<h:outputText id="msgRecibPrimeraArp" value=" RecibPrimeraArp"/>
+							<p:inputText id="txtRecibPrimeraArp" disabled="true" binding="#{tr000004View.txtRecibPrimeraArp}"/>
+													<h:outputText id="msgRecibPrimeraCaja" value=" RecibPrimeraCaja"/>
+							<p:inputText id="txtRecibPrimeraCaja" disabled="true" binding="#{tr000004View.txtRecibPrimeraCaja}"/>
+													<h:outputText id="msgRecibPrimeraEps" value=" RecibPrimeraEps"/>
+							<p:inputText id="txtRecibPrimeraEps" disabled="true" binding="#{tr000004View.txtRecibPrimeraEps}"/>
+													<h:outputText id="msgReciboCuentaCobro" value=" ReciboCuentaCobro"/>
+							<p:inputText id="txtReciboCuentaCobro" disabled="true" binding="#{tr000004View.txtReciboCuentaCobro}"/>
+													<h:outputText id="msgRiesgos" value=" Riesgos"/>
+							<p:inputText id="txtRiesgos" disabled="true" binding="#{tr000004View.txtRiesgos}"/>
+													<h:outputText id="msgValAdmonAfprec" value=" ValAdmonAfprec"/>
+							<p:inputText id="txtValAdmonAfprec" disabled="true" binding="#{tr000004View.txtValAdmonAfprec}"/>
+													<h:outputText id="msgValAdmonRec" value=" ValAdmonRec"/>
+							<p:inputText id="txtValAdmonRec" disabled="true" binding="#{tr000004View.txtValAdmonRec}"/>
+													<h:outputText id="msgValorAfiliacion" value=" ValorAfiliacion"/>
+							<p:inputText id="txtValorAfiliacion" disabled="true" binding="#{tr000004View.txtValorAfiliacion}"/>
+													<h:outputText id="msgValorCheque" value=" ValorCheque"/>
+							<p:inputText id="txtValorCheque" disabled="true" binding="#{tr000004View.txtValorCheque}"/>
+													<h:outputText id="msgValorConsignacion" value=" ValorConsignacion"/>
+							<p:inputText id="txtValorConsignacion" disabled="true" binding="#{tr000004View.txtValorConsignacion}"/>
+													<h:outputText id="msgValorDiasCotizadosAfp" value=" ValorDiasCotizadosAfp"/>
+							<p:inputText id="txtValorDiasCotizadosAfp" disabled="true" binding="#{tr000004View.txtValorDiasCotizadosAfp}"/>
+													<h:outputText id="msgValorDiasCotizadosArp" value=" ValorDiasCotizadosArp"/>
+							<p:inputText id="txtValorDiasCotizadosArp" disabled="true" binding="#{tr000004View.txtValorDiasCotizadosArp}"/>
+													<h:outputText id="msgValorDiasCotizadosCaja" value=" ValorDiasCotizadosCaja"/>
+							<p:inputText id="txtValorDiasCotizadosCaja" disabled="true" binding="#{tr000004View.txtValorDiasCotizadosCaja}"/>
+													<h:outputText id="msgValorDiasCotizadosEps" value=" ValorDiasCotizadosEps"/>
+							<p:inputText id="txtValorDiasCotizadosEps" disabled="true" binding="#{tr000004View.txtValorDiasCotizadosEps}"/>
+													<h:outputText id="msgValorEfectivo" value=" ValorEfectivo"/>
+							<p:inputText id="txtValorEfectivo" disabled="true" binding="#{tr000004View.txtValorEfectivo}"/>
+													<h:outputText id="msgValorFpsolidaridad" value=" ValorFpsolidaridad"/>
+							<p:inputText id="txtValorFpsolidaridad" disabled="true" binding="#{tr000004View.txtValorFpsolidaridad}"/>
+													<h:outputText id="msgValorFpsubsistencia" value=" ValorFpsubsistencia"/>
+							<p:inputText id="txtValorFpsubsistencia" disabled="true" binding="#{tr000004View.txtValorFpsubsistencia}"/>
+													<h:outputText id="msgValorIcbf" value=" ValorIcbf"/>
+							<p:inputText id="txtValorIcbf" disabled="true" binding="#{tr000004View.txtValorIcbf}"/>
+													<h:outputText id="msgValorMensajeriaRecibo" value=" ValorMensajeriaRecibo"/>
+							<p:inputText id="txtValorMensajeriaRecibo" disabled="true" binding="#{tr000004View.txtValorMensajeriaRecibo}"/>
+													<h:outputText id="msgValorMora" value=" ValorMora"/>
+							<p:inputText id="txtValorMora" disabled="true" binding="#{tr000004View.txtValorMora}"/>
+													<h:outputText id="msgValorOtrosServicios" value=" ValorOtrosServicios"/>
+							<p:inputText id="txtValorOtrosServicios" disabled="true" binding="#{tr000004View.txtValorOtrosServicios}"/>
+													<h:outputText id="msgValorPagoMora" value=" ValorPagoMora"/>
+							<p:inputText id="txtValorPagoMora" disabled="true" binding="#{tr000004View.txtValorPagoMora}"/>
+													<h:outputText id="msgValorPagoUpc" value=" ValorPagoUpc"/>
+							<p:inputText id="txtValorPagoUpc" disabled="true" binding="#{tr000004View.txtValorPagoUpc}"/>
+													<h:outputText id="msgValorReactivacion" value=" ValorReactivacion"/>
+							<p:inputText id="txtValorReactivacion" disabled="true" binding="#{tr000004View.txtValorReactivacion}"/>
+													<h:outputText id="msgValorSalario" value=" ValorSalario"/>
+							<p:inputText id="txtValorSalario" disabled="true" binding="#{tr000004View.txtValorSalario}"/>
+													<h:outputText id="msgValorSena" value=" ValorSena"/>
+							<p:inputText id="txtValorSena" disabled="true" binding="#{tr000004View.txtValorSena}"/>
+													<h:outputText id="msgValorTotal" value=" ValorTotal"/>
+							<p:inputText id="txtValorTotal" disabled="true" binding="#{tr000004View.txtValorTotal}"/>
+													<h:outputText id="msgValorenletras" value=" Valorenletras"/>
+							<p:inputText id="txtValorenletras" disabled="true" binding="#{tr000004View.txtValorenletras}"/>
+													<h:outputText id="msgCodEmpresa_Tg000003" value=" CodEmpresa_Tg000003"/>
+							<p:inputText id="txtCodEmpresa_Tg000003" disabled="true" binding="#{tr000004View.txtCodEmpresa_Tg000003}"/>
+													<h:outputText id="msgCodEps_Tp000003" value=" CodEps_Tp000003"/>
+							<p:inputText id="txtCodEps_Tp000003" disabled="true" binding="#{tr000004View.txtCodEps_Tp000003}"/>
+													<h:outputText id="msgCodArp_Tp000004" value=" CodArp_Tp000004"/>
+							<p:inputText id="txtCodArp_Tp000004" disabled="true" binding="#{tr000004View.txtCodArp_Tp000004}"/>
+													<h:outputText id="msgCodAfp_Tp000005" value=" CodAfp_Tp000005"/>
+							<p:inputText id="txtCodAfp_Tp000005" disabled="true" binding="#{tr000004View.txtCodAfp_Tp000005}"/>
+													<h:outputText id="msgCodCaja_Tp000006" value=" CodCaja_Tp000006"/>
+							<p:inputText id="txtCodCaja_Tp000006" disabled="true" binding="#{tr000004View.txtCodCaja_Tp000006}"/>
+												
+																				<h:outputText id="msgFechaIngPagoSistema" value=" FechaIngPagoSistema"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tr000004View.txtFechaIngPagoSistema}" >
+								<p:ajax event="dateSelect" listener="#{tr000004View.listener_txtFechaIngPagoSistema}" />
+							</p:calendar>
+														<h:outputText id="msgFechaPago" value=" FechaPago"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tr000004View.txtFechaPago}" >
+								<p:ajax event="dateSelect" listener="#{tr000004View.listener_txtFechaPago}" />
+							</p:calendar>
+														<h:outputText id="msgHoraIngPagoSistema" value=" HoraIngPagoSistema"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tr000004View.txtHoraIngPagoSistema}" >
+								<p:ajax event="dateSelect" listener="#{tr000004View.listener_txtHoraIngPagoSistema}" />
+							</p:calendar>
+														<h:outputText id="msgHoraPago" value=" HoraPago"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tr000004View.txtHoraPago}" >
+								<p:ajax event="dateSelect" listener="#{tr000004View.listener_txtHoraPago}" />
+							</p:calendar>
+																	   </h:panelGrid>
+				</p:panel>
+	   			<p:panel id="panelBotones">
+					<div align="center">					
+						<p:commandButton id="btnSave" binding="#{tr000004View.btnSave}" disabled="true" value="Save" action="#{tr000004View.action_save()}" update="panelTr000004,msg,panelBotones" />
+						<p:commandButton id="btnDelete" binding="#{tr000004View.btnDelete}" disabled="true" value="Delete" action="#{tr000004View.action_delete_master()}" onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}" update="panelTr000004,msg,panelBotones" />
+						<p:commandButton id="btnClear" value="Clear" action="#{tr000004View.action_clear()}" update="panelTr000004,msg,panelBotones" />
+					</div>
+				</p:panel>			
+			</h:form>
+  </ui:define>
+</ui:composition>

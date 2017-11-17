@@ -1,0 +1,233 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">	
+			<h:form id="formDialog">
+				<p:messages id="msg" />
+				<p:growl id="men"/>
+					<p:panel id="panelTp000001" header="Tp000001">							
+						<h:panelGrid columns="2" id="panelGrid" >
+												 	<h:outputText id="msgCodEmpresa" value="CodEmpresa"/>
+						 	<p:inputText id="txtCodEmpresa" binding="#{tp000001View.txtCodEmpresa}">
+						 		<p:ajax update="panelTp000001,msg,panelBotones" listener="#{tp000001View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCodEmpresaEmp" value="CodEmpresaEmp"/>
+						 	<p:inputText id="txtCodEmpresaEmp" binding="#{tp000001View.txtCodEmpresaEmp}">
+						 		<p:ajax update="panelTp000001,msg,panelBotones" listener="#{tp000001View.listener_txtId}"/>
+						 	</p:inputText>	
+																		
+													<h:outputText id="msgAfpActiva" value=" AfpActiva"/>
+							<p:inputText id="txtAfpActiva" disabled="true" binding="#{tp000001View.txtAfpActiva}"/>
+													<h:outputText id="msgArpActiva" value=" ArpActiva"/>
+							<p:inputText id="txtArpActiva" disabled="true" binding="#{tp000001View.txtArpActiva}"/>
+													<h:outputText id="msgBasico" value=" Basico"/>
+							<p:inputText id="txtBasico" disabled="true" binding="#{tp000001View.txtBasico}"/>
+													<h:outputText id="msgBeeper" value=" Beeper"/>
+							<p:inputText id="txtBeeper" disabled="true" binding="#{tp000001View.txtBeeper}"/>
+													<h:outputText id="msgCajaActiva" value=" CajaActiva"/>
+							<p:inputText id="txtCajaActiva" disabled="true" binding="#{tp000001View.txtCajaActiva}"/>
+													<h:outputText id="msgCelular" value=" Celular"/>
+							<p:inputText id="txtCelular" disabled="true" binding="#{tp000001View.txtCelular}"/>
+													<h:outputText id="msgCiuCotizante" value=" CiuCotizante"/>
+							<p:inputText id="txtCiuCotizante" disabled="true" binding="#{tp000001View.txtCiuCotizante}"/>
+													<h:outputText id="msgCiuLaboralCotizante" value=" CiuLaboralCotizante"/>
+							<p:inputText id="txtCiuLaboralCotizante" disabled="true" binding="#{tp000001View.txtCiuLaboralCotizante}"/>
+													<h:outputText id="msgCodAsesor" value=" CodAsesor"/>
+							<p:inputText id="txtCodAsesor" disabled="true" binding="#{tp000001View.txtCodAsesor}"/>
+													<h:outputText id="msgCodAsesor2" value=" CodAsesor2"/>
+							<p:inputText id="txtCodAsesor2" disabled="true" binding="#{tp000001View.txtCodAsesor2}"/>
+													<h:outputText id="msgCodCotizante" value=" CodCotizante"/>
+							<p:inputText id="txtCodCotizante" disabled="true" binding="#{tp000001View.txtCodCotizante}"/>
+													<h:outputText id="msgCodIntBarrio" value=" CodIntBarrio"/>
+							<p:inputText id="txtCodIntBarrio" disabled="true" binding="#{tp000001View.txtCodIntBarrio}"/>
+													<h:outputText id="msgCodigoCentroTrabajoC" value=" CodigoCentroTrabajoC"/>
+							<p:inputText id="txtCodigoCentroTrabajoC" disabled="true" binding="#{tp000001View.txtCodigoCentroTrabajoC}"/>
+													<h:outputText id="msgCodigoPostal" value=" CodigoPostal"/>
+							<p:inputText id="txtCodigoPostal" disabled="true" binding="#{tp000001View.txtCodigoPostal}"/>
+													<h:outputText id="msgColombianoExterior" value=" ColombianoExterior"/>
+							<p:inputText id="txtColombianoExterior" disabled="true" binding="#{tp000001View.txtColombianoExterior}"/>
+													<h:outputText id="msgCotisanteValorUpc" value=" CotisanteValorUpc"/>
+							<p:inputText id="txtCotisanteValorUpc" disabled="true" binding="#{tp000001View.txtCotisanteValorUpc}"/>
+													<h:outputText id="msgCotizanteEspecial" value=" CotizanteEspecial"/>
+							<p:inputText id="txtCotizanteEspecial" disabled="true" binding="#{tp000001View.txtCotizanteEspecial}"/>
+													<h:outputText id="msgCotizanteValorEsp" value=" CotizanteValorEsp"/>
+							<p:inputText id="txtCotizanteValorEsp" disabled="true" binding="#{tp000001View.txtCotizanteValorEsp}"/>
+													<h:outputText id="msgDirCotizante" value=" DirCotizante"/>
+							<p:inputText id="txtDirCotizante" disabled="true" binding="#{tp000001View.txtDirCotizante}"/>
+													<h:outputText id="msgEmailCotizante" value=" EmailCotizante"/>
+							<p:inputText id="txtEmailCotizante" disabled="true" binding="#{tp000001View.txtEmailCotizante}"/>
+													<h:outputText id="msgEpsActiva" value=" EpsActiva"/>
+							<p:inputText id="txtEpsActiva" disabled="true" binding="#{tp000001View.txtEpsActiva}"/>
+													<h:outputText id="msgEstadoCarnetArp" value=" EstadoCarnetArp"/>
+							<p:inputText id="txtEstadoCarnetArp" disabled="true" binding="#{tp000001View.txtEstadoCarnetArp}"/>
+													<h:outputText id="msgEstadoCarnetCaja" value=" EstadoCarnetCaja"/>
+							<p:inputText id="txtEstadoCarnetCaja" disabled="true" binding="#{tp000001View.txtEstadoCarnetCaja}"/>
+													<h:outputText id="msgEstadoCivil" value=" EstadoCivil"/>
+							<p:inputText id="txtEstadoCivil" disabled="true" binding="#{tp000001View.txtEstadoCivil}"/>
+													<h:outputText id="msgEstadoCotizante" value=" EstadoCotizante"/>
+							<p:inputText id="txtEstadoCotizante" disabled="true" binding="#{tp000001View.txtEstadoCotizante}"/>
+													<h:outputText id="msgEstrato" value=" Estrato"/>
+							<p:inputText id="txtEstrato" disabled="true" binding="#{tp000001View.txtEstrato}"/>
+													<h:outputText id="msgExtranjero" value=" Extranjero"/>
+							<p:inputText id="txtExtranjero" disabled="true" binding="#{tp000001View.txtExtranjero}"/>
+													<h:outputText id="msgIdenCotizante" value=" IdenCotizante"/>
+							<p:inputText id="txtIdenCotizante" disabled="true" binding="#{tp000001View.txtIdenCotizante}"/>
+													<h:outputText id="msgIpsAtencionCotiza" value=" IpsAtencionCotiza"/>
+							<p:inputText id="txtIpsAtencionCotiza" disabled="true" binding="#{tp000001View.txtIpsAtencionCotiza}"/>
+													<h:outputText id="msgIpsDirecionCotiza" value=" IpsDirecionCotiza"/>
+							<p:inputText id="txtIpsDirecionCotiza" disabled="true" binding="#{tp000001View.txtIpsDirecionCotiza}"/>
+													<h:outputText id="msgIpsTelefonosCotiza" value=" IpsTelefonosCotiza"/>
+							<p:inputText id="txtIpsTelefonosCotiza" disabled="true" binding="#{tp000001View.txtIpsTelefonosCotiza}"/>
+													<h:outputText id="msgNafiliacionAfp" value=" NafiliacionAfp"/>
+							<p:inputText id="txtNafiliacionAfp" disabled="true" binding="#{tp000001View.txtNafiliacionAfp}"/>
+													<h:outputText id="msgNafiliacionArp" value=" NafiliacionArp"/>
+							<p:inputText id="txtNafiliacionArp" disabled="true" binding="#{tp000001View.txtNafiliacionArp}"/>
+													<h:outputText id="msgNafiliacionCaja" value=" NafiliacionCaja"/>
+							<p:inputText id="txtNafiliacionCaja" disabled="true" binding="#{tp000001View.txtNafiliacionCaja}"/>
+													<h:outputText id="msgNafiliacionEps" value=" NafiliacionEps"/>
+							<p:inputText id="txtNafiliacionEps" disabled="true" binding="#{tp000001View.txtNafiliacionEps}"/>
+													<h:outputText id="msgNumRadicacion" value=" NumRadicacion"/>
+							<p:inputText id="txtNumRadicacion" disabled="true" binding="#{tp000001View.txtNumRadicacion}"/>
+													<h:outputText id="msgObservacion" value=" Observacion"/>
+							<p:inputText id="txtObservacion" disabled="true" binding="#{tp000001View.txtObservacion}"/>
+													<h:outputText id="msgPagaParafiscales" value=" PagaParafiscales"/>
+							<p:inputText id="txtPagaParafiscales" disabled="true" binding="#{tp000001View.txtPagaParafiscales}"/>
+													<h:outputText id="msgPlanilladoRtAfp" value=" PlanilladoRtAfp"/>
+							<p:inputText id="txtPlanilladoRtAfp" disabled="true" binding="#{tp000001View.txtPlanilladoRtAfp}"/>
+													<h:outputText id="msgPlanilladoRtArp" value=" PlanilladoRtArp"/>
+							<p:inputText id="txtPlanilladoRtArp" disabled="true" binding="#{tp000001View.txtPlanilladoRtArp}"/>
+													<h:outputText id="msgPlanilladoRtCaja" value=" PlanilladoRtCaja"/>
+							<p:inputText id="txtPlanilladoRtCaja" disabled="true" binding="#{tp000001View.txtPlanilladoRtCaja}"/>
+													<h:outputText id="msgPlanilladoRtEps" value=" PlanilladoRtEps"/>
+							<p:inputText id="txtPlanilladoRtEps" disabled="true" binding="#{tp000001View.txtPlanilladoRtEps}"/>
+													<h:outputText id="msgPrimerApeCotizante" value=" PrimerApeCotizante"/>
+							<p:inputText id="txtPrimerApeCotizante" disabled="true" binding="#{tp000001View.txtPrimerApeCotizante}"/>
+													<h:outputText id="msgPrimerNomCotizante" value=" PrimerNomCotizante"/>
+							<p:inputText id="txtPrimerNomCotizante" disabled="true" binding="#{tp000001View.txtPrimerNomCotizante}"/>
+													<h:outputText id="msgPrimeraAfp" value=" PrimeraAfp"/>
+							<p:inputText id="txtPrimeraAfp" disabled="true" binding="#{tp000001View.txtPrimeraAfp}"/>
+													<h:outputText id="msgPrimeraArp" value=" PrimeraArp"/>
+							<p:inputText id="txtPrimeraArp" disabled="true" binding="#{tp000001View.txtPrimeraArp}"/>
+													<h:outputText id="msgPrimeraCaja" value=" PrimeraCaja"/>
+							<p:inputText id="txtPrimeraCaja" disabled="true" binding="#{tp000001View.txtPrimeraCaja}"/>
+													<h:outputText id="msgPrimeraEps" value=" PrimeraEps"/>
+							<p:inputText id="txtPrimeraEps" disabled="true" binding="#{tp000001View.txtPrimeraEps}"/>
+													<h:outputText id="msgQuienRecibeCarnetArp" value=" QuienRecibeCarnetArp"/>
+							<p:inputText id="txtQuienRecibeCarnetArp" disabled="true" binding="#{tp000001View.txtQuienRecibeCarnetArp}"/>
+													<h:outputText id="msgQuienRecibeCarnetCaja" value=" QuienRecibeCarnetCaja"/>
+							<p:inputText id="txtQuienRecibeCarnetCaja" disabled="true" binding="#{tp000001View.txtQuienRecibeCarnetCaja}"/>
+													<h:outputText id="msgRutaFoto" value=" RutaFoto"/>
+							<p:inputText id="txtRutaFoto" disabled="true" binding="#{tp000001View.txtRutaFoto}"/>
+													<h:outputText id="msgSalarioIntegral" value=" SalarioIntegral"/>
+							<p:inputText id="txtSalarioIntegral" disabled="true" binding="#{tp000001View.txtSalarioIntegral}"/>
+													<h:outputText id="msgSegundoApeCotizante" value=" SegundoApeCotizante"/>
+							<p:inputText id="txtSegundoApeCotizante" disabled="true" binding="#{tp000001View.txtSegundoApeCotizante}"/>
+													<h:outputText id="msgSegundoNomCotizante" value=" SegundoNomCotizante"/>
+							<p:inputText id="txtSegundoNomCotizante" disabled="true" binding="#{tp000001View.txtSegundoNomCotizante}"/>
+													<h:outputText id="msgSexo" value=" Sexo"/>
+							<p:inputText id="txtSexo" disabled="true" binding="#{tp000001View.txtSexo}"/>
+													<h:outputText id="msgTelCotizante" value=" TelCotizante"/>
+							<p:inputText id="txtTelCotizante" disabled="true" binding="#{tp000001View.txtTelCotizante}"/>
+													<h:outputText id="msgTipoAfiliacion" value=" TipoAfiliacion"/>
+							<p:inputText id="txtTipoAfiliacion" disabled="true" binding="#{tp000001View.txtTipoAfiliacion}"/>
+													<h:outputText id="msgTipoSalario" value=" TipoSalario"/>
+							<p:inputText id="txtTipoSalario" disabled="true" binding="#{tp000001View.txtTipoSalario}"/>
+													<h:outputText id="msgZona" value=" Zona"/>
+							<p:inputText id="txtZona" disabled="true" binding="#{tp000001View.txtZona}"/>
+													<h:outputText id="msgCodCiudad_Tg000002" value=" CodCiudad_Tg000002"/>
+							<p:inputText id="txtCodCiudad_Tg000002" disabled="true" binding="#{tp000001View.txtCodCiudad_Tg000002}"/>
+													<h:outputText id="msgCodProfesion_Tg000012" value=" CodProfesion_Tg000012"/>
+							<p:inputText id="txtCodProfesion_Tg000012" disabled="true" binding="#{tp000001View.txtCodProfesion_Tg000012}"/>
+													<h:outputText id="msgCodActividad_Tg000013" value=" CodActividad_Tg000013"/>
+							<p:inputText id="txtCodActividad_Tg000013" disabled="true" binding="#{tp000001View.txtCodActividad_Tg000013}"/>
+													<h:outputText id="msgCodIdentidad_Tg000019" value=" CodIdentidad_Tg000019"/>
+							<p:inputText id="txtCodIdentidad_Tg000019" disabled="true" binding="#{tp000001View.txtCodIdentidad_Tg000019}"/>
+													<h:outputText id="msgCodTipoCotizante_Tg000028" value=" CodTipoCotizante_Tg000028"/>
+							<p:inputText id="txtCodTipoCotizante_Tg000028" disabled="true" binding="#{tp000001View.txtCodTipoCotizante_Tg000028}"/>
+													<h:outputText id="msgCodSubTipoCotizante_Tg000029" value=" CodSubTipoCotizante_Tg000029"/>
+							<p:inputText id="txtCodSubTipoCotizante_Tg000029" disabled="true" binding="#{tp000001View.txtCodSubTipoCotizante_Tg000029}"/>
+													<h:outputText id="msgCodEps_Tp000003" value=" CodEps_Tp000003"/>
+							<p:inputText id="txtCodEps_Tp000003" disabled="true" binding="#{tp000001View.txtCodEps_Tp000003}"/>
+													<h:outputText id="msgCodArp_Tp000004" value=" CodArp_Tp000004"/>
+							<p:inputText id="txtCodArp_Tp000004" disabled="true" binding="#{tp000001View.txtCodArp_Tp000004}"/>
+													<h:outputText id="msgCodAfp_Tp000005" value=" CodAfp_Tp000005"/>
+							<p:inputText id="txtCodAfp_Tp000005" disabled="true" binding="#{tp000001View.txtCodAfp_Tp000005}"/>
+													<h:outputText id="msgCodCaja_Tp000006" value=" CodCaja_Tp000006"/>
+							<p:inputText id="txtCodCaja_Tp000006" disabled="true" binding="#{tp000001View.txtCodCaja_Tp000006}"/>
+												
+																				<h:outputText id="msgFcoberTotal" value=" FcoberTotal"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tp000001View.txtFcoberTotal}" >
+								<p:ajax event="dateSelect" listener="#{tp000001View.listener_txtFcoberTotal}" />
+							</p:calendar>
+														<h:outputText id="msgFcoberUrgencia" value=" FcoberUrgencia"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tp000001View.txtFcoberUrgencia}" >
+								<p:ajax event="dateSelect" listener="#{tp000001View.listener_txtFcoberUrgencia}" />
+							</p:calendar>
+														<h:outputText id="msgFecInicioAfp" value=" FecInicioAfp"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tp000001View.txtFecInicioAfp}" >
+								<p:ajax event="dateSelect" listener="#{tp000001View.listener_txtFecInicioAfp}" />
+							</p:calendar>
+														<h:outputText id="msgFecInicioArp" value=" FecInicioArp"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tp000001View.txtFecInicioArp}" >
+								<p:ajax event="dateSelect" listener="#{tp000001View.listener_txtFecInicioArp}" />
+							</p:calendar>
+														<h:outputText id="msgFecInicioCaja" value=" FecInicioCaja"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tp000001View.txtFecInicioCaja}" >
+								<p:ajax event="dateSelect" listener="#{tp000001View.listener_txtFecInicioCaja}" />
+							</p:calendar>
+														<h:outputText id="msgFecInicioEps" value=" FecInicioEps"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tp000001View.txtFecInicioEps}" >
+								<p:ajax event="dateSelect" listener="#{tp000001View.listener_txtFecInicioEps}" />
+							</p:calendar>
+														<h:outputText id="msgFechaAfiliacion" value=" FechaAfiliacion"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tp000001View.txtFechaAfiliacion}" >
+								<p:ajax event="dateSelect" listener="#{tp000001View.listener_txtFechaAfiliacion}" />
+							</p:calendar>
+														<h:outputText id="msgFechaEntregaCarnetArp" value=" FechaEntregaCarnetArp"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tp000001View.txtFechaEntregaCarnetArp}" >
+								<p:ajax event="dateSelect" listener="#{tp000001View.listener_txtFechaEntregaCarnetArp}" />
+							</p:calendar>
+														<h:outputText id="msgFechaEntregaCarnetCaja" value=" FechaEntregaCarnetCaja"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tp000001View.txtFechaEntregaCarnetCaja}" >
+								<p:ajax event="dateSelect" listener="#{tp000001View.listener_txtFechaEntregaCarnetCaja}" />
+							</p:calendar>
+														<h:outputText id="msgFechaIngresoEmp" value=" FechaIngresoEmp"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tp000001View.txtFechaIngresoEmp}" >
+								<p:ajax event="dateSelect" listener="#{tp000001View.listener_txtFechaIngresoEmp}" />
+							</p:calendar>
+														<h:outputText id="msgFechaNacimiento" value=" FechaNacimiento"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tp000001View.txtFechaNacimiento}" >
+								<p:ajax event="dateSelect" listener="#{tp000001View.listener_txtFechaNacimiento}" />
+							</p:calendar>
+														<h:outputText id="msgFechaRadicacion" value=" FechaRadicacion"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tp000001View.txtFechaRadicacion}" >
+								<p:ajax event="dateSelect" listener="#{tp000001View.listener_txtFechaRadicacion}" />
+							</p:calendar>
+																	   </h:panelGrid>
+				</p:panel>
+	   			<p:panel id="panelBotones">
+					<div align="center">					
+						<p:commandButton id="btnSave" binding="#{tp000001View.btnSave}" disabled="true" value="Save" action="#{tp000001View.action_save()}" update="panelTp000001,msg,panelBotones" />
+						<p:commandButton id="btnDelete" binding="#{tp000001View.btnDelete}" disabled="true" value="Delete" action="#{tp000001View.action_delete_master()}" onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}" update="panelTp000001,msg,panelBotones" />
+						<p:commandButton id="btnClear" value="Clear" action="#{tp000001View.action_clear()}" update="panelTp000001,msg,panelBotones" />
+					</div>
+				</p:panel>			
+			</h:form>
+  </ui:define>
+</ui:composition>

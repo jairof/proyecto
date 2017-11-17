@@ -1,0 +1,89 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">		
+
+		  			<h:form id="frm">								  		
+						
+						<p:panel id="panelDataTableTg000013" header="Tg000013Data">
+							<p:growl id="men"/>				
+							<p:dataTable value="#{tg000013View.data}" var="tg000013"
+								paginator="true" rows="5">
+																										<p:column filterBy="#{tg000013.codActividad}" sortBy="#{tg000013.codActividad}" >
+										 <f:facet name="header">
+										<h:outputText value="codActividad"/>
+										</f:facet>
+										 <h:outputText value="#{tg000013.codActividad}"/>
+										 </p:column>
+			                    																									
+										<p:column filterBy="#{tg000013.desActividad}" sortBy="#{tg000013.desActividad}" >
+										 <f:facet name="header">
+										<h:outputText value="DesActividad"/>
+										</f:facet>
+										 <h:outputText value="#{tg000013.desActividad}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000013.nivelRiesgo}" sortBy="#{tg000013.nivelRiesgo}" >
+										 <f:facet name="header">
+										<h:outputText value="NivelRiesgo"/>
+										</f:facet>
+										 <h:outputText value="#{tg000013.nivelRiesgo}"/>
+										</p:column>   
+			                    			                    
+								<p:column headerText="Options">
+									<p:commandButton id="btnEdit" icon="ui-icon-pencil"
+										update=":dialogTg000013"
+										actionListener="#{tg000013View.action_edit}">
+										<f:attribute name="selectedTg000013" value="#{tg000013}" />
+									</p:commandButton>
+									<p:commandButton id="btnDelete"									
+										title="Delete" actionListener="#{tg000013View.action_delete_datatable}"
+										onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}"
+										icon="ui-icon-trash" update="@form">
+										<f:attribute name="selectedTg000013" value="#{tg000013}" />
+									</p:commandButton>
+								</p:column>									                    
+							</p:dataTable>	
+						</p:panel>
+						<p:panel id="panelBoton">
+							<div align="center">
+								<p:commandButton id="btnNew" value="New"
+									action="#{tg000013View.action_new()}" update=":dialogTg000013" />
+							</div>
+						</p:panel>						
+		   			</h:form>
+					<p:dialog id="dialogTg000013" appendTo="@(body)" draggable="true"
+						closable="false" visible="#{tg000013View.showDialog}" resizable="false"
+						modal="true" width="500">
+						<h:form id="formDialog">
+							<p:messages id="msg" />
+							<p:panel id="panelTg000013" header="Tg000013">							
+							    <h:panelGrid columns="2" id="panelGrid" >
+																		 <h:outputText id="msgCodActividad" value="CodActividad"/>
+									 <p:inputText id="txtCodActividad" binding="#{tg000013View.txtCodActividad}">
+									 <p:ajax update=":dialogTg000013" listener="#{tg000013View.listener_txtId}"/>
+									 </p:inputText>	
+																											
+																		<h:outputText id="msgDesActividad" value=" DesActividad"/>
+									<p:inputText id="txtDesActividad" disabled="true" binding="#{tg000013View.txtDesActividad}"/>
+																		<h:outputText id="msgNivelRiesgo" value=" NivelRiesgo"/>
+									<p:inputText id="txtNivelRiesgo" disabled="true" binding="#{tg000013View.txtNivelRiesgo}"/>
+																		
+																    </h:panelGrid>
+							</p:panel>						   
+							<p:panel id="panelBotones">
+								<div align="center">					
+									<p:commandButton id="btnSave" binding="#{tg000013View.btnSave}" value="Save" action="#{tg000013View.action_save()}" update=":dialogTg000013 :frm:panelDataTableTg000013" />
+									<p:commandButton id="btnClear" value="Clear" action="#{tg000013View.action_clear()}" update=":dialogTg000013" />
+									<p:commandButton id="btnExit" value="Exit" action="#{tg000013View.action_closeDialog()}" update=":dialogTg000013" />
+								</div>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+	</ui:define>
+</ui:composition>
+

@@ -1,0 +1,99 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">		
+
+		  			<h:form id="frm">								  		
+						
+						<p:panel id="panelDataTableTg000010" header="Tg000010Data">
+							<p:growl id="men"/>				
+							<p:dataTable value="#{tg000010View.data}" var="tg000010"
+								paginator="true" rows="5">
+																										<p:column filterBy="#{tg000010.codSucursal}" sortBy="#{tg000010.codSucursal}" >
+										 <f:facet name="header">
+										<h:outputText value="codSucursal"/>
+										</f:facet>
+										 <h:outputText value="#{tg000010.codSucursal}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tg000010.codEmpresa}" sortBy="#{tg000010.codEmpresa}" >
+										 <f:facet name="header">
+										<h:outputText value="codEmpresa"/>
+										</f:facet>
+										 <h:outputText value="#{tg000010.codEmpresa}"/>
+										 </p:column>
+			                    																									
+										<p:column filterBy="#{tg000010.nomSucursal}" sortBy="#{tg000010.nomSucursal}" >
+										 <f:facet name="header">
+										<h:outputText value="NomSucursal"/>
+										</f:facet>
+										 <h:outputText value="#{tg000010.nomSucursal}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tg000010.codEmpresa_Tg000003}" sortBy="#{tg000010.codEmpresa_Tg000003}" >
+										 <f:facet name="header">
+										<h:outputText value="CodEmpresa_Tg000003"/>
+										</f:facet>
+										 <h:outputText value="#{tg000010.codEmpresa_Tg000003}"/>
+										</p:column>   
+			                    			                    
+								<p:column headerText="Options">
+									<p:commandButton id="btnEdit" icon="ui-icon-pencil"
+										update=":dialogTg000010"
+										actionListener="#{tg000010View.action_edit}">
+										<f:attribute name="selectedTg000010" value="#{tg000010}" />
+									</p:commandButton>
+									<p:commandButton id="btnDelete"									
+										title="Delete" actionListener="#{tg000010View.action_delete_datatable}"
+										onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}"
+										icon="ui-icon-trash" update="@form">
+										<f:attribute name="selectedTg000010" value="#{tg000010}" />
+									</p:commandButton>
+								</p:column>									                    
+							</p:dataTable>	
+						</p:panel>
+						<p:panel id="panelBoton">
+							<div align="center">
+								<p:commandButton id="btnNew" value="New"
+									action="#{tg000010View.action_new()}" update=":dialogTg000010" />
+							</div>
+						</p:panel>						
+		   			</h:form>
+					<p:dialog id="dialogTg000010" appendTo="@(body)" draggable="true"
+						closable="false" visible="#{tg000010View.showDialog}" resizable="false"
+						modal="true" width="500">
+						<h:form id="formDialog">
+							<p:messages id="msg" />
+							<p:panel id="panelTg000010" header="Tg000010">							
+							    <h:panelGrid columns="2" id="panelGrid" >
+																		 <h:outputText id="msgCodSucursal" value="CodSucursal"/>
+									 <p:inputText id="txtCodSucursal" binding="#{tg000010View.txtCodSucursal}">
+									 <p:ajax update=":dialogTg000010" listener="#{tg000010View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCodEmpresa" value="CodEmpresa"/>
+									 <p:inputText id="txtCodEmpresa" binding="#{tg000010View.txtCodEmpresa}">
+									 <p:ajax update=":dialogTg000010" listener="#{tg000010View.listener_txtId}"/>
+									 </p:inputText>	
+																											
+																		<h:outputText id="msgNomSucursal" value=" NomSucursal"/>
+									<p:inputText id="txtNomSucursal" disabled="true" binding="#{tg000010View.txtNomSucursal}"/>
+																		<h:outputText id="msgCodEmpresa_Tg000003" value=" CodEmpresa_Tg000003"/>
+									<p:inputText id="txtCodEmpresa_Tg000003" disabled="true" binding="#{tg000010View.txtCodEmpresa_Tg000003}"/>
+																		
+																    </h:panelGrid>
+							</p:panel>						   
+							<p:panel id="panelBotones">
+								<div align="center">					
+									<p:commandButton id="btnSave" binding="#{tg000010View.btnSave}" value="Save" action="#{tg000010View.action_save()}" update=":dialogTg000010 :frm:panelDataTableTg000010" />
+									<p:commandButton id="btnClear" value="Clear" action="#{tg000010View.action_clear()}" update=":dialogTg000010" />
+									<p:commandButton id="btnExit" value="Exit" action="#{tg000010View.action_closeDialog()}" update=":dialogTg000010" />
+								</div>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+	</ui:define>
+</ui:composition>
+

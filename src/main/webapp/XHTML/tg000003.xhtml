@@ -1,0 +1,157 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">	
+			<h:form id="formDialog">
+				<p:messages id="msg" />
+				<p:growl id="men"/>
+					<p:panel id="panelTg000003" header="Tg000003">							
+						<h:panelGrid columns="2" id="panelGrid" >
+												 	<h:outputText id="msgCodEmpresa" value="CodEmpresa"/>
+						 	<p:inputText id="txtCodEmpresa" binding="#{tg000003View.txtCodEmpresa}">
+						 		<p:ajax update="panelTg000003,msg,panelBotones" listener="#{tg000003View.listener_txtId}"/>
+						 	</p:inputText>	
+																		
+													<h:outputText id="msgApartado" value=" Apartado"/>
+							<p:inputText id="txtApartado" disabled="true" binding="#{tg000003View.txtApartado}"/>
+													<h:outputText id="msgApeContacto" value=" ApeContacto"/>
+							<p:inputText id="txtApeContacto" disabled="true" binding="#{tg000003View.txtApeContacto}"/>
+													<h:outputText id="msgCotizacionnoCaja" value=" CotizacionnoCaja"/>
+							<p:inputText id="txtCotizacionnoCaja" disabled="true" binding="#{tg000003View.txtCotizacionnoCaja}"/>
+													<h:outputText id="msgCotizacionredondeada" value=" Cotizacionredondeada"/>
+							<p:inputText id="txtCotizacionredondeada" disabled="true" binding="#{tg000003View.txtCotizacionredondeada}"/>
+													<h:outputText id="msgCotizacionresiduoMayor" value=" CotizacionresiduoMayor"/>
+							<p:inputText id="txtCotizacionresiduoMayor" disabled="true" binding="#{tg000003View.txtCotizacionresiduoMayor}"/>
+													<h:outputText id="msgDe16hasta17" value=" De16hasta17"/>
+							<p:inputText id="txtDe16hasta17" disabled="true" binding="#{tg000003View.txtDe16hasta17}"/>
+													<h:outputText id="msgDe4amenosde16" value=" De4amenosde16"/>
+							<p:inputText id="txtDe4amenosde16" disabled="true" binding="#{tg000003View.txtDe4amenosde16}"/>
+													<h:outputText id="msgDepartamentoCargo" value=" DepartamentoCargo"/>
+							<p:inputText id="txtDepartamentoCargo" disabled="true" binding="#{tg000003View.txtDepartamentoCargo}"/>
+													<h:outputText id="msgDepto" value=" Depto"/>
+							<p:inputText id="txtDepto" disabled="true" binding="#{tg000003View.txtDepto}"/>
+													<h:outputText id="msgDespedida" value=" Despedida"/>
+							<p:inputText id="txtDespedida" disabled="true" binding="#{tg000003View.txtDespedida}"/>
+													<h:outputText id="msgDireccion" value=" Direccion"/>
+							<p:inputText id="txtDireccion" disabled="true" binding="#{tg000003View.txtDireccion}"/>
+													<h:outputText id="msgDvemp" value=" Dvemp"/>
+							<p:inputText id="txtDvemp" disabled="true" binding="#{tg000003View.txtDvemp}"/>
+													<h:outputText id="msgEmail" value=" Email"/>
+							<p:inputText id="txtEmail" disabled="true" binding="#{tg000003View.txtEmail}"/>
+													<h:outputText id="msgFax" value=" Fax"/>
+							<p:inputText id="txtFax" disabled="true" binding="#{tg000003View.txtFax}"/>
+													<h:outputText id="msgFirmadaPor" value=" FirmadaPor"/>
+							<p:inputText id="txtFirmadaPor" disabled="true" binding="#{tg000003View.txtFirmadaPor}"/>
+													<h:outputText id="msgFondoArp" value=" FondoArp"/>
+							<p:inputText id="txtFondoArp" disabled="true" binding="#{tg000003View.txtFondoArp}"/>
+													<h:outputText id="msgIbcnoCaja" value=" IbcnoCaja"/>
+							<p:inputText id="txtIbcnoCaja" disabled="true" binding="#{tg000003View.txtIbcnoCaja}"/>
+													<h:outputText id="msgIbcredondeado" value=" Ibcredondeado"/>
+							<p:inputText id="txtIbcredondeado" disabled="true" binding="#{tg000003View.txtIbcredondeado}"/>
+													<h:outputText id="msgIbcresiduoMayor" value=" IbcresiduoMayor"/>
+							<p:inputText id="txtIbcresiduoMayor" disabled="true" binding="#{tg000003View.txtIbcresiduoMayor}"/>
+													<h:outputText id="msgMasde17hasta18" value=" Masde17hasta18"/>
+							<p:inputText id="txtMasde17hasta18" disabled="true" binding="#{tg000003View.txtMasde17hasta18}"/>
+													<h:outputText id="msgMasde18hasta19" value=" Masde18hasta19"/>
+							<p:inputText id="txtMasde18hasta19" disabled="true" binding="#{tg000003View.txtMasde18hasta19}"/>
+													<h:outputText id="msgMasde19hasta20" value=" Masde19hasta20"/>
+							<p:inputText id="txtMasde19hasta20" disabled="true" binding="#{tg000003View.txtMasde19hasta20}"/>
+													<h:outputText id="msgMayora20" value=" Mayora20"/>
+							<p:inputText id="txtMayora20" disabled="true" binding="#{tg000003View.txtMayora20}"/>
+													<h:outputText id="msgNit" value=" Nit"/>
+							<p:inputText id="txtNit" disabled="true" binding="#{tg000003View.txtNit}"/>
+													<h:outputText id="msgNomContacto" value=" NomContacto"/>
+							<p:inputText id="txtNomContacto" disabled="true" binding="#{tg000003View.txtNomContacto}"/>
+													<h:outputText id="msgNomRegistroPila" value=" NomRegistroPila"/>
+							<p:inputText id="txtNomRegistroPila" disabled="true" binding="#{tg000003View.txtNomRegistroPila}"/>
+													<h:outputText id="msgNotaAlpieRecibo" value=" NotaAlpieRecibo"/>
+							<p:inputText id="txtNotaAlpieRecibo" disabled="true" binding="#{tg000003View.txtNotaAlpieRecibo}"/>
+													<h:outputText id="msgNumeroEmpresas" value=" NumeroEmpresas"/>
+							<p:inputText id="txtNumeroEmpresas" disabled="true" binding="#{tg000003View.txtNumeroEmpresas}"/>
+													<h:outputText id="msgObservacion" value=" Observacion"/>
+							<p:inputText id="txtObservacion" disabled="true" binding="#{tg000003View.txtObservacion}"/>
+													<h:outputText id="msgPagaMesActual" value=" PagaMesActual"/>
+							<p:inputText id="txtPagaMesActual" disabled="true" binding="#{tg000003View.txtPagaMesActual}"/>
+													<h:outputText id="msgPorAfp" value=" PorAfp"/>
+							<p:inputText id="txtPorAfp" disabled="true" binding="#{tg000003View.txtPorAfp}"/>
+													<h:outputText id="msgPorMoraPlanilla" value=" PorMoraPlanilla"/>
+							<p:inputText id="txtPorMoraPlanilla" disabled="true" binding="#{tg000003View.txtPorMoraPlanilla}"/>
+													<h:outputText id="msgPorMoraRecibo" value=" PorMoraRecibo"/>
+							<p:inputText id="txtPorMoraRecibo" disabled="true" binding="#{tg000003View.txtPorMoraRecibo}"/>
+													<h:outputText id="msgPorcAporteSocial" value=" PorcAporteSocial"/>
+							<p:inputText id="txtPorcAporteSocial" disabled="true" binding="#{tg000003View.txtPorcAporteSocial}"/>
+													<h:outputText id="msgPorcCaja" value=" PorcCaja"/>
+							<p:inputText id="txtPorcCaja" disabled="true" binding="#{tg000003View.txtPorcCaja}"/>
+													<h:outputText id="msgPorcEps" value=" PorcEps"/>
+							<p:inputText id="txtPorcEps" disabled="true" binding="#{tg000003View.txtPorcEps}"/>
+													<h:outputText id="msgPorcIcbf" value=" PorcIcbf"/>
+							<p:inputText id="txtPorcIcbf" disabled="true" binding="#{tg000003View.txtPorcIcbf}"/>
+													<h:outputText id="msgPorcIva" value=" PorcIva"/>
+							<p:inputText id="txtPorcIva" disabled="true" binding="#{tg000003View.txtPorcIva}"/>
+													<h:outputText id="msgPorcSena" value=" PorcSena"/>
+							<p:inputText id="txtPorcSena" disabled="true" binding="#{tg000003View.txtPorcSena}"/>
+													<h:outputText id="msgProfesion" value=" Profesion"/>
+							<p:inputText id="txtProfesion" disabled="true" binding="#{tg000003View.txtProfesion}"/>
+													<h:outputText id="msgRazonSocial" value=" RazonSocial"/>
+							<p:inputText id="txtRazonSocial" disabled="true" binding="#{tg000003View.txtRazonSocial}"/>
+													<h:outputText id="msgRiesgo1" value=" Riesgo1"/>
+							<p:inputText id="txtRiesgo1" disabled="true" binding="#{tg000003View.txtRiesgo1}"/>
+													<h:outputText id="msgRiesgo2" value=" Riesgo2"/>
+							<p:inputText id="txtRiesgo2" disabled="true" binding="#{tg000003View.txtRiesgo2}"/>
+													<h:outputText id="msgRiesgo3" value=" Riesgo3"/>
+							<p:inputText id="txtRiesgo3" disabled="true" binding="#{tg000003View.txtRiesgo3}"/>
+													<h:outputText id="msgRiesgo4" value=" Riesgo4"/>
+							<p:inputText id="txtRiesgo4" disabled="true" binding="#{tg000003View.txtRiesgo4}"/>
+													<h:outputText id="msgRiesgo5" value=" Riesgo5"/>
+							<p:inputText id="txtRiesgo5" disabled="true" binding="#{tg000003View.txtRiesgo5}"/>
+													<h:outputText id="msgSalarioBasico" value=" SalarioBasico"/>
+							<p:inputText id="txtSalarioBasico" disabled="true" binding="#{tg000003View.txtSalarioBasico}"/>
+													<h:outputText id="msgSigla" value=" Sigla"/>
+							<p:inputText id="txtSigla" disabled="true" binding="#{tg000003View.txtSigla}"/>
+													<h:outputText id="msgTelefono" value=" Telefono"/>
+							<p:inputText id="txtTelefono" disabled="true" binding="#{tg000003View.txtTelefono}"/>
+													<h:outputText id="msgTipoAportante" value=" TipoAportante"/>
+							<p:inputText id="txtTipoAportante" disabled="true" binding="#{tg000003View.txtTipoAportante}"/>
+													<h:outputText id="msgTipoDocumentoC" value=" TipoDocumentoC"/>
+							<p:inputText id="txtTipoDocumentoC" disabled="true" binding="#{tg000003View.txtTipoDocumentoC}"/>
+													<h:outputText id="msgValAdmon" value=" ValAdmon"/>
+							<p:inputText id="txtValAdmon" disabled="true" binding="#{tg000003View.txtValAdmon}"/>
+													<h:outputText id="msgValAdmonAfp" value=" ValAdmonAfp"/>
+							<p:inputText id="txtValAdmonAfp" disabled="true" binding="#{tg000003View.txtValAdmonAfp}"/>
+													<h:outputText id="msgValorMensajeriaRecibo" value=" ValorMensajeriaRecibo"/>
+							<p:inputText id="txtValorMensajeriaRecibo" disabled="true" binding="#{tg000003View.txtValorMensajeriaRecibo}"/>
+													<h:outputText id="msgValorReactivacion" value=" ValorReactivacion"/>
+							<p:inputText id="txtValorReactivacion" disabled="true" binding="#{tg000003View.txtValorReactivacion}"/>
+													<h:outputText id="msgValorRetiro" value=" ValorRetiro"/>
+							<p:inputText id="txtValorRetiro" disabled="true" binding="#{tg000003View.txtValorRetiro}"/>
+													<h:outputText id="msgCodCiudad_Tg000002" value=" CodCiudad_Tg000002"/>
+							<p:inputText id="txtCodCiudad_Tg000002" disabled="true" binding="#{tg000003View.txtCodCiudad_Tg000002}"/>
+													<h:outputText id="msgCodCargo_Tg000006" value=" CodCargo_Tg000006"/>
+							<p:inputText id="txtCodCargo_Tg000006" disabled="true" binding="#{tg000003View.txtCodCargo_Tg000006}"/>
+												
+																				<h:outputText id="msgFechaPrimerPago" value=" FechaPrimerPago"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tg000003View.txtFechaPrimerPago}" >
+								<p:ajax event="dateSelect" listener="#{tg000003View.listener_txtFechaPrimerPago}" />
+							</p:calendar>
+														<h:outputText id="msgFechaSegundoPago" value=" FechaSegundoPago"/>
+														<p:calendar showOn="button" navigator="true" locale="en" 
+							binding="#{tg000003View.txtFechaSegundoPago}" >
+								<p:ajax event="dateSelect" listener="#{tg000003View.listener_txtFechaSegundoPago}" />
+							</p:calendar>
+																	   </h:panelGrid>
+				</p:panel>
+	   			<p:panel id="panelBotones">
+					<div align="center">					
+						<p:commandButton id="btnSave" binding="#{tg000003View.btnSave}" disabled="true" value="Save" action="#{tg000003View.action_save()}" update="panelTg000003,msg,panelBotones" />
+						<p:commandButton id="btnDelete" binding="#{tg000003View.btnDelete}" disabled="true" value="Delete" action="#{tg000003View.action_delete_master()}" onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}" update="panelTg000003,msg,panelBotones" />
+						<p:commandButton id="btnClear" value="Clear" action="#{tg000003View.action_clear()}" update="panelTg000003,msg,panelBotones" />
+					</div>
+				</p:panel>			
+			</h:form>
+  </ui:define>
+</ui:composition>

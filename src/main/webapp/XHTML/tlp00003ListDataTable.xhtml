@@ -1,0 +1,135 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">		
+
+		  			<h:form id="frm">								  		
+						
+						<p:panel id="panelDataTableTlp00003" header="Tlp00003Data">
+							<p:growl id="men"/>				
+							<p:dataTable value="#{tlp00003View.data}" var="tlp00003"
+								paginator="true" rows="5">
+																										<p:column filterBy="#{tlp00003.numPlanilla}" sortBy="#{tlp00003.numPlanilla}" >
+										 <f:facet name="header">
+										<h:outputText value="numPlanilla"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00003.numPlanilla}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00003.codEmpresa}" sortBy="#{tlp00003.codEmpresa}" >
+										 <f:facet name="header">
+										<h:outputText value="codEmpresa"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00003.codEmpresa}"/>
+										 </p:column>
+			                    																									
+										<p:column filterBy="#{tlp00003.codEmpresaEmp}" sortBy="#{tlp00003.codEmpresaEmp}" >
+										 <f:facet name="header">
+										<h:outputText value="CodEmpresaEmp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00003.codEmpresaEmp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00003.ing}" sortBy="#{tlp00003.ing}" >
+										 <f:facet name="header">
+										<h:outputText value="Ing"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00003.ing}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00003.planillaAfp}" sortBy="#{tlp00003.planillaAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="PlanillaAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00003.planillaAfp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00003.planillaArp}" sortBy="#{tlp00003.planillaArp}" >
+										 <f:facet name="header">
+										<h:outputText value="PlanillaArp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00003.planillaArp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00003.planillaEps}" sortBy="#{tlp00003.planillaEps}" >
+										 <f:facet name="header">
+										<h:outputText value="PlanillaEps"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00003.planillaEps}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tlp00003.ret}" sortBy="#{tlp00003.ret}" >
+										 <f:facet name="header">
+										<h:outputText value="Ret"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00003.ret}"/>
+										</p:column>   
+			                    			                    
+								<p:column headerText="Options">
+									<p:commandButton id="btnEdit" icon="ui-icon-pencil"
+										update=":dialogTlp00003"
+										actionListener="#{tlp00003View.action_edit}">
+										<f:attribute name="selectedTlp00003" value="#{tlp00003}" />
+									</p:commandButton>
+									<p:commandButton id="btnDelete"									
+										title="Delete" actionListener="#{tlp00003View.action_delete_datatable}"
+										onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}"
+										icon="ui-icon-trash" update="@form">
+										<f:attribute name="selectedTlp00003" value="#{tlp00003}" />
+									</p:commandButton>
+								</p:column>									                    
+							</p:dataTable>	
+						</p:panel>
+						<p:panel id="panelBoton">
+							<div align="center">
+								<p:commandButton id="btnNew" value="New"
+									action="#{tlp00003View.action_new()}" update=":dialogTlp00003" />
+							</div>
+						</p:panel>						
+		   			</h:form>
+					<p:dialog id="dialogTlp00003" appendTo="@(body)" draggable="true"
+						closable="false" visible="#{tlp00003View.showDialog}" resizable="false"
+						modal="true" width="500">
+						<h:form id="formDialog">
+							<p:messages id="msg" />
+							<p:panel id="panelTlp00003" header="Tlp00003">							
+							    <h:panelGrid columns="2" id="panelGrid" >
+																		 <h:outputText id="msgNumPlanilla" value="NumPlanilla"/>
+									 <p:inputText id="txtNumPlanilla" binding="#{tlp00003View.txtNumPlanilla}">
+									 <p:ajax update=":dialogTlp00003" listener="#{tlp00003View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCodEmpresa" value="CodEmpresa"/>
+									 <p:inputText id="txtCodEmpresa" binding="#{tlp00003View.txtCodEmpresa}">
+									 <p:ajax update=":dialogTlp00003" listener="#{tlp00003View.listener_txtId}"/>
+									 </p:inputText>	
+																											
+																		<h:outputText id="msgCodEmpresaEmp" value=" CodEmpresaEmp"/>
+									<p:inputText id="txtCodEmpresaEmp" disabled="true" binding="#{tlp00003View.txtCodEmpresaEmp}"/>
+																		<h:outputText id="msgIng" value=" Ing"/>
+									<p:inputText id="txtIng" disabled="true" binding="#{tlp00003View.txtIng}"/>
+																		<h:outputText id="msgPlanillaAfp" value=" PlanillaAfp"/>
+									<p:inputText id="txtPlanillaAfp" disabled="true" binding="#{tlp00003View.txtPlanillaAfp}"/>
+																		<h:outputText id="msgPlanillaArp" value=" PlanillaArp"/>
+									<p:inputText id="txtPlanillaArp" disabled="true" binding="#{tlp00003View.txtPlanillaArp}"/>
+																		<h:outputText id="msgPlanillaEps" value=" PlanillaEps"/>
+									<p:inputText id="txtPlanillaEps" disabled="true" binding="#{tlp00003View.txtPlanillaEps}"/>
+																		<h:outputText id="msgRet" value=" Ret"/>
+									<p:inputText id="txtRet" disabled="true" binding="#{tlp00003View.txtRet}"/>
+																		
+																    </h:panelGrid>
+							</p:panel>						   
+							<p:panel id="panelBotones">
+								<div align="center">					
+									<p:commandButton id="btnSave" binding="#{tlp00003View.btnSave}" value="Save" action="#{tlp00003View.action_save()}" update=":dialogTlp00003 :frm:panelDataTableTlp00003" />
+									<p:commandButton id="btnClear" value="Clear" action="#{tlp00003View.action_clear()}" update=":dialogTlp00003" />
+									<p:commandButton id="btnExit" value="Exit" action="#{tlp00003View.action_closeDialog()}" update=":dialogTlp00003" />
+								</div>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+	</ui:define>
+</ui:composition>
+

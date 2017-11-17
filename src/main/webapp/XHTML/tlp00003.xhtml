@@ -1,0 +1,47 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">	
+			<h:form id="formDialog">
+				<p:messages id="msg" />
+				<p:growl id="men"/>
+					<p:panel id="panelTlp00003" header="Tlp00003">							
+						<h:panelGrid columns="2" id="panelGrid" >
+												 	<h:outputText id="msgNumPlanilla" value="NumPlanilla"/>
+						 	<p:inputText id="txtNumPlanilla" binding="#{tlp00003View.txtNumPlanilla}">
+						 		<p:ajax update="panelTlp00003,msg,panelBotones" listener="#{tlp00003View.listener_txtId}"/>
+						 	</p:inputText>	
+												 	<h:outputText id="msgCodEmpresa" value="CodEmpresa"/>
+						 	<p:inputText id="txtCodEmpresa" binding="#{tlp00003View.txtCodEmpresa}">
+						 		<p:ajax update="panelTlp00003,msg,panelBotones" listener="#{tlp00003View.listener_txtId}"/>
+						 	</p:inputText>	
+																		
+													<h:outputText id="msgCodEmpresaEmp" value=" CodEmpresaEmp"/>
+							<p:inputText id="txtCodEmpresaEmp" disabled="true" binding="#{tlp00003View.txtCodEmpresaEmp}"/>
+													<h:outputText id="msgIng" value=" Ing"/>
+							<p:inputText id="txtIng" disabled="true" binding="#{tlp00003View.txtIng}"/>
+													<h:outputText id="msgPlanillaAfp" value=" PlanillaAfp"/>
+							<p:inputText id="txtPlanillaAfp" disabled="true" binding="#{tlp00003View.txtPlanillaAfp}"/>
+													<h:outputText id="msgPlanillaArp" value=" PlanillaArp"/>
+							<p:inputText id="txtPlanillaArp" disabled="true" binding="#{tlp00003View.txtPlanillaArp}"/>
+													<h:outputText id="msgPlanillaEps" value=" PlanillaEps"/>
+							<p:inputText id="txtPlanillaEps" disabled="true" binding="#{tlp00003View.txtPlanillaEps}"/>
+													<h:outputText id="msgRet" value=" Ret"/>
+							<p:inputText id="txtRet" disabled="true" binding="#{tlp00003View.txtRet}"/>
+												
+										   </h:panelGrid>
+				</p:panel>
+	   			<p:panel id="panelBotones">
+					<div align="center">					
+						<p:commandButton id="btnSave" binding="#{tlp00003View.btnSave}" disabled="true" value="Save" action="#{tlp00003View.action_save()}" update="panelTlp00003,msg,panelBotones" />
+						<p:commandButton id="btnDelete" binding="#{tlp00003View.btnDelete}" disabled="true" value="Delete" action="#{tlp00003View.action_delete_master()}" onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}" update="panelTlp00003,msg,panelBotones" />
+						<p:commandButton id="btnClear" value="Clear" action="#{tlp00003View.action_clear()}" update="panelTlp00003,msg,panelBotones" />
+					</div>
+				</p:panel>			
+			</h:form>
+  </ui:define>
+</ui:composition>

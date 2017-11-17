@@ -1,0 +1,790 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">		
+
+		  			<h:form id="frm">								  		
+						
+						<p:panel id="panelDataTableTlp00002" header="Tlp00002Data">
+							<p:growl id="men"/>				
+							<p:dataTable value="#{tlp00002View.data}" var="tlp00002"
+								paginator="true" rows="5">
+																										<p:column filterBy="#{tlp00002.numPlanilla}" sortBy="#{tlp00002.numPlanilla}" >
+										 <f:facet name="header">
+										<h:outputText value="numPlanilla"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.numPlanilla}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.codiEps}" sortBy="#{tlp00002.codiEps}" >
+										 <f:facet name="header">
+										<h:outputText value="codiEps"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.codiEps}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.codiArp}" sortBy="#{tlp00002.codiArp}" >
+										 <f:facet name="header">
+										<h:outputText value="codiArp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.codiArp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.codiAfp}" sortBy="#{tlp00002.codiAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="codiAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.codiAfp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.codiCaja}" sortBy="#{tlp00002.codiCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="codiCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.codiCaja}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.cotizante}" sortBy="#{tlp00002.cotizante}" >
+										 <f:facet name="header">
+										<h:outputText value="cotizante"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.cotizante}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.codEmpresaEmp}" sortBy="#{tlp00002.codEmpresaEmp}" >
+										 <f:facet name="header">
+										<h:outputText value="codEmpresaEmp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.codEmpresaEmp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.ciuLaboralCotizante}" sortBy="#{tlp00002.ciuLaboralCotizante}" >
+										 <f:facet name="header">
+										<h:outputText value="ciuLaboralCotizante"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.ciuLaboralCotizante}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.depLaboralCotizante}" sortBy="#{tlp00002.depLaboralCotizante}" >
+										 <f:facet name="header">
+										<h:outputText value="depLaboralCotizante"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.depLaboralCotizante}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.tipocotizante}" sortBy="#{tlp00002.tipocotizante}" >
+										 <f:facet name="header">
+										<h:outputText value="tipocotizante"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.tipocotizante}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.subTipocotizante}" sortBy="#{tlp00002.subTipocotizante}" >
+										 <f:facet name="header">
+										<h:outputText value="subTipocotizante"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.subTipocotizante}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.diasCotizados}" sortBy="#{tlp00002.diasCotizados}" >
+										 <f:facet name="header">
+										<h:outputText value="diasCotizados"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.diasCotizados}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.diasCotizadosArp}" sortBy="#{tlp00002.diasCotizadosArp}" >
+										 <f:facet name="header">
+										<h:outputText value="diasCotizadosArp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.diasCotizadosArp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.diasCotizadosAfp}" sortBy="#{tlp00002.diasCotizadosAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="diasCotizadosAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.diasCotizadosAfp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.diasCotizadosCaja}" sortBy="#{tlp00002.diasCotizadosCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="diasCotizadosCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.diasCotizadosCaja}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.salarioBasico}" sortBy="#{tlp00002.salarioBasico}" >
+										 <f:facet name="header">
+										<h:outputText value="salarioBasico"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.salarioBasico}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.salarioCIntegral}" sortBy="#{tlp00002.salarioCIntegral}" >
+										 <f:facet name="header">
+										<h:outputText value="salarioCIntegral"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.salarioCIntegral}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.planillaEps}" sortBy="#{tlp00002.planillaEps}" >
+										 <f:facet name="header">
+										<h:outputText value="planillaEps"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.planillaEps}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.planillaArp}" sortBy="#{tlp00002.planillaArp}" >
+										 <f:facet name="header">
+										<h:outputText value="planillaArp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.planillaArp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.planillaAfp}" sortBy="#{tlp00002.planillaAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="planillaAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.planillaAfp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.planillaCaja}" sortBy="#{tlp00002.planillaCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="planillaCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.planillaCaja}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.numAuincapacidad}" sortBy="#{tlp00002.numAuincapacidad}" >
+										 <f:facet name="header">
+										<h:outputText value="numAuincapacidad"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.numAuincapacidad}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.valorIncapacidad}" sortBy="#{tlp00002.valorIncapacidad}" >
+										 <f:facet name="header">
+										<h:outputText value="valorIncapacidad"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.valorIncapacidad}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.numAulicenciaM}" sortBy="#{tlp00002.numAulicenciaM}" >
+										 <f:facet name="header">
+										<h:outputText value="numAulicenciaM"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.numAulicenciaM}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.valorLicenciaM}" sortBy="#{tlp00002.valorLicenciaM}" >
+										 <f:facet name="header">
+										<h:outputText value="valorLicenciaM"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.valorLicenciaM}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.valorUpcAdicional}" sortBy="#{tlp00002.valorUpcAdicional}" >
+										 <f:facet name="header">
+										<h:outputText value="valorUpcAdicional"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.valorUpcAdicional}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.ingresoBaseCotizacion}" sortBy="#{tlp00002.ingresoBaseCotizacion}" >
+										 <f:facet name="header">
+										<h:outputText value="ingresoBaseCotizacion"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.ingresoBaseCotizacion}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.ingresoBaseCotizacionArp}" sortBy="#{tlp00002.ingresoBaseCotizacionArp}" >
+										 <f:facet name="header">
+										<h:outputText value="ingresoBaseCotizacionArp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.ingresoBaseCotizacionArp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.ingresoBaseCotizacionAfp}" sortBy="#{tlp00002.ingresoBaseCotizacionAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="ingresoBaseCotizacionAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.ingresoBaseCotizacionAfp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.ingresoBaseCotizacionCaja}" sortBy="#{tlp00002.ingresoBaseCotizacionCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="ingresoBaseCotizacionCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.ingresoBaseCotizacionCaja}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.ingresoBaseCotizacionSenaIcbf}" sortBy="#{tlp00002.ingresoBaseCotizacionSenaIcbf}" >
+										 <f:facet name="header">
+										<h:outputText value="ingresoBaseCotizacionSenaIcbf"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.ingresoBaseCotizacionSenaIcbf}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.cotizaciónObligatoria}" sortBy="#{tlp00002.cotizaciónObligatoria}" >
+										 <f:facet name="header">
+										<h:outputText value="cotizaciónObligatoria"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.cotizaciónObligatoria}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.cotizaciónObligatoriaArp}" sortBy="#{tlp00002.cotizaciónObligatoriaArp}" >
+										 <f:facet name="header">
+										<h:outputText value="cotizaciónObligatoriaArp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.cotizaciónObligatoriaArp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.codigoCentroTrabajo}" sortBy="#{tlp00002.codigoCentroTrabajo}" >
+										 <f:facet name="header">
+										<h:outputText value="codigoCentroTrabajo"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.codigoCentroTrabajo}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.cotizaciónObligatoriaAfp}" sortBy="#{tlp00002.cotizaciónObligatoriaAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="cotizaciónObligatoriaAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.cotizaciónObligatoriaAfp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.valorFpsolidaridad}" sortBy="#{tlp00002.valorFpsolidaridad}" >
+										 <f:facet name="header">
+										<h:outputText value="valorFpsolidaridad"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.valorFpsolidaridad}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.valorFpsubsistencia}" sortBy="#{tlp00002.valorFpsubsistencia}" >
+										 <f:facet name="header">
+										<h:outputText value="valorFpsubsistencia"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.valorFpsubsistencia}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.riesgos}" sortBy="#{tlp00002.riesgos}" >
+										 <f:facet name="header">
+										<h:outputText value="riesgos"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.riesgos}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.porcEps}" sortBy="#{tlp00002.porcEps}" >
+										 <f:facet name="header">
+										<h:outputText value="porcEps"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.porcEps}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.porcRiesgo}" sortBy="#{tlp00002.porcRiesgo}" >
+										 <f:facet name="header">
+										<h:outputText value="porcRiesgo"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.porcRiesgo}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.porcAfp}" sortBy="#{tlp00002.porcAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="porcAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.porcAfp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.porcCaja}" sortBy="#{tlp00002.porcCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="porcCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.porcCaja}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.cotizaciónObligatoriaCaja}" sortBy="#{tlp00002.cotizaciónObligatoriaCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="cotizaciónObligatoriaCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.cotizaciónObligatoriaCaja}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.porcSena}" sortBy="#{tlp00002.porcSena}" >
+										 <f:facet name="header">
+										<h:outputText value="porcSena"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.porcSena}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.cotizaciónObligatoriaSena}" sortBy="#{tlp00002.cotizaciónObligatoriaSena}" >
+										 <f:facet name="header">
+										<h:outputText value="cotizaciónObligatoriaSena"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.cotizaciónObligatoriaSena}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.porcIcbf}" sortBy="#{tlp00002.porcIcbf}" >
+										 <f:facet name="header">
+										<h:outputText value="porcIcbf"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.porcIcbf}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.cotizaciónObligatoriaIcbf}" sortBy="#{tlp00002.cotizaciónObligatoriaIcbf}" >
+										 <f:facet name="header">
+										<h:outputText value="cotizaciónObligatoriaIcbf"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.cotizaciónObligatoriaIcbf}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.detaPlanPrimeraEps}" sortBy="#{tlp00002.detaPlanPrimeraEps}" >
+										 <f:facet name="header">
+										<h:outputText value="detaPlanPrimeraEps"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.detaPlanPrimeraEps}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.detaPlanPrimeraArp}" sortBy="#{tlp00002.detaPlanPrimeraArp}" >
+										 <f:facet name="header">
+										<h:outputText value="detaPlanPrimeraArp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.detaPlanPrimeraArp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.detaPlanPrimeraAfp}" sortBy="#{tlp00002.detaPlanPrimeraAfp}" >
+										 <f:facet name="header">
+										<h:outputText value="detaPlanPrimeraAfp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.detaPlanPrimeraAfp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.detaPlanPrimeraCaja}" sortBy="#{tlp00002.detaPlanPrimeraCaja}" >
+										 <f:facet name="header">
+										<h:outputText value="detaPlanPrimeraCaja"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.detaPlanPrimeraCaja}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.ing}" sortBy="#{tlp00002.ing}" >
+										 <f:facet name="header">
+										<h:outputText value="ing"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.ing}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.ret}" sortBy="#{tlp00002.ret}" >
+										 <f:facet name="header">
+										<h:outputText value="ret"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.ret}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.tde}" sortBy="#{tlp00002.tde}" >
+										 <f:facet name="header">
+										<h:outputText value="tde"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.tde}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.tae}" sortBy="#{tlp00002.tae}" >
+										 <f:facet name="header">
+										<h:outputText value="tae"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.tae}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.codiEpsTraslado}" sortBy="#{tlp00002.codiEpsTraslado}" >
+										 <f:facet name="header">
+										<h:outputText value="codiEpsTraslado"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.codiEpsTraslado}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.tdp}" sortBy="#{tlp00002.tdp}" >
+										 <f:facet name="header">
+										<h:outputText value="tdp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.tdp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.tap}" sortBy="#{tlp00002.tap}" >
+										 <f:facet name="header">
+										<h:outputText value="tap"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.tap}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.codiAfpTraslado}" sortBy="#{tlp00002.codiAfpTraslado}" >
+										 <f:facet name="header">
+										<h:outputText value="codiAfpTraslado"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.codiAfpTraslado}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.tda}" sortBy="#{tlp00002.tda}" >
+										 <f:facet name="header">
+										<h:outputText value="tda"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.tda}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.taa}" sortBy="#{tlp00002.taa}" >
+										 <f:facet name="header">
+										<h:outputText value="taa"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.taa}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.vsp}" sortBy="#{tlp00002.vsp}" >
+										 <f:facet name="header">
+										<h:outputText value="vsp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.vsp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.vte}" sortBy="#{tlp00002.vte}" >
+										 <f:facet name="header">
+										<h:outputText value="vte"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.vte}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.vst}" sortBy="#{tlp00002.vst}" >
+										 <f:facet name="header">
+										<h:outputText value="vst"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.vst}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.sln}" sortBy="#{tlp00002.sln}" >
+										 <f:facet name="header">
+										<h:outputText value="sln"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.sln}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.ige}" sortBy="#{tlp00002.ige}" >
+										 <f:facet name="header">
+										<h:outputText value="ige"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.ige}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.lma}" sortBy="#{tlp00002.lma}" >
+										 <f:facet name="header">
+										<h:outputText value="lma"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.lma}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.vac}" sortBy="#{tlp00002.vac}" >
+										 <f:facet name="header">
+										<h:outputText value="vac"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.vac}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.avp}" sortBy="#{tlp00002.avp}" >
+										 <f:facet name="header">
+										<h:outputText value="avp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.avp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.vct}" sortBy="#{tlp00002.vct}" >
+										 <f:facet name="header">
+										<h:outputText value="vct"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.vct}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.irp}" sortBy="#{tlp00002.irp}" >
+										 <f:facet name="header">
+										<h:outputText value="irp"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.irp}"/>
+										 </p:column>
+			                    										<p:column filterBy="#{tlp00002.codUsuario}" sortBy="#{tlp00002.codUsuario}" >
+										 <f:facet name="header">
+										<h:outputText value="codUsuario"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.codUsuario}"/>
+										 </p:column>
+			                    																									
+										<p:column filterBy="#{tlp00002.codEps_Tp000003}" sortBy="#{tlp00002.codEps_Tp000003}" >
+										 <f:facet name="header">
+										<h:outputText value="CodEps_Tp000003"/>
+										</f:facet>
+										 <h:outputText value="#{tlp00002.codEps_Tp000003}"/>
+										</p:column>   
+			                    			                    
+								<p:column headerText="Options">
+									<p:commandButton id="btnEdit" icon="ui-icon-pencil"
+										update=":dialogTlp00002"
+										actionListener="#{tlp00002View.action_edit}">
+										<f:attribute name="selectedTlp00002" value="#{tlp00002}" />
+									</p:commandButton>
+									<p:commandButton id="btnDelete"									
+										title="Delete" actionListener="#{tlp00002View.action_delete_datatable}"
+										onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}"
+										icon="ui-icon-trash" update="@form">
+										<f:attribute name="selectedTlp00002" value="#{tlp00002}" />
+									</p:commandButton>
+								</p:column>									                    
+							</p:dataTable>	
+						</p:panel>
+						<p:panel id="panelBoton">
+							<div align="center">
+								<p:commandButton id="btnNew" value="New"
+									action="#{tlp00002View.action_new()}" update=":dialogTlp00002" />
+							</div>
+						</p:panel>						
+		   			</h:form>
+					<p:dialog id="dialogTlp00002" appendTo="@(body)" draggable="true"
+						closable="false" visible="#{tlp00002View.showDialog}" resizable="false"
+						modal="true" width="500">
+						<h:form id="formDialog">
+							<p:messages id="msg" />
+							<p:panel id="panelTlp00002" header="Tlp00002">							
+							    <h:panelGrid columns="2" id="panelGrid" >
+																		 <h:outputText id="msgNumPlanilla" value="NumPlanilla"/>
+									 <p:inputText id="txtNumPlanilla" binding="#{tlp00002View.txtNumPlanilla}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCodiEps" value="CodiEps"/>
+									 <p:inputText id="txtCodiEps" binding="#{tlp00002View.txtCodiEps}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCodiArp" value="CodiArp"/>
+									 <p:inputText id="txtCodiArp" binding="#{tlp00002View.txtCodiArp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCodiAfp" value="CodiAfp"/>
+									 <p:inputText id="txtCodiAfp" binding="#{tlp00002View.txtCodiAfp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCodiCaja" value="CodiCaja"/>
+									 <p:inputText id="txtCodiCaja" binding="#{tlp00002View.txtCodiCaja}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCotizante" value="Cotizante"/>
+									 <p:inputText id="txtCotizante" binding="#{tlp00002View.txtCotizante}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCodEmpresaEmp" value="CodEmpresaEmp"/>
+									 <p:inputText id="txtCodEmpresaEmp" binding="#{tlp00002View.txtCodEmpresaEmp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCiuLaboralCotizante" value="CiuLaboralCotizante"/>
+									 <p:inputText id="txtCiuLaboralCotizante" binding="#{tlp00002View.txtCiuLaboralCotizante}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgDepLaboralCotizante" value="DepLaboralCotizante"/>
+									 <p:inputText id="txtDepLaboralCotizante" binding="#{tlp00002View.txtDepLaboralCotizante}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgTipocotizante" value="Tipocotizante"/>
+									 <p:inputText id="txtTipocotizante" binding="#{tlp00002View.txtTipocotizante}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgSubTipocotizante" value="SubTipocotizante"/>
+									 <p:inputText id="txtSubTipocotizante" binding="#{tlp00002View.txtSubTipocotizante}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgDiasCotizados" value="DiasCotizados"/>
+									 <p:inputText id="txtDiasCotizados" binding="#{tlp00002View.txtDiasCotizados}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgDiasCotizadosArp" value="DiasCotizadosArp"/>
+									 <p:inputText id="txtDiasCotizadosArp" binding="#{tlp00002View.txtDiasCotizadosArp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgDiasCotizadosAfp" value="DiasCotizadosAfp"/>
+									 <p:inputText id="txtDiasCotizadosAfp" binding="#{tlp00002View.txtDiasCotizadosAfp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgDiasCotizadosCaja" value="DiasCotizadosCaja"/>
+									 <p:inputText id="txtDiasCotizadosCaja" binding="#{tlp00002View.txtDiasCotizadosCaja}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgSalarioBasico" value="SalarioBasico"/>
+									 <p:inputText id="txtSalarioBasico" binding="#{tlp00002View.txtSalarioBasico}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgSalarioCIntegral" value="SalarioCIntegral"/>
+									 <p:inputText id="txtSalarioCIntegral" binding="#{tlp00002View.txtSalarioCIntegral}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgPlanillaEps" value="PlanillaEps"/>
+									 <p:inputText id="txtPlanillaEps" binding="#{tlp00002View.txtPlanillaEps}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgPlanillaArp" value="PlanillaArp"/>
+									 <p:inputText id="txtPlanillaArp" binding="#{tlp00002View.txtPlanillaArp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgPlanillaAfp" value="PlanillaAfp"/>
+									 <p:inputText id="txtPlanillaAfp" binding="#{tlp00002View.txtPlanillaAfp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgPlanillaCaja" value="PlanillaCaja"/>
+									 <p:inputText id="txtPlanillaCaja" binding="#{tlp00002View.txtPlanillaCaja}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgNumAuincapacidad" value="NumAuincapacidad"/>
+									 <p:inputText id="txtNumAuincapacidad" binding="#{tlp00002View.txtNumAuincapacidad}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgValorIncapacidad" value="ValorIncapacidad"/>
+									 <p:inputText id="txtValorIncapacidad" binding="#{tlp00002View.txtValorIncapacidad}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgNumAulicenciaM" value="NumAulicenciaM"/>
+									 <p:inputText id="txtNumAulicenciaM" binding="#{tlp00002View.txtNumAulicenciaM}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgValorLicenciaM" value="ValorLicenciaM"/>
+									 <p:inputText id="txtValorLicenciaM" binding="#{tlp00002View.txtValorLicenciaM}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgValorUpcAdicional" value="ValorUpcAdicional"/>
+									 <p:inputText id="txtValorUpcAdicional" binding="#{tlp00002View.txtValorUpcAdicional}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgIngresoBaseCotizacion" value="IngresoBaseCotizacion"/>
+									 <p:inputText id="txtIngresoBaseCotizacion" binding="#{tlp00002View.txtIngresoBaseCotizacion}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgIngresoBaseCotizacionArp" value="IngresoBaseCotizacionArp"/>
+									 <p:inputText id="txtIngresoBaseCotizacionArp" binding="#{tlp00002View.txtIngresoBaseCotizacionArp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgIngresoBaseCotizacionAfp" value="IngresoBaseCotizacionAfp"/>
+									 <p:inputText id="txtIngresoBaseCotizacionAfp" binding="#{tlp00002View.txtIngresoBaseCotizacionAfp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgIngresoBaseCotizacionCaja" value="IngresoBaseCotizacionCaja"/>
+									 <p:inputText id="txtIngresoBaseCotizacionCaja" binding="#{tlp00002View.txtIngresoBaseCotizacionCaja}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgIngresoBaseCotizacionSenaIcbf" value="IngresoBaseCotizacionSenaIcbf"/>
+									 <p:inputText id="txtIngresoBaseCotizacionSenaIcbf" binding="#{tlp00002View.txtIngresoBaseCotizacionSenaIcbf}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCotizaciónObligatoria" value="CotizaciónObligatoria"/>
+									 <p:inputText id="txtCotizaciónObligatoria" binding="#{tlp00002View.txtCotizaciónObligatoria}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCotizaciónObligatoriaArp" value="CotizaciónObligatoriaArp"/>
+									 <p:inputText id="txtCotizaciónObligatoriaArp" binding="#{tlp00002View.txtCotizaciónObligatoriaArp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCodigoCentroTrabajo" value="CodigoCentroTrabajo"/>
+									 <p:inputText id="txtCodigoCentroTrabajo" binding="#{tlp00002View.txtCodigoCentroTrabajo}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCotizaciónObligatoriaAfp" value="CotizaciónObligatoriaAfp"/>
+									 <p:inputText id="txtCotizaciónObligatoriaAfp" binding="#{tlp00002View.txtCotizaciónObligatoriaAfp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgValorFpsolidaridad" value="ValorFpsolidaridad"/>
+									 <p:inputText id="txtValorFpsolidaridad" binding="#{tlp00002View.txtValorFpsolidaridad}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgValorFpsubsistencia" value="ValorFpsubsistencia"/>
+									 <p:inputText id="txtValorFpsubsistencia" binding="#{tlp00002View.txtValorFpsubsistencia}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgRiesgos" value="Riesgos"/>
+									 <p:inputText id="txtRiesgos" binding="#{tlp00002View.txtRiesgos}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgPorcEps" value="PorcEps"/>
+									 <p:inputText id="txtPorcEps" binding="#{tlp00002View.txtPorcEps}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgPorcRiesgo" value="PorcRiesgo"/>
+									 <p:inputText id="txtPorcRiesgo" binding="#{tlp00002View.txtPorcRiesgo}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgPorcAfp" value="PorcAfp"/>
+									 <p:inputText id="txtPorcAfp" binding="#{tlp00002View.txtPorcAfp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgPorcCaja" value="PorcCaja"/>
+									 <p:inputText id="txtPorcCaja" binding="#{tlp00002View.txtPorcCaja}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCotizaciónObligatoriaCaja" value="CotizaciónObligatoriaCaja"/>
+									 <p:inputText id="txtCotizaciónObligatoriaCaja" binding="#{tlp00002View.txtCotizaciónObligatoriaCaja}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgPorcSena" value="PorcSena"/>
+									 <p:inputText id="txtPorcSena" binding="#{tlp00002View.txtPorcSena}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCotizaciónObligatoriaSena" value="CotizaciónObligatoriaSena"/>
+									 <p:inputText id="txtCotizaciónObligatoriaSena" binding="#{tlp00002View.txtCotizaciónObligatoriaSena}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgPorcIcbf" value="PorcIcbf"/>
+									 <p:inputText id="txtPorcIcbf" binding="#{tlp00002View.txtPorcIcbf}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCotizaciónObligatoriaIcbf" value="CotizaciónObligatoriaIcbf"/>
+									 <p:inputText id="txtCotizaciónObligatoriaIcbf" binding="#{tlp00002View.txtCotizaciónObligatoriaIcbf}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgDetaPlanPrimeraEps" value="DetaPlanPrimeraEps"/>
+									 <p:inputText id="txtDetaPlanPrimeraEps" binding="#{tlp00002View.txtDetaPlanPrimeraEps}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgDetaPlanPrimeraArp" value="DetaPlanPrimeraArp"/>
+									 <p:inputText id="txtDetaPlanPrimeraArp" binding="#{tlp00002View.txtDetaPlanPrimeraArp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgDetaPlanPrimeraAfp" value="DetaPlanPrimeraAfp"/>
+									 <p:inputText id="txtDetaPlanPrimeraAfp" binding="#{tlp00002View.txtDetaPlanPrimeraAfp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgDetaPlanPrimeraCaja" value="DetaPlanPrimeraCaja"/>
+									 <p:inputText id="txtDetaPlanPrimeraCaja" binding="#{tlp00002View.txtDetaPlanPrimeraCaja}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgIng" value="Ing"/>
+									 <p:inputText id="txtIng" binding="#{tlp00002View.txtIng}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgRet" value="Ret"/>
+									 <p:inputText id="txtRet" binding="#{tlp00002View.txtRet}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgTde" value="Tde"/>
+									 <p:inputText id="txtTde" binding="#{tlp00002View.txtTde}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgTae" value="Tae"/>
+									 <p:inputText id="txtTae" binding="#{tlp00002View.txtTae}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCodiEpsTraslado" value="CodiEpsTraslado"/>
+									 <p:inputText id="txtCodiEpsTraslado" binding="#{tlp00002View.txtCodiEpsTraslado}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgTdp" value="Tdp"/>
+									 <p:inputText id="txtTdp" binding="#{tlp00002View.txtTdp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgTap" value="Tap"/>
+									 <p:inputText id="txtTap" binding="#{tlp00002View.txtTap}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCodiAfpTraslado" value="CodiAfpTraslado"/>
+									 <p:inputText id="txtCodiAfpTraslado" binding="#{tlp00002View.txtCodiAfpTraslado}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgTda" value="Tda"/>
+									 <p:inputText id="txtTda" binding="#{tlp00002View.txtTda}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgTaa" value="Taa"/>
+									 <p:inputText id="txtTaa" binding="#{tlp00002View.txtTaa}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgVsp" value="Vsp"/>
+									 <p:inputText id="txtVsp" binding="#{tlp00002View.txtVsp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgVte" value="Vte"/>
+									 <p:inputText id="txtVte" binding="#{tlp00002View.txtVte}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgVst" value="Vst"/>
+									 <p:inputText id="txtVst" binding="#{tlp00002View.txtVst}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgSln" value="Sln"/>
+									 <p:inputText id="txtSln" binding="#{tlp00002View.txtSln}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgIge" value="Ige"/>
+									 <p:inputText id="txtIge" binding="#{tlp00002View.txtIge}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgLma" value="Lma"/>
+									 <p:inputText id="txtLma" binding="#{tlp00002View.txtLma}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgVac" value="Vac"/>
+									 <p:inputText id="txtVac" binding="#{tlp00002View.txtVac}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgAvp" value="Avp"/>
+									 <p:inputText id="txtAvp" binding="#{tlp00002View.txtAvp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgVct" value="Vct"/>
+									 <p:inputText id="txtVct" binding="#{tlp00002View.txtVct}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgIrp" value="Irp"/>
+									 <p:inputText id="txtIrp" binding="#{tlp00002View.txtIrp}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																		 <h:outputText id="msgCodUsuario" value="CodUsuario"/>
+									 <p:inputText id="txtCodUsuario" binding="#{tlp00002View.txtCodUsuario}">
+									 <p:ajax update=":dialogTlp00002" listener="#{tlp00002View.listener_txtId}"/>
+									 </p:inputText>	
+																											
+																		<h:outputText id="msgCodEps_Tp000003" value=" CodEps_Tp000003"/>
+									<p:inputText id="txtCodEps_Tp000003" disabled="true" binding="#{tlp00002View.txtCodEps_Tp000003}"/>
+																		
+																    </h:panelGrid>
+							</p:panel>						   
+							<p:panel id="panelBotones">
+								<div align="center">					
+									<p:commandButton id="btnSave" binding="#{tlp00002View.btnSave}" value="Save" action="#{tlp00002View.action_save()}" update=":dialogTlp00002 :frm:panelDataTableTlp00002" />
+									<p:commandButton id="btnClear" value="Clear" action="#{tlp00002View.action_clear()}" update=":dialogTlp00002" />
+									<p:commandButton id="btnExit" value="Exit" action="#{tlp00002View.action_closeDialog()}" update=":dialogTlp00002" />
+								</div>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+	</ui:define>
+</ui:composition>
+

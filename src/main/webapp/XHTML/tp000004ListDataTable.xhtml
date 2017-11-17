@@ -1,0 +1,188 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+		 
+	<ui:define name="content">		
+
+		  			<h:form id="frm">								  		
+						
+						<p:panel id="panelDataTableTp000004" header="Tp000004Data">
+							<p:growl id="men"/>				
+							<p:dataTable value="#{tp000004View.data}" var="tp000004"
+								paginator="true" rows="5">
+																										<p:column filterBy="#{tp000004.codArp}" sortBy="#{tp000004.codArp}" >
+										 <f:facet name="header">
+										<h:outputText value="codArp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000004.codArp}"/>
+										 </p:column>
+			                    																									
+										<p:column filterBy="#{tp000004.arpactiva}" sortBy="#{tp000004.arpactiva}" >
+										 <f:facet name="header">
+										<h:outputText value="Arpactiva"/>
+										</f:facet>
+										 <h:outputText value="#{tp000004.arpactiva}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000004.codigoArp}" sortBy="#{tp000004.codigoArp}" >
+										 <f:facet name="header">
+										<h:outputText value="CodigoArp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000004.codigoArp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000004.direccionArp}" sortBy="#{tp000004.direccionArp}" >
+										 <f:facet name="header">
+										<h:outputText value="DireccionArp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000004.direccionArp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000004.dvarp}" sortBy="#{tp000004.dvarp}" >
+										 <f:facet name="header">
+										<h:outputText value="Dvarp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000004.dvarp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000004.emailArp}" sortBy="#{tp000004.emailArp}" >
+										 <f:facet name="header">
+										<h:outputText value="EmailArp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000004.emailArp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000004.faxArp}" sortBy="#{tp000004.faxArp}" >
+										 <f:facet name="header">
+										<h:outputText value="FaxArp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000004.faxArp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000004.nitArp}" sortBy="#{tp000004.nitArp}" >
+										 <f:facet name="header">
+										<h:outputText value="NitArp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000004.nitArp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000004.nomContactoArp}" sortBy="#{tp000004.nomContactoArp}" >
+										 <f:facet name="header">
+										<h:outputText value="NomContactoArp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000004.nomContactoArp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000004.nombreArp}" sortBy="#{tp000004.nombreArp}" >
+										 <f:facet name="header">
+										<h:outputText value="NombreArp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000004.nombreArp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000004.numPerPlaniArp}" sortBy="#{tp000004.numPerPlaniArp}" >
+										 <f:facet name="header">
+										<h:outputText value="NumPerPlaniArp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000004.numPerPlaniArp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000004.telefonoArp}" sortBy="#{tp000004.telefonoArp}" >
+										 <f:facet name="header">
+										<h:outputText value="TelefonoArp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000004.telefonoArp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000004.tipoDocumentoArp}" sortBy="#{tp000004.tipoDocumentoArp}" >
+										 <f:facet name="header">
+										<h:outputText value="TipoDocumentoArp"/>
+										</f:facet>
+										 <h:outputText value="#{tp000004.tipoDocumentoArp}"/>
+										</p:column>   
+			                    									
+										<p:column filterBy="#{tp000004.codEmpresa_Tg000003}" sortBy="#{tp000004.codEmpresa_Tg000003}" >
+										 <f:facet name="header">
+										<h:outputText value="CodEmpresa_Tg000003"/>
+										</f:facet>
+										 <h:outputText value="#{tp000004.codEmpresa_Tg000003}"/>
+										</p:column>   
+			                    			                    
+								<p:column headerText="Options">
+									<p:commandButton id="btnEdit" icon="ui-icon-pencil"
+										update=":dialogTp000004"
+										actionListener="#{tp000004View.action_edit}">
+										<f:attribute name="selectedTp000004" value="#{tp000004}" />
+									</p:commandButton>
+									<p:commandButton id="btnDelete"									
+										title="Delete" actionListener="#{tp000004View.action_delete_datatable}"
+										onclick="if(!confirm('Do you really want to delete this Entry?')){return false;}"
+										icon="ui-icon-trash" update="@form">
+										<f:attribute name="selectedTp000004" value="#{tp000004}" />
+									</p:commandButton>
+								</p:column>									                    
+							</p:dataTable>	
+						</p:panel>
+						<p:panel id="panelBoton">
+							<div align="center">
+								<p:commandButton id="btnNew" value="New"
+									action="#{tp000004View.action_new()}" update=":dialogTp000004" />
+							</div>
+						</p:panel>						
+		   			</h:form>
+					<p:dialog id="dialogTp000004" appendTo="@(body)" draggable="true"
+						closable="false" visible="#{tp000004View.showDialog}" resizable="false"
+						modal="true" width="500">
+						<h:form id="formDialog">
+							<p:messages id="msg" />
+							<p:panel id="panelTp000004" header="Tp000004">							
+							    <h:panelGrid columns="2" id="panelGrid" >
+																		 <h:outputText id="msgCodArp" value="CodArp"/>
+									 <p:inputText id="txtCodArp" binding="#{tp000004View.txtCodArp}">
+									 <p:ajax update=":dialogTp000004" listener="#{tp000004View.listener_txtId}"/>
+									 </p:inputText>	
+																											
+																		<h:outputText id="msgArpactiva" value=" Arpactiva"/>
+									<p:inputText id="txtArpactiva" disabled="true" binding="#{tp000004View.txtArpactiva}"/>
+																		<h:outputText id="msgCodigoArp" value=" CodigoArp"/>
+									<p:inputText id="txtCodigoArp" disabled="true" binding="#{tp000004View.txtCodigoArp}"/>
+																		<h:outputText id="msgDireccionArp" value=" DireccionArp"/>
+									<p:inputText id="txtDireccionArp" disabled="true" binding="#{tp000004View.txtDireccionArp}"/>
+																		<h:outputText id="msgDvarp" value=" Dvarp"/>
+									<p:inputText id="txtDvarp" disabled="true" binding="#{tp000004View.txtDvarp}"/>
+																		<h:outputText id="msgEmailArp" value=" EmailArp"/>
+									<p:inputText id="txtEmailArp" disabled="true" binding="#{tp000004View.txtEmailArp}"/>
+																		<h:outputText id="msgFaxArp" value=" FaxArp"/>
+									<p:inputText id="txtFaxArp" disabled="true" binding="#{tp000004View.txtFaxArp}"/>
+																		<h:outputText id="msgNitArp" value=" NitArp"/>
+									<p:inputText id="txtNitArp" disabled="true" binding="#{tp000004View.txtNitArp}"/>
+																		<h:outputText id="msgNomContactoArp" value=" NomContactoArp"/>
+									<p:inputText id="txtNomContactoArp" disabled="true" binding="#{tp000004View.txtNomContactoArp}"/>
+																		<h:outputText id="msgNombreArp" value=" NombreArp"/>
+									<p:inputText id="txtNombreArp" disabled="true" binding="#{tp000004View.txtNombreArp}"/>
+																		<h:outputText id="msgNumPerPlaniArp" value=" NumPerPlaniArp"/>
+									<p:inputText id="txtNumPerPlaniArp" disabled="true" binding="#{tp000004View.txtNumPerPlaniArp}"/>
+																		<h:outputText id="msgTelefonoArp" value=" TelefonoArp"/>
+									<p:inputText id="txtTelefonoArp" disabled="true" binding="#{tp000004View.txtTelefonoArp}"/>
+																		<h:outputText id="msgTipoDocumentoArp" value=" TipoDocumentoArp"/>
+									<p:inputText id="txtTipoDocumentoArp" disabled="true" binding="#{tp000004View.txtTipoDocumentoArp}"/>
+																		<h:outputText id="msgCodEmpresa_Tg000003" value=" CodEmpresa_Tg000003"/>
+									<p:inputText id="txtCodEmpresa_Tg000003" disabled="true" binding="#{tp000004View.txtCodEmpresa_Tg000003}"/>
+																		
+																    </h:panelGrid>
+							</p:panel>						   
+							<p:panel id="panelBotones">
+								<div align="center">					
+									<p:commandButton id="btnSave" binding="#{tp000004View.btnSave}" value="Save" action="#{tp000004View.action_save()}" update=":dialogTp000004 :frm:panelDataTableTp000004" />
+									<p:commandButton id="btnClear" value="Clear" action="#{tp000004View.action_clear()}" update=":dialogTp000004" />
+									<p:commandButton id="btnExit" value="Exit" action="#{tp000004View.action_closeDialog()}" update=":dialogTp000004" />
+								</div>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+	</ui:define>
+</ui:composition>
+
