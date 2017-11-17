@@ -13,7 +13,7 @@ import javax.validation.constraints.*;
 
 /**
 * @author Zathura Code Generator http://zathuracode.org
-* www.zathuracode.org
+* www.zathuracode.orgddd
 *
 */
 @Entity
